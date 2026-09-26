@@ -1,0 +1,245 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #faf9f6;
+    color: #171717;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.luxury-navbar {
+    position: relative;
+    padding: 24px 4%;
+    background: #faf9f6;
+    border-bottom: 1px solid #e6e2db;
+}
+
+
+/* =========================================
+   LEFT + RIGHT LINKS
+========================================= */
+
+.nav-left a,
+.nav-links a {
+    position: relative;
+
+    color: #171717;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+
+    transition: opacity 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-links a:hover {
+    opacity: 0.55;
+}
+
+
+.nav-left a::after,
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: #171717;
+
+    transition: width 0.3s ease;
+}
+
+.nav-left a:hover::after,
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+.brand-logo {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: #171717;
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+    font-weight: 400;
+
+    letter-spacing: 0.13em;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.brand-logo span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 7px;
+    letter-spacing: 0.35em;
+}
+
+
+
+.nav-right {
+    gap: 24px;
+}
+
+
+
+.nav-icons {
+    gap: 18px;
+
+    margin-left: 6px;
+    padding-left: 20px;
+
+    border-left: 1px solid #dedbd5;
+}
+
+.nav-icons a {
+    color: #171717;
+
+    font-size: 17px;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.nav-icons a:hover {
+    transform: translateY(-2px);
+    opacity: 0.55;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 5px;
+
+    color: #171717;
+
+    font-size: 24px;
+
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+.mobile-menu {
+    padding: 25px 5px 10px;
+}
+
+.mobile-menu > a {
+    display: block;
+
+    padding: 10px 0;
+
+    color: #171717;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.mobile-divider {
+    height: 1px;
+
+    margin: 12px 0;
+
+    background: #e1ded8;
+}
+
+.mobile-icons {
+    display: flex;
+
+    gap: 22px;
+
+    padding-top: 18px;
+}
+
+.mobile-icons a {
+    color: #171717;
+
+    font-size: 19px;
+}
+
+
+@media (max-width: 1100px) {
+
+    .nav-left,
+    .nav-links {
+        gap: 18px !important;
+    }
+
+    .nav-left a,
+    .nav-links a {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .luxury-navbar {
+        padding: 20px 5%;
+    }
+
+    .brand-logo {
+        position: static;
+
+        transform: none;
+
+        margin-right: auto;
+        margin-left: 20px;
+
+        font-size: 23px;
+    }
+
+    .brand-logo span {
+        font-size: 6px;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none !important;
+    }
+
+}
+
