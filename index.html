@@ -3,25 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurelia Jewellery</title>
+    <title>Aurelia — Accessories</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar luxury-navbar">
         <div class="container-fluid">
+            <!-- left side  -->
             <div class="nav-left d-flex align-items-center gap-4">
-                <a href="#">Home</a>
-                <a href="#">Collection</a>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <!-- categories dropdown -->
+                <div class="dropdown">
+                    <a href="categories.html" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Categories</a>
+                    <div class="dropdown-menu category-menu">
+                        <div class="container-fluid">
+                            <div class="row g-4">
+                                <!-- woman -->
+                                <div class="col-lg-3">
+                                    <h6>FOR HER</h6>
+                                    <a href="#">Jewellery</a>
+                                    <a href="#">Necklaces</a>
+                                    <a href="#">Earrings</a>
+                                    <a href="#">Bracelets</a>
+                                    <a href="#">Rings</a>
+                                    <a href="#">Hair Accessories</a>
+                                </div>
+                                <!-- men -->
+                                <div class="col-lg-3">
+                                    <h6>FOR HIM</h6>
+                                    <a href="#">Watches</a>
+                                    <a href="#">Wallets</a>
+                                    <a href="#">Belts</a>
+                                    <a href="#">Bracelets</a>
+                                    <a href="#">Rings</a>
+                                    <a href="#">Sunglasses</a>
+                                </div>
+                                <!-- accessories -->
+                                <div class="col-lg-3">
+                                    <h6>ACCESSORIES</h6>
+                                    <a href="#">Bags</a>
+                                    <a href="#">Watches</a>
+                                    <a href="#">Sunglasses</a>
+                                    <a href="#">Wallets</a>
+                                    <a href="#">Belts</a>
+                                    <a href="#">Travel Accessories</a>
+                                </div>
+                                <!-- featured -->
+                                <div class="col-lg-3 category-featured">
+                                    <span>NEW SEASON</span>
+                                    <h4>The Everyday<br>Edit</h4>
+                                    <a href="#" class="featured-link">Explore Collection →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="#" class="brand-logo">AURELIA<span>FINE JEWELLERY</span></a>
+            <!-- logo -->
+            <a href="#" class="brand-logo">AURELIA
+                <span>ACCESSORIES</span>
+            </a>
+            <!-- right -->
             <div class="nav-right d-flex align-items-center">
                 <div class="nav-links d-flex align-items-center gap-4">
-                    <a href="#">Categories</a>
-                    <a href="#">Help</a>
+                    <a href="collection.html">Collections</a>
+                    <a href="#">About</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="help.html">Help</a>
                 </div>
+                <!-- icons -->
                 <div class="nav-icons d-flex align-items-center">
                     <a href="#" aria-label="Search">
                         <i class="bi bi-search"></i>
@@ -34,41 +89,162 @@
                     </a>
                 </div>
             </div>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+            <!-- mobile btn -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
             </button>
         </div>
         <div class="collapse mobile-menu" id="mobileMenu">
-
+            <a href="#">Home</a>
             <a href="#">Shop</a>
-            <a href="#">Collection</a>
-            <a href="#">Custom Jewellery</a>
-
-            <div class="mobile-divider"></div>
-
+            <div class="mobile-category">
+                <button class="mobile-category-title" data-bs-toggle="collapse"
+                    data-bs-target="#mobileCategories">Categories
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="collapse" id="mobileCategories">
+                    <a href="#">Women</a>
+                    <a href="#">Men</a>
+                    <a href="#">Jewellery</a>
+                    <a href="#">Watches</a>
+                    <a href="#">Bags</a>
+                    <a href="#">Wallets</a>
+                    <a href="#">Belts</a>
+                    <a href="#">Sunglasses</a>
+                </div>
+            </div>
+            <a href="#">Collections</a>
             <a href="#">About</a>
             <a href="#">Journal</a>
-            <a href="#">Contact</a>
-
+            <a href="#">Help</a>
+            <div class="mobile-divider"></div>
+            <!-- icons -->
             <div class="mobile-icons">
-
-                <a href="#">
+                <a href="#" aria-label="Search">
                     <i class="bi bi-search"></i>
                 </a>
-
-                <a href="#">
+                <a href="#" aria-label="Wishlist">
                     <i class="bi bi-heart"></i>
                 </a>
-
-                <a href="#">
+                <a href="#" aria-label="Cart">
                     <i class="bi bi-bag"></i>
                 </a>
-
             </div>
-
         </div>
-
     </nav>
+    <!-- hero section  -->
+    <section class="hero">
+        <div class="hero-grid">
+            <!-- women -->
+            <div class="hero-card">
+                <img src="img/Women's jewellery.jpg" alt="Women's jewellery">
+                <div class="hero-overlay">
+                    <span class="hero-label"> WOMEN'S EDIT</span>
+                    <h1>Everyday<br>Elegance</h1>
+                    <a href="#" class="hero-btn">SHOP WOMEN <span>↗</span></a>
+                </div>
+            </div>
+            <!-- men -->
+            <div class="hero-card">
+                <img src="img/Men's accessories.jpg" alt="Men's accessories">
+                <div class="hero-overlay">
+                    <span class="hero-label">MEN'S EDIT</span>
+                    <h1>Modern<br>Essentials</h1>
+                    <a href="#" class="hero-btn">SHOP MEN<span>↗</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- intro -->
+        <div class="hero-intro">
+            <span>AURELIA</span>
+            <p>Objects of everyday elegance.</p>
+        </div>
+        <!-- benefits -->
+        <div class="benefits">
+            <div>
+                <span>01</span>Ethically Sourced Materials
+            </div>
+            <div>
+                <span>02</span>
+                Premium Craftsmanship
+            </div>
+            <div>
+                <span>03</span>
+                Free Worldwide Shipping
+            </div>
+            <div>
+                <span>04</span>
+                Easy Returns & Lifetime Care
+            </div>
+        </div>
+    </section>
+    <!-- end of the hero  -->
+    <!-- our collection  -->
+    <section class="our-collection-section">
+    <div class="our-collection-left">
+        <div>
+            <span class="section-eyebrow">
+                AURELIA / 02
+            </span>
+            <h2>Explore Our<br>Collections.</h2>
+            <p>Discover carefully curated accessories designed to elevate everyday moments and celebratelife's most meaningful occasions.</p>
+        </div>
+        <div class="our-collection-controls">
+            <button class="our-collection-arrow" id="our-collection-prev">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+            <button class="our-collection-arrow" id="our-collection-next">
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+    <div class="our-collection-right">
+        <div class="our-collection-track" id="our-collection-track">
+            <!-- card 1 -->
+            <a href="#" class="our-collection-card">
+                <img src="img/women jewelery.jpg" alt="Jewellery collection">
+                <div class="our-collection-info">
+                    <span>01</span>
+                    <h3>Jewellery
+                    </h3>
+                    <p>Explore collection →</p>
+                </div>
+            </a>
+            <!-- card 2 -->
+            <a href="#" class="our-collection-card">
+                <img src="img/necklace collection.jpg" alt="Necklaces collection">
+                <div class="our-collection-info">
+                    <span>02</span>
+                    <h3>Necklaces</h3>
+                    <p>Explore collection →</p>
+                </div>
+            </a>
+            <!-- card 3 -->
+            <a href="#" class="our-collection-card">
+                <img src="img/watch collection.jpg" alt="Watches collection">
+                <div class="our-collection-info">
+                    <span>03</span>
+                    <h3>Watches</h3>
+                    <p>Explore collection →</p>
+                </div>
+            </a>
+            <!-- card 4 -->
+            <a href="#" class="our-collection-card">
+                <img src="img/bag collection.jpg" alt="Bags collection">
+                <div class="our-collection-info">
+                    <span>04</span>
+                    <h3>Bags</h3>
+                    <p>Explore collection →</p>
+                </div>
+            </a>
+        </div>
+        <!-- progress -->
+        <div class="our-collection-progress">
+            <div class="our-collection-progress-fill"></div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
-
