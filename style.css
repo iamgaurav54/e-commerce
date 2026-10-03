@@ -536,7 +536,7 @@ a {
 
     text-align: center;
 
-    font-size: 9px;
+    font-size: 10px;
 
     letter-spacing: .12em;
 
@@ -553,8 +553,8 @@ a {
     margin-right: 8px;
 
     color: #a59d8d;
-
-    font-size: 8px;
+    font-weight: 700;
+    font-size: 24px;
 }
 @media (max-width: 900px) {
 
@@ -831,5 +831,728 @@ a {
     .our-collection-card::after {
 
         opacity: 1;
+    }
+}
+/* new collection  */
+.aurelia-new-collections {
+    width: 100%;
+    padding: 80px 3.5vw 55px;
+    background: #f8f6f2;
+    overflow: hidden;
+}
+.aurelia-collections-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.aurelia-collections-header h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(52px, 7vw, 92px);
+    font-weight: 400;
+    line-height: .9;
+    letter-spacing: -.035em;
+    text-transform: uppercase;
+    color: #171614;
+}
+.aurelia-collections-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    gap: 22px;
+}
+.aurelia-collection-card {
+    display: block;
+    text-decoration: none;
+    color: #171614;
+    transition: transform .45s ease;
+}
+.card-one {
+    margin-top: 65px;
+}
+.card-two {
+    margin-top: 0;
+}
+.card-three {
+    margin-top: 65px;
+}
+.card-four {
+    margin-top: 0;
+}
+.aurelia-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: .08em;
+    color: #6e6a64;
+}
+.aurelia-image {
+    width: 100%;
+    aspect-ratio: .78;
+    overflow: hidden;
+    background: #e8e3dd;
+}
+.aurelia-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition:transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.aurelia-collection-card:hover {
+    transform: translateY(-5px);
+}
+.aurelia-collection-card:hover img {
+    transform: scale(1.045);
+}
+.aurelia-collections-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -2px;
+}
+/* ---------- btn ---------- */
+.aurelia-view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    height: 28px;
+    padding: 0 18px;
+    border: 1px solid #77736d;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    color: #24221f;
+    text-decoration: none;
+    transition:background .3s ease,color .3s ease,border-color .3s ease;
+}
+.aurelia-view-btn:hover {
+    background: #1c1b19;
+    border-color: #1c1b19;
+    color: #fff;
+}
+@media (max-width: 900px) {
+    .aurelia-new-collections {
+        padding: 70px 30px 50px;
+    }
+    .aurelia-collections-header h2 {
+        font-size: 62px;
+    }
+    .aurelia-collections-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+    .card-one,
+    .card-three {
+        margin-top: 40px;
+    }
+    .card-two,
+    .card-four {
+        margin-top: 0;
+    }
+    .aurelia-collections-footer {
+        margin-top: 35px;
+    }
+}
+@media (max-width: 600px) {
+
+    .aurelia-new-collections {
+        padding: 60px 18px 45px;
+    }
+    .aurelia-collections-header {
+        margin-bottom: 35px;
+    }
+    .aurelia-collections-header h2 {
+        font-size: 43px;
+        letter-spacing: -.025em;
+    }
+    .aurelia-collections-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 12px;
+    }
+    .card-one,
+    .card-three {
+        margin-top: 30px;
+    }
+    .aurelia-card-top {
+        font-size: 7px;
+        margin-bottom: 6px;
+    }
+    .aurelia-image {
+        aspect-ratio: .72;
+    }
+    .aurelia-collections-footer {
+        justify-content: center;
+        margin-top: 35px;
+    }
+    .aurelia-view-btn {
+        min-width: 135px;
+        height: 32px;
+        font-size: 8px;
+    }
+}
+/* our gallery  */
+.aurelia-gallery {
+    width: 100%;
+    padding: 90px 1.2vw 70px;
+    background: #f7f5f2;
+    overflow: hidden;
+}
+.aurelia-gallery-heading {
+    padding: 0 0 25px 10px;
+}
+.aurelia-gallery-heading h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 400;
+    line-height: .9;
+    letter-spacing: -.035em;
+    text-transform: uppercase;
+    color: #171614;
+}
+.aurelia-gallery-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 18px;
+}
+.aurelia-gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #e7e2dc;
+}
+.gallery-item-one,
+.gallery-item-two {
+    height: 250px;
+}
+.gallery-item-three {
+    grid-column: 1 / -1;
+    height: 390px;
+}
+.aurelia-gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition:transform .9s cubic-bezier(.2,.7,.2,1);
+}
+.aurelia-gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top, rgba(0,0,0,.55),transparent 55%
+    );
+    opacity: 0;transition: opacity .4s ease;
+}
+.aurelia-gallery-item:hover::after {
+    opacity: 1;
+}
+.aurelia-gallery-item:hover img {
+    transform: scale(1.045);
+}
+.aurelia-gallery-overlay {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:opacity .35s ease,transform .35s ease;
+}
+.aurelia-gallery-item:hover .aurelia-gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+.aurelia-gallery-overlay span {
+    font-size: 9px;
+    letter-spacing: .12em;
+}
+.aurelia-gallery-overlay p {
+    margin: 0;
+    font-size: 9px;
+    letter-spacing: .13em;
+}
+@media (max-width: 900px) {
+    .aurelia-gallery {
+        padding: 70px 25px 55px;
+    }
+    .gallery-item-one,
+    .gallery-item-two {
+        height: 210px;
+    }
+    .gallery-item-three {
+        height: 320px;
+    }
+}
+@media (max-width: 600px) {
+    .aurelia-gallery {
+        padding: 60px 16px 45px;
+    }
+    .aurelia-gallery-heading {
+        padding-left: 3px;
+        padding-bottom: 20px;
+    }
+    .aurelia-gallery-heading h2 {
+        font-size: 43px;
+    }
+    .aurelia-gallery-grid {
+        gap: 10px;
+    }
+    .gallery-item-one,
+    .gallery-item-two {
+        height: 145px;
+    }
+    .gallery-item-three {
+        height: 230px;
+    }
+    .aurelia-gallery-overlay {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        opacity: 1;
+        transform: none;
+    }
+    .aurelia-gallery-overlay span,
+    .aurelia-gallery-overlay p {
+        font-size: 6px;
+    }
+    .aurelia-gallery-item::after {
+        opacity: 1;
+    }
+}
+/* aurelia-philosophy  */
+.aurelia-philosophy {
+    width: 100%;
+    padding: 120px 5vw;
+    background: #171614;
+    color: #f7f5f1;
+}
+.aurelia-philosophy-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    letter-spacing: .14em;
+    color: rgba(255,255,255,.55);
+}
+.aurelia-philosophy-content {
+    display: grid;
+    grid-template-columns: 1.4fr .6fr;
+    gap: 8vw;
+    padding-top: 70px;
+}
+.aurelia-philosophy-content h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(60px, 9vw, 130px);
+    font-weight: 400;
+    line-height: .82;
+    letter-spacing: -.045em;
+    color: #f7f5f1;
+}
+.aurelia-philosophy-copy {
+    max-width: 330px;
+    align-self: end;
+    padding-bottom: 8px;
+}
+.aurelia-philosophy-copy p {
+    margin: 0 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.62);
+}
+.aurelia-philosophy-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-decoration: none;
+    transition:gap .3s ease,border-color .3s ease;
+}
+.aurelia-philosophy-link span {
+    font-size: 13px;
+}
+.aurelia-philosophy-link:hover {
+    gap: 22px;
+    border-color: #fff;
+}
+@media (max-width: 900px) {
+    .aurelia-philosophy {
+        padding: 90px 30px;
+    }
+    .aurelia-philosophy-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .aurelia-philosophy-copy {
+        max-width: 430px;
+    }
+}
+@media (max-width: 600px) {
+    .aurelia-philosophy {
+        padding: 70px 18px;
+    }
+    .aurelia-philosophy-content {
+        padding-top: 50px;
+        gap: 40px;
+    }
+    .aurelia-philosophy-content h2 {
+        font-size: 58px;
+    }
+    .aurelia-philosophy-copy p {
+        font-size: 12px;
+    }
+}
+/* footer  */
+.aurelia-footer {
+    width: 100%;
+    padding: 60px 4vw 22px;
+    background: #f8f6f2;
+    color: #171614;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.aurelia-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 250px;
+}
+.aurelia-footer-newsletter {
+    width: 58%;
+}
+.aurelia-footer-label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #aaa59e;
+}
+.aurelia-footer-newsletter h2 {
+    margin: 0 0 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 55px);
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: -.02em;
+    color: #171614;
+}
+.aurelia-subscribe {
+    width: 375px;
+    display: flex;
+    margin-top: 20px;
+}
+.aurelia-subscribe input {
+    width: 285px;
+    height: 25px;
+    padding: 0 18px;
+    border: 1px solid #8b8882;
+    border-right: none;
+    background: #fff;
+    outline: none;
+    font-size: 12px;
+    color: #171614;
+}
+.aurelia-subscribe input::placeholder {
+    color: #8e8a84;
+}
+.aurelia-subscribe button {
+    width: 90px;
+    height: 25px;
+    border: 1px solid #8b8882;
+    background: transparent;
+    color: #55514c;
+    font-size: 10px;
+    letter-spacing: .04em;
+    cursor: pointer;
+    transition:background .3s ease,color .3s ease;
+}
+.aurelia-subscribe button:hover {
+    background: #171614;
+    color: #fff;
+}
+.aurelia-footer-note {
+    margin: 9px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #77736d;
+}
+.aurelia-social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: max-content;
+}
+.aurelia-social span {
+    margin-bottom: 7px;
+    font-size: 12px;
+    letter-spacing: .14em;
+    color: #55514c;
+}
+.aurelia-social a {
+    width: max-content;
+    margin-bottom: 2px;
+    font-size: 16px;
+    color: #24221f;
+    text-decoration: none;
+    transition:opacity .25s ease,transform .25s ease;
+}
+.aurelia-social a:hover {
+    opacity: .55;
+    transform: translateX(3px);
+}
+.aurelia-footer-links {
+    width: 28%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+.aurelia-footer-column {
+    display: flex;
+    flex-direction: column;
+}
+.aurelia-footer-column > span {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .13em;
+    color: #34312d;
+}
+.aurelia-footer-column a {
+    width: max-content;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #24221f;
+    text-decoration: none;
+    transition: opacity .25s ease;
+}
+.aurelia-footer-column a:hover {
+    opacity: .5;
+}
+.aurelia-footer-divider {
+    width: 100%;
+    height: 1px;
+    margin-top: 15px;
+    background: #aaa59e;
+}
+.aurelia-footer-brand {
+    margin-top: 22px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(75px, 13vw, 150px);
+    font-weight: 400;
+    line-height: .78;
+    letter-spacing: -.045em;
+    color: #050505;
+}
+.aurelia-footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 8px;
+    border-top: 1px solid #aaa59e;
+    font-size: 7px;
+    letter-spacing: .05em;
+    color: #858079;
+}
+.aurelia-footer-bottom span:nth-child(2) {
+    text-align: center;
+}
+.aurelia-footer-bottom span:last-child {
+    text-align: right;
+}
+@media (max-width: 900px) {
+    .aurelia-footer {
+        padding: 55px 30px 20px;
+    }
+    .aurelia-footer-top {
+        flex-direction: column;
+        gap: 55px;
+    }
+    .aurelia-footer-newsletter {
+        width: 100%;
+    }
+    .aurelia-footer-links {
+        width: 100%;
+        max-width: 500px;
+    }
+    .aurelia-footer-brand {
+        font-size: 105px;
+    }
+}
+@media (max-width: 600px) {
+    .aurelia-footer {
+        padding: 45px 18px 18px;
+    }
+    .aurelia-footer-label {
+        font-size: 12px;
+    }
+    .aurelia-footer-newsletter h2 {
+        font-size: 38px;
+        line-height: .95;
+    }
+    .aurelia-subscribe {
+        width: 100%;
+    }
+    .aurelia-subscribe input {
+        width: calc(100% - 85px);
+    }
+    .aurelia-subscribe button {
+        width: 85px;
+    }
+    .aurelia-footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .aurelia-footer-brand {
+        margin-top: 35px;
+        font-size: 66px;
+        letter-spacing: -.04em;
+    }
+    .aurelia-footer-bottom {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        line-height: 1.4;
+    }
+    .aurelia-footer-bottom span,
+    .aurelia-footer-bottom span:nth-child(2),
+    .aurelia-footer-bottom span:last-child {
+        text-align: left;
+    }
+}
+/* end of the footer  */
+/* =====================================================
+   AURELIA CUSTOM CURSOR
+===================================================== */
+
+body {
+    cursor: none;
+}
+
+a,
+button {
+    cursor: none;
+}
+
+.aurelia-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 6px;
+    height: 6px;
+
+    background: #171614;
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: 99999;
+
+    transform: translate(-50%, -50%);
+}
+
+
+.aurelia-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid rgba(23, 22, 20, .45);
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: 99998;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        width .35s cubic-bezier(.2,.7,.2,1),
+        height .35s cubic-bezier(.2,.7,.2,1),
+        background .35s ease,
+        border-color .35s ease;
+}
+
+
+/* =====================================================
+   HOVER — LINKS / BUTTONS
+===================================================== */
+
+.aurelia-cursor-ring.is-hovering {
+    width: 52px;
+    height: 52px;
+
+    background: rgba(23, 22, 20, .06);
+    border-color: #171614;
+}
+
+
+/* =====================================================
+   HOVER — IMAGES
+===================================================== */
+
+.aurelia-cursor-ring.is-image {
+    width: 75px;
+    height: 75px;
+
+    background: #171614;
+    border-color: #171614;
+}
+
+.aurelia-cursor-ring.is-image::after {
+    content: "VIEW";
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: .12em;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .aurelia-cursor,
+    .aurelia-cursor-ring {
+        display: none;
+    }
+
+    body,
+    a,
+    button {
+        cursor: auto;
     }
 }
