@@ -16,63 +16,52 @@
     <div class="aurelia-cursor-ring"></div>
     <nav class="navbar luxury-navbar">
         <div class="container-fluid">
-            <!-- left side  -->
             <div class="nav-left d-flex align-items-center gap-4">
                 <a href="index.html">Home</a>
                 <a href="shop.html">Shop</a>
-                <!-- categories dropdown -->
                 <div class="dropdown">
                     <a href="categories.html" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">Categories</a>
                     <div class="dropdown-menu category-menu">
-                        <div class="container-fluid">
-                            <div class="row g-4">
-                                <!-- woman -->
-                                <div class="col-lg-3">
-                                    <h6>FOR HER</h6>
-                                    <a href="#">Jewellery</a>
-                                    <a href="#">Necklaces</a>
-                                    <a href="#">Earrings</a>
-                                    <a href="#">Bracelets</a>
-                                    <a href="#">Rings</a>
-                                    <a href="#">Hair Accessories</a>
-                                </div>
-                                <!-- men -->
-                                <div class="col-lg-3">
-                                    <h6>FOR HIM</h6>
-                                    <a href="#">Watches</a>
-                                    <a href="#">Wallets</a>
-                                    <a href="#">Belts</a>
-                                    <a href="#">Bracelets</a>
-                                    <a href="#">Rings</a>
-                                    <a href="#">Sunglasses</a>
-                                </div>
-                                <!-- accessories -->
-                                <div class="col-lg-3">
-                                    <h6>ACCESSORIES</h6>
-                                    <a href="#">Bags</a>
-                                    <a href="#">Watches</a>
-                                    <a href="#">Sunglasses</a>
-                                    <a href="#">Wallets</a>
-                                    <a href="#">Belts</a>
-                                    <a href="#">Travel Accessories</a>
-                                </div>
-                                <!-- featured -->
-                                <div class="col-lg-3 category-featured">
-                                    <span>NEW SEASON</span>
-                                    <h4>The Everyday<br>Edit</h4>
-                                    <a href="#" class="featured-link">Explore Collection →</a>
-                                </div>
+                        <div class="category-menu-inner">
+                            <div class="category-column">
+                                <h6>FOR HER</h6>
+                                <a href="jewellery.html">Jewellery</a>
+                                <a href="necklaces.html">Necklaces</a>
+                                <a href="earrings.html">Earrings</a>
+                                <a href="bracelets.html">Bracelets</a>
+                                <a href="rings.html">Rings</a>
+                            </div>
+                            <div class="category-column">
+                                <h6>FOR HIM</h6>
+                                <a href="watches.html">Watches</a>
+                                <a href="wallets.html">Wallets</a>
+                                <a href="belts.html">Belts</a>
+                                <a href="bracelets.html">Bracelets</a>
+                                <a href="rings.html">Rings</a>
+                                <a href="sunglasses.html">Sunglasses</a>
+                            </div>
+                            <div class="category-column">
+                                <h6>ACCESSORIES</h6>
+                                <a href="bags.html">Bags</a>
+                                <a href="watches.html">Watches</a>
+                                <a href="sunglasses.html">Sunglasses</a>
+                                <a href="wallets.html">Wallets</a>
+                                <a href="belts.html">Belts</a>
+                                <a href="travel.html">Travel Accessories</a>
+                            </div>
+                            <div class="category-featured">
+                                <span>NEW SEASON</span>
+                                <h4>The Everyday<br>Edit</h4>
+                                <a href="#" class="featured-link">Explore Collection →</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- logo -->
             <a href="#" class="brand-logo">AURELIA
                 <span>ACCESSORIES</span>
             </a>
-            <!-- right -->
             <div class="nav-right d-flex align-items-center">
                 <div class="nav-links d-flex align-items-center gap-4">
                     <a href="collection.html">Collections</a>
@@ -80,7 +69,6 @@
                     <a href="journal.html">Journal</a>
                     <a href="help.html">Help</a>
                 </div>
-                <!-- icons -->
                 <div class="nav-icons d-flex align-items-center">
                     <a href="#" aria-label="Search">
                         <i class="bi bi-search"></i>
@@ -93,7 +81,6 @@
                     </a>
                 </div>
             </div>
-            <!-- mobile btn -->
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -101,30 +88,29 @@
             </button>
         </div>
         <div class="collapse mobile-menu" id="mobileMenu">
-            <a href="#">Home</a>
-            <a href="#">Shop</a>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
             <div class="mobile-category">
                 <button class="mobile-category-title" data-bs-toggle="collapse"
                     data-bs-target="#mobileCategories">Categories
                     <i class="bi bi-chevron-down"></i>
                 </button>
                 <div class="collapse" id="mobileCategories">
-                    <a href="#">Women</a>
-                    <a href="#">Men</a>
-                    <a href="#">Jewellery</a>
-                    <a href="#">Watches</a>
-                    <a href="#">Bags</a>
-                    <a href="#">Wallets</a>
-                    <a href="#">Belts</a>
-                    <a href="#">Sunglasses</a>
+                    <a href="jewellery.html">Women</a>
+                    <a href="watches.html">Men</a>
+                    <a href="jewellery.html">Jewellery</a>
+                    <a href="watches.html">Watches</a>
+                    <a href="bags.html">Bags</a>
+                    <a href="wallets.html">Wallets</a>
+                    <a href="belts.html">Belts</a>
+                    <a href="sunglasses.html">Sunglasses</a>
                 </div>
             </div>
-            <a href="#">Collections</a>
+            <a href="collection.html">Collections</a>
             <a href="#">About</a>
-            <a href="#">Journal</a>
-            <a href="#">Help</a>
+            <a href="journal.html">Journal</a>
+            <a href="help.html">Help</a>
             <div class="mobile-divider"></div>
-            <!-- icons -->
             <div class="mobile-icons">
                 <a href="#" aria-label="Search">
                     <i class="bi bi-search"></i>
