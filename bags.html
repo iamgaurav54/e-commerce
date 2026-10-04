@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelia — Accessories</title>
+    <link rel="icon" type="image/svg+xml" href="img/fevicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="aurelia-cursor"></div>
+    <div class="aurelia-cursor-ring"></div>
+    <nav class="navbar luxury-navbar">
+        <div class="container-fluid">
+            <div class="nav-left d-flex align-items-center gap-4">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <div class="dropdown">
+                    <a href="categories.html" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Categories</a>
+                    <div class="dropdown-menu category-menu">
+                        <div class="category-menu-inner">
+                            <div class="category-column">
+                                <h6>FOR HER</h6>
+                                <a href="jewellery.html">Jewellery</a>
+                                <a href="necklaces.html">Necklaces</a>
+                                <a href="earrings.html">Earrings</a>
+                                <a href="bracelets.html">Bracelets</a>
+                                <a href="rings.html">Rings</a>
+                            </div>
+                            <div class="category-column">
+                                <h6>FOR HIM</h6>
+                                <a href="watches.html">Watches</a>
+                                <a href="wallets.html">Wallets</a>
+                                <a href="belts.html">Belts</a>
+                                <a href="bracelets.html">Bracelets</a>
+                                <a href="rings.html">Rings</a>
+                                <a href="sunglasses.html">Sunglasses</a>
+                            </div>
+                            <div class="category-column">
+                                <h6>ACCESSORIES</h6>
+                                <a href="bags.html">Bags</a>
+                                <a href="watches.html">Watches</a>
+                                <a href="sunglasses.html">Sunglasses</a>
+                                <a href="wallets.html">Wallets</a>
+                                <a href="belts.html">Belts</a>
+                                <a href="travel.html">Travel Accessories</a>
+                            </div>
+                            <div class="category-featured">
+                                <span>NEW SEASON</span>
+                                <h4>The Everyday<br>Edit</h4>
+                                <a href="#" class="featured-link">Explore Collection →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="brand-logo">AURELIA
+                <span>ACCESSORIES</span>
+            </a>
+            <div class="nav-right d-flex align-items-center">
+                <div class="nav-links d-flex align-items-center gap-4">
+                    <a href="collection.html">Collections</a>
+                    <a href="#">About</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="help.html">Help</a>
+                </div>
+                <div class="nav-icons d-flex align-items-center">
+                    <a href="#" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" aria-label="Wishlist">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    <a href="#" aria-label="Cart">
+                        <i class="bi bi-bag"></i>
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+        <div class="collapse mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <div class="mobile-category">
+                <button class="mobile-category-title" data-bs-toggle="collapse"
+                    data-bs-target="#mobileCategories">Categories
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="collapse" id="mobileCategories">
+                    <a href="jewellery.html">Women</a>
+                    <a href="watches.html">Men</a>
+                    <a href="jewellery.html">Jewellery</a>
+                    <a href="watches.html">Watches</a>
+                    <a href="bags.html">Bags</a>
+                    <a href="wallets.html">Wallets</a>
+                    <a href="belts.html">Belts</a>
+                    <a href="sunglasses.html">Sunglasses</a>
+                </div>
+            </div>
+            <a href="collection.html">Collections</a>
+            <a href="#">About</a>
+            <a href="journal.html">Journal</a>
+            <a href="help.html">Help</a>
+            <div class="mobile-divider"></div>
+            <div class="mobile-icons">
+                <a href="#" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" aria-label="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="#" aria-label="Cart">
+                    <i class="bi bi-bag"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+<!-- Bag hero -->
+    <section class="bag-hero">
+    <div class="container-fluid px-4 px-lg-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <p class="small-label">
+                    AURELIA / BAGS
+                </p>
+                <p class="collection-label">
+                    THE BAG EDIT
+                </p>
+                <h1>
+                    BAGS.
+                </h1>
+            </div>
+            <div class="col-lg-3 hero-description">
+                <p>
+                    Discover refined bags designed for
+                    everyday movement, effortless style
+                    and modern living.
+                </p>
+                <span>
+                    12 PIECES
+                </span>
+            </div>
+            <div class="col-lg-4">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=85"
+                     class="img-fluid hero-bag"
+                     alt="Luxury bag">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- fiters -->
+ <section class="filter-section">
+    <div class="container-fluid px-4 px-lg-5">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <div class="filters">
+                    <button>
+                        CATEGORY
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <button>
+                        COLOR
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <button>
+                        PRICE
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <button class="sort-button">
+                    SORT BY
+                    <span>FEATURED</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- products -->
+ <section class="products-section">
+    <div class="container-fluid px-4 px-lg-5">
+        <div class="row g-4">
+            <!-- PRODUCT 01 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            01
+                        </span>
+                        <span class="new-tag">
+                            NEW
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85"
+                             alt="Structured Leather Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Structured Leather Bag
+                        </h3>
+                        <p class="price">
+                            ₹8,900
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 02 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            02
+                        </span>
+                        <span class="new-tag">
+                            NEW
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=85"
+                             alt="Everyday Shoulder Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Everyday Shoulder Bag
+                        </h3>
+                        <p class="price">
+                            ₹7,400
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 03 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            03
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=900&q=85"
+                             alt="Minimal Crossbody Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Minimal Crossbody Bag
+                        </h3>
+                        <p class="price">
+                            ₹6,800
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 04 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            04
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85"
+                             alt="Classic Tote Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Classic Leather Tote
+                        </h3>
+                        <p class="price">
+                            ₹9,800
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 05 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            05
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=85"
+                             alt="Soft Leather Handbag">
+
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Soft Leather Handbag
+                        </h3>
+                        <p class="price">
+                            ₹8,200
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 06 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            06
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=900&q=85"
+                             alt="Modern Mini Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Modern Mini Bag
+                        </h3>
+                        <p class="price">
+                            ₹5,900
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 07 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            07
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1585488438761-1c4f1d9a1f42?auto=format&fit=crop&w=900&q=85"
+                             alt="Daily Carry Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Daily Carry Bag
+                        </h3>
+                        <p class="price">
+                            ₹7,900
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 08 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            08
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1564222250859-7f9e4e4b5f4e?auto=format&fit=crop&w=900&q=85"
+                             alt="Premium Shoulder Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Premium Shoulder Bag
+                        </h3>
+                        <p class="price">
+                            ₹8,600
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+              <!-- PRODUCT 09 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            01
+                        </span>
+                        <span class="new-tag">
+                            NEW
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85"
+                             alt="Structured Leather Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Structured Leather Bag
+                        </h3>
+                        <p class="price">
+                            ₹8,900
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 10 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            02
+                        </span>
+                        <span class="new-tag">
+                            NEW
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=85"
+                             alt="Everyday Shoulder Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Everyday Shoulder Bag
+                        </h3>
+                        <p class="price">
+                            ₹7,400
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 11 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            03
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=900&q=85"
+                             alt="Minimal Crossbody Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Minimal Crossbody Bag
+                        </h3>
+                        <p class="price">
+                            ₹6,800
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 12 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            04
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85"
+                             alt="Classic Tote Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Classic Leather Tote
+                        </h3>
+                        <p class="price">
+                            ₹9,800
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+              <!-- PRODUCT 13 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            01
+                        </span>
+                        <span class="new-tag">
+                            NEW
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85"
+                             alt="Structured Leather Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Structured Leather Bag
+                        </h3>
+                        <p class="price">
+                            ₹8,900
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 14 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            02
+                        </span>
+                        <span class="new-tag">
+                            NEW
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=85"
+                             alt="Everyday Shoulder Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Everyday Shoulder Bag
+                        </h3>
+                        <p class="price">
+                            ₹7,400
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 15 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            03
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=900&q=85"
+                             alt="Minimal Crossbody Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Minimal Crossbody Bag
+                        </h3>
+                        <p class="price">
+                            ₹6,800
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- PRODUCT 16 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-number">
+                            04
+                        </span>
+                        <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85"
+                             alt="Classic Tote Bag">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">
+                            BAGS
+                        </p>
+                        <h3>
+                            Classic Leather Tote
+                        </h3>
+                        <p class="price">
+                            ₹9,800
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brand statement -->
+ <section class="brand-statement">
+    <div class="container-fluid px-4 px-lg-5">
+        <div class="row align-items-center">
+            <div class="col-lg-2">
+                <span class="section-number">
+                    AURELIA / 02
+                </span>
+            </div>
+            <div class="col-lg-6">
+                <p class="mini-title">
+                    THE AURELIA STANDARD
+                </p>
+                <h2>
+                    Objects made to
+                    <em>stay with you.</em>
+                </h2>
+            </div>
+            <div class="col-lg-3">
+                <p class="statement-text">
+                    Quiet forms, considered materials
+                    and details designed to become
+                    part of your everyday.
+                </p>
+            </div>
+
+            <div class="col-lg-1">
+                <button class="round-button">
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

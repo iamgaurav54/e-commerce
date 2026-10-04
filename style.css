@@ -1661,3 +1661,454 @@ button {
         cursor: auto;
     }
 }
+
+/* category bags css */
+.bag-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 7vw, 100px);
+    font-weight: 400;
+    line-height: .9;
+    margin: 0 0 35px;
+}
+
+.hero-description {
+    padding-top: 15px;
+}
+
+.hero-description p {
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 190px;
+}
+
+.hero-description span {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.hero-bag {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    filter: saturate(.7);
+}
+
+/* filter categories */
+.filter-section {
+    border-bottom: 1px solid #d8d3cb;
+    padding: 13px 0;
+}
+
+.filters {
+    display: flex;
+    gap: 30px;
+}
+
+.filters button,
+.sort-button {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: #45413c;
+}
+
+.filters i,
+.sort-button i {
+    margin-left: 8px;
+    font-size: 8px;
+}
+
+.sort-button span {
+    margin-left: 15px;
+}
+
+/* products */
+.products-section {
+    padding: 18px 0 60px;
+}
+
+.product-card {
+    cursor: pointer;
+}
+
+.product-image {
+    position: relative;
+    height: 290px;
+    overflow: hidden;
+    background: #e4ddd4;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.new-tag {
+    position: absolute;
+    top: 10px;
+    left: 42px;
+    z-index: 2;
+    border: 1px solid #77716a;
+    border-radius: 20px;
+    padding: 3px 8px;
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+.wishlist {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    z-index: 3;
+    font-size: 17px;
+}
+
+.wishlist:hover {
+    transform: scale(1.15);
+}
+
+.product-info {
+    padding-top: 9px;
+}
+
+.product-category {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+    color: #77716a;
+    margin: 0 0 5px;
+}
+
+.product-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 0 5px;
+}
+
+.price {
+    font-size: 10px;
+    margin: 0;
+}
+
+/* brand statement */
+.brand-statement {
+    border-top: 1px solid #d8d3cb;
+    border-bottom: 1px solid #d8d3cb;
+    padding: 32px 0;
+}
+
+.section-number {
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.mini-title {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #77716a;
+    margin-bottom: 7px;
+}
+
+.brand-statement h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.brand-statement h2 em {
+    font-size: 20px;
+    color: #77716a;
+}
+
+.statement-text {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #77716a;
+    margin: 0;
+}
+
+.round-button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #aaa49c;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* Media quary bags categories */
+/* Tablet */
+@media (max-width: 991px) {
+
+    /* Hero */
+    .bag-hero {
+        padding: 35px 0;
+    }
+
+    .bag-hero h1 {
+        font-size: clamp(55px, 10vw, 85px);
+        margin-bottom: 25px;
+    }
+
+    .hero-description {
+        padding-top: 10px;
+    }
+
+    .hero-description p {
+        max-width: 250px;
+    }
+
+    .hero-bag {
+        height: 220px;
+        margin-top: 25px;
+    }
+
+
+    /* Filters */
+    .filter-section {
+        padding: 15px 0;
+    }
+
+    .filters {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .sort-button {
+        margin-top: 15px;
+    }
+
+
+    /* Products */
+    .products-section {
+        padding: 20px 0 50px;
+    }
+
+    .product-image {
+        height: 330px;
+    }
+
+
+    /* Brand statement */
+    .brand-statement {
+        padding: 30px 0;
+    }
+
+    .brand-statement h2 {
+        font-size: 30px;
+        margin: 12px 0;
+    }
+
+    .statement-text {
+        margin-top: 15px;
+    }
+
+    .round-button {
+        margin-top: 15px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    /* Hero */
+    .bag-hero {
+        padding: 30px 0;
+    }
+
+    .bag-hero h1 {
+        font-size: 65px;
+        margin: 10px 0 25px;
+    }
+
+    .hero-description {
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero-description p {
+        font-size: 11px;
+        max-width: 280px;
+    }
+
+    .hero-description span {
+        font-size: 7px;
+        margin-top: 15px;
+    }
+
+    .hero-bag {
+        height: 200px;
+        width: 100%;
+    }
+
+
+    /* Filters */
+    .filter-section {
+        padding: 14px 0;
+    }
+
+    .filters {
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .filters button,
+    .sort-button {
+        font-size: 8px;
+    }
+
+    .filters i,
+    .sort-button i {
+        margin-left: 5px;
+    }
+
+    .sort-button {
+        margin-top: 14px;
+    }
+
+    .sort-button span {
+        margin-left: 8px;
+    }
+
+
+    /* Products */
+    .products-section {
+        padding: 15px 0 45px;
+    }
+
+    .product-image {
+        height: 280px;
+    }
+
+    .product-info {
+        padding-top: 8px;
+    }
+
+    .product-info h3 {
+        font-size: 13px;
+    }
+
+    .product-category {
+        font-size: 7px;
+    }
+
+    .price {
+        font-size: 10px;
+    }
+
+    .wishlist {
+        font-size: 16px;
+    }
+
+
+    /* Brand statement */
+    .brand-statement {
+        padding: 28px 0;
+    }
+
+    .section-number {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .mini-title {
+        font-size: 7px;
+    }
+
+    .brand-statement h2 {
+        font-size: 27px;
+        line-height: 1.15;
+    }
+
+    .brand-statement h2 em {
+        font-size: 17px;
+    }
+
+    .statement-text {
+        font-size: 9px;
+        margin-top: 18px;
+        max-width: 300px;
+    }
+
+    .round-button {
+        width: 34px;
+        height: 34px;
+        margin-top: 18px;
+    }
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    /* Hero */
+    .bag-hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-bag {
+        height: 170px;
+    }
+
+
+    /* Filters */
+    .filters {
+        gap: 5px;
+    }
+
+    .filters button,
+    .sort-button {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .filters i,
+    .sort-button i {
+        font-size: 7px;
+    }
+
+
+    /* Products */
+    .product-image {
+        height: 230px;
+    }
+
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+    .product-category {
+        font-size: 6px;
+    }
+
+    .price {
+        font-size: 9px;
+    }
+
+
+    /* Brand statement */
+    .brand-statement h2 {
+        font-size: 24px;
+    }
+
+    .brand-statement h2 em {
+        font-size: 15px;
+    }
+}
