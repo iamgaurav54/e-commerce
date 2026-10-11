@@ -398,6 +398,84 @@
         </section>
 
     </main>
+    <script>
+
+const cursor = document.querySelector(".aurelia-cursor");
+const cursorRing = document.querySelector(".aurelia-cursor-ring");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let cursorX = 0;
+let cursorY = 0;
+
+
+/* Mouse position */
+
+document.addEventListener("mousemove", (e) => {
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+});
+
+
+/* Smooth movement */
+
+function animateCursor() {
+
+    cursorX += (mouseX - cursorX) * 0.18;
+    cursorY += (mouseY - cursorY) * 0.18;
+
+    cursor.style.transform =
+        `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+
+    cursorRing.style.transform =
+        `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+
+    requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+
+
+/* Links + buttons */
+
+document.querySelectorAll("a, button").forEach((element) => {
+
+    element.addEventListener("mouseenter", () => {
+        cursorRing.classList.add("is-hovering");
+    });
+
+    element.addEventListener("mouseleave", () => {
+        cursorRing.classList.remove("is-hovering");
+    });
+
+});
+
+
+/* Images */
+
+document.querySelectorAll(
+    ".aurelia-gallery-item, .aurelia-collection-card, .aurelia-image"
+).forEach((element) => {
+
+    element.addEventListener("mouseenter", () => {
+
+        cursorRing.classList.remove("is-hovering");
+        cursorRing.classList.add("is-image");
+
+    });
+
+    element.addEventListener("mouseleave", () => {
+
+        cursorRing.classList.remove("is-image");
+
+    });
+
+});
+
+</script>
 </body>
 
 </html>
