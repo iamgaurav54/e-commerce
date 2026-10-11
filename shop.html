@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f5f0;
+            color: #262522;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .rec img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1850px;
+            margin: auto;
+        }
+
+        /* =========================
+           TOP CATEGORY NAVIGATION
+        ========================== */
+
+        .category-nav {
+            height: 53px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #dedbd4;
+        }
+
+        .categories {
+            display: flex;
+            align-items: center;
+            gap: 52px;
+            height: 100%;
+        }
+
+        .category {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            color: #4b4945;
+            text-transform: uppercase;
+
+            cursor: pointer;
+        }
+
+        .category.active {
+            color: #222;
+        }
+
+        .category.active::after {
+            content: "";
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            width: 27px;
+            height: 1.5px;
+            background: #222;
+        }
+
+        .product-count {
+            font-size: 10px;
+            letter-spacing: 1.3px;
+            color: #77736c;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           FILTER BAR
+        ========================== */
+
+        .filter-bar {
+            margin-top: 12px;
+            height: 39px;
+            background: #eeece6;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 12px;
+        }
+
+        .filters {
+            display: flex;
+            align-items: center;
+            gap: 43px;
+        }
+
+        .filter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 1.4px;
+            color: #55514b;
+            text-transform: uppercase;
+
+            cursor: pointer;
+        }
+
+        .filter i {
+            font-size: 8px;
+            color: #77736d;
+        }
+
+        .sort {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 10px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .sort-title {
+            color: #77736d;
+        }
+
+        .sort-value {
+            color: #33312d;
+            font-weight: 500;
+        }
+
+        /* =========================
+           PRODUCT GRID
+        ========================== */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 31px;
+            row-gap: 27px;
+
+            margin-top: 27px;
+            padding-bottom: 35px;
+        }
+
+        /* =========================
+           PRODUCT CARD
+        ========================== */
+
+        .product-card {
+            min-width: 0;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background: #ded6ca;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.03);
+        }
+
+        /* Number */
+
+        .product-number {
+            position: absolute;
+            top: 14px;
+            left: 19px;
+
+            z-index: 2;
+
+            font-size: 10px;
+            letter-spacing: 1.2px;
+            color: #4e4a44;
+        }
+
+        /* NEW Badge */
+
+        .new-badge {
+            position: absolute;
+            top: 14px;
+            left: 64px;
+
+            border: 1px solid #77736c;
+            border-radius: 15px;
+
+            padding: 3px 9px 3px;
+
+            font-size: 8px;
+            letter-spacing: 1px;
+            color: #4f4b45;
+            text-transform: uppercase;
+        }
+
+        /* Heart */
+
+        .wishlist {
+            position: absolute;
+            top: 13px;
+            right: 17px;
+
+            width: 20px;
+            height: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #4a4742;
+            font-size: 18px;
+
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .wishlist i {
+            font-weight: 400;
+        }
+
+        /* =========================
+           PRODUCT INFORMATION
+        ========================== */
+
+        .product-info {
+            padding-top: 9px;
+        }
+
+        .product-category {
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            color: #77736d;
+
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        .product-name {
+            font-family: "Playfair Display", serif;
+
+            font-size: 16px;
+            line-height: 1.3;
+            font-weight: 400;
+
+            color: #35332f;
+
+            margin-bottom: 7px;
+        }
+
+        .product-price {
+            font-size: 12px;
+            font-weight: 600;
+            color: #292724;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1100px) {
+
+            .products {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .categories {
+                gap: 30px;
+            }
+
+        }
+
+        @media (max-width: 800px) {
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .category-nav {
+                overflow-x: auto;
+            }
+
+            .categories {
+                gap: 30px;
+                min-width: max-content;
+            }
+
+            .product-count {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: 94%;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .image-wrapper {
+                height: 240px;
+            }
+
+            .filters {
+                gap: 20px;
+            }
+
+            .filter-bar {
+                overflow-x: auto;
+            }
+
+            .sort {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rec">
+        <img src="Frame 32.png" alt="">
+    </div>
+    <main class="container">
+
+        <!-- =========================
+             CATEGORY NAVIGATION
+        ========================== -->
+
+        <div class="category-nav">
+
+            <div class="categories">
+
+                <div class="category active">
+                    All
+                </div>
+
+                <div class="category">
+                    Jewellery
+                </div>
+
+                <div class="category">
+                    Bags
+                </div>
+
+                <div class="category">
+                    Watches
+                </div>
+
+                <div class="category">
+                    Accessories
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+
+        <!-- =========================
+             FILTER BAR
+        ========================== -->
+
+        <div class="filter-bar">
+
+            <div class="filters">
+
+                <div class="filter">
+                    Category
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="filter">
+                    Gender
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="filter">
+                    Price
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+            </div>
+
+            <div class="sort">
+
+                <span class="sort-title">
+                    Sort:
+                </span>
+
+                <span class="sort-value">
+                    Featured
+                </span>
+
+                <i class="fa-solid fa-chevron-down" style="font-size: 8px; color:#77736d;">
+                </i>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PRODUCT GRID
+        ========================== -->
+
+        <section class="products">
+
+
+            <!-- PRODUCT 01 -->
+
+            <article class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img src="https://i.pinimg.com/1200x/f6/72/1f/f6721f97692063a5e6dd68a3ebcb4e4e.jpg" alt="Aurelia Signature Ring" class="product-image">
+
+                    
+
+                    <span class="new-badge">
+                        New
+                    </span>
+
+                    <span class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Jewellery
+                    </div>
+
+                    <h2 class="product-name">
+                        Aurelia Signature Ring
+                    </h2>
+
+                    <div class="product-price">
+                        ₹ 4,900
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 02 -->
+
+            <article class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img src="https://i.pinimg.com/1200x/9f/3c/32/9f3c32d5b203df310ccc8f12102984a4.jpg" alt="Sculpted Gold Necklace" class="product-image">
+
+                    
+
+                    <span class="new-badge">
+                        New
+                    </span>
+
+                    <span class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Jewellery
+                    </div>
+
+                    <h2 class="product-name">
+                        Sculpted Gold Necklace
+                    </h2>
+
+                    <div class="product-price">
+                        ₹ 6,800
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 03 -->
+
+            <article class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img src="https://i.pinimg.com/1200x/f7/69/39/f769398ca94d1348e21da69b0a9d91d3.jpg" alt="Essential Silver Bracelet" class="product-image">
+
+                    
+
+                    <span class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Jewellery
+                    </div>
+
+                    <h2 class="product-name">
+                        Essential Silver Bracelet
+                    </h2>
+
+                    <div class="product-price">
+                        ₹ 3,600
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 04 -->
+
+            <article class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img src="https://i.pinimg.com/1200x/ed/4e/d7/ed4ed705379a911c9621c4741b552413.jpg" alt="Aurelia Classic Watch" class="product-image">
+
+                   
+
+                    <span class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Watches
+                    </div>
+
+                    <h2 class="product-name">
+                        Aurelia Classic Watch
+                    </h2>
+
+                    <div class="product-price">
+                        ₹ 12,500
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 05 -->
+
+            <article class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img src="https://i.pinimg.com/736x/bb/15/cc/bb15cc414638f72476b456c1b7fb8900.jpg" alt="Minimal Steel Watch" class="product-image">
+
+                    
+
+                    <span class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Watches
+                    </div>
+
+                    <h2 class="product-name">
+                        Minimal Steel Watch
+                    </h2>
+
+                    <div class="product-price">
+                        ₹ 9,800
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 06 -->
+
+            <article class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img src="https://i.pinimg.com/736x/f4/81/05/f48105b760ce47348a1a401fe32124d9.jpg" alt="Structured Leather Bag" class="product-image">
+
+                    
+
+                    <span class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Bags
+                    </div>
+
+                    <h2 class="product-name">
+                        Structured Leather Bag
+                    </h2>
+
+                    <div class="product-price">
+                        ₹ 8,900
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 07 -->
+
+            <article class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img src="https://i.pinimg.com/736x/5e/b2/34/5eb234a25716c324df5193f65df01af9.jpg" alt="Everyday Shoulder Bag" class="product-image">
+
+                    
+
+                    <span class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Bags
+                    </div>
+
+                    <h2 class="product-name">
+                        Everyday Shoulder Bag
+                    </h2>
+
+                    <div class="product-price">
+                        ₹ 7,400
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 08 -->
+
+            <article class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img src="https://i.pinimg.com/1200x/a6/0c/4b/a60c4b9a56cdcdd228c624488f85917c.jpg" alt="Essential Leather Belt" class="product-image">
+
+                    
+
+                    <span class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Accessories
+                    </div>
+
+                    <h2 class="product-name">
+                        Essential Leather Belt
+                    </h2>
+
+                    <div class="product-price">
+                        ₹ 2,900
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+</body>
+
+</html>
