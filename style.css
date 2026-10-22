@@ -1818,15 +1818,13 @@ button {
 }
 
 .aurelia-gallery-item.gallery-item-one img,
-.aurelia-gallery-item.gallery-item-two img,
-.aurelia-gallery-item.gallery-item-four img,
-.aurelia-gallery-item.gallery-item-five img {
+.aurelia-gallery-item.gallery-item-two img {
     aspect-ratio: 16 / 7;
 }
 
 .aurelia-gallery-item.gallery-item-three img,
-.aurelia-gallery-item.gallery-item-six video {
-    aspect-ratio: 16 / 6;
+ {
+    aspect-ratio: 16 / 9;
 }
 
 .aurelia-gallery-item:hover img,
