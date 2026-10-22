@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelia — Accessories</title>
+    <link rel="icon" type="image/svg+xml" href="img/fevicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <body>
+         <!-- CUSTOM CURSOR -->
+    <div class="aurelia-cursor"></div>
+    <div class="aurelia-cursor-ring"></div>
+    <nav class="navbar luxury-navbar">
+        <div class="container-fluid">
+            <div class="nav-left d-flex align-items-center gap-4">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <div class="dropdown">
+                    <a href="categories.html" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Categories</a>
+                    <div class="dropdown-menu category-menu">
+                        <div class="category-menu-inner">
+                            <div class="category-column">
+                                <h6>FOR HER</h6>
+                                <a href="jewellery.html">Jewellery</a>
+                                <a href="necklaces.html">Necklaces</a>
+                                <a href="earrings.html">Earrings</a>
+                                <a href="bracelets.html">Bracelets</a>
+                                <a href="rings.html">Rings</a>
+                            </div>
+                            <div class="category-column">
+                                <h6>FOR HIM</h6>
+                                <a href="watches.html">Watches</a>
+                                <a href="wallets.html">Wallets</a>
+                                <a href="belts.html">Belts</a>
+                                <a href="bracelets.html">Bracelets</a>
+                                <a href="rings.html">Rings</a>
+                                <a href="sunglasses.html">Sunglasses</a>
+                            </div>
+                            <div class="category-column">
+                                <h6>ACCESSORIES</h6>
+                                <a href="bags.html">Bags</a>
+                                <a href="watches.html">Watches</a>
+                                <a href="sunglasses.html">Sunglasses</a>
+                                <a href="wallets.html">Wallets</a>
+                                <a href="belts.html">Belts</a>
+                                <a href="travel.html">Travel Accessories</a>
+                            </div>
+                            <div class="category-featured">
+                                <span>NEW SEASON</span>
+                                <h4>The Everyday<br>Edit</h4>
+                                <a href="#" class="featured-link">Explore Collection→</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="brand-logo">AURELIA
+                <span>ACCESSORIES</span>
+            </a>
+            <div class="nav-right d-flex align-items-center">
+                <div class="nav-links d-flex align-items-center gap-4">
+                    <a href="collection.html">Collections</a>
+                    <a href="#">About</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="help.html">Help</a>
+                </div>
+                <div class="nav-icons d-flex align-items-center">
+                    <a href="#" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" aria-label="Wishlist">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    <a href="#" aria-label="Cart">
+                        <i class="bi bi-bag"></i>
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+        <div class="collapse mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <div class="mobile-category">
+                <button class="mobile-category-title" data-bs-toggle="collapse"
+                    data-bs-target="#mobileCategories">Categories
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="collapse" id="mobileCategories">
+                    <a href="jewellery.html">Women</a>
+                    <a href="watches.html">Men</a>
+                    <a href="jewellery.html">Jewellery</a>
+                    <a href="watches.html">Watches</a>
+                    <a href="bags.html">Bags</a>
+                    <a href="wallets.html">Wallets</a>
+                    <a href="belts.html">Belts</a>
+                    <a href="sunglasses.html">Sunglasses</a>
+                </div>
+            </div>
+            <a href="collection.html">Collections</a>
+            <a href="#">About</a>
+            <a href="journal.html">Journal</a>
+            <a href="help.html">Help</a>
+            <div class="mobile-divider"></div>
+            <div class="mobile-icons">
+                <a href="#" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" aria-label="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="#" aria-label="Cart">
+                    <i class="bi bi-bag"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- hero section  -->
+    <section class="hero">
+        <div id="aureliaHeroSlider" class="carousel slide aurelia-hero-slider" data-bs-ride="carousel"
+            data-bs-interval="5500">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#aureliaHeroSlider" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#aureliaHeroSlider" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#aureliaHeroSlider" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-slide-image"><img src="img/home/Women's jewellery.jpg"
+                            alt="Women's jewellery collection"></div>
+                    <div class="hero-overlay"><span class="hero-label">THE WOMEN'S EDIT · 01</span>
+                        <h1>Everyday<br>Elegance.</h1><a href="jewellery.html" class="hero-btn">DISCOVER THE EDIT
+                            <span>↗</span></a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide-image"><img src="img/home/Men's accessories.jpg"
+                            alt="Men's accessories collection"></div>
+                    <div class="hero-overlay"><span class="hero-label">THE MEN'S EDIT · 02</span>
+                        <h1>Modern<br>Essentials.</h1><a href="watches.html" class="hero-btn">SHOP MEN
+                            <span>↗</span></a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide-image"><img src="img/home/slider 3.jpg" alt="Aurelia bags and accessories">
+                    </div>
+                    <div class="hero-overlay"><span class="hero-label">THE NEW SEASON · 03</span>
+                        <h1>Made to<br>Move You.</h1><a href="bags.html" class="hero-btn">EXPLORE THE COLLECTION
+                            <span>↗</span></a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev aurelia-hero-control" type="button" data-bs-target="#aureliaHeroSlider"
+                data-bs-slide="prev" aria-label="Previous slide"><span class="hero-control-circle"><i
+                        class="bi bi-arrow-left"></i></span></button>
+            <button class="carousel-control-next aurelia-hero-control" type="button" data-bs-target="#aureliaHeroSlider"
+                data-bs-slide="next" aria-label="Next slide"><span class="hero-control-circle"><i
+                        class="bi bi-arrow-right"></i></span></button>
+        </div>
+        <!-- intro -->
+        <div class="hero-intro">
+            <span>AURELIA</span>
+            <p>Objects of everyday elegance.</p>
+        </div>
+        <!-- benefits -->
+        <div class="benefits">
+            <div>
+                <span>01</span>Ethically Sourced Materials
+            </div>
+            <div>
+                <span>02</span>
+                Premium Craftsmanship
+            </div>
+            <div><span>03</span>Free Worldwide Shipping</div>
+            <div>
+                <span>04</span>Easy Returns & Lifetime Care
+            </div>
+        </div>
+    </section>
+    <!-- end of the hero  -->
+    <!-- our collection  -->
+    <section class="our-collection-section">
+        <div class="our-collection-left">
+            <div>
+                <span class="section-eyebrow">AURELIA / 02</span>
+                <h2>Explore Our<br>Collections.</h2>
+                <p>Discover carefully curated accessories designed to elevate everyday moments andcelebratelife's most
+                    meaningful occasions.</p>
+            </div>
+            <div class="our-collection-controls">
+                <button class="our-collection-arrow" id="our-collection-prev">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+                <button class="our-collection-arrow" id="our-collection-next">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="our-collection-right">
+            <div class="our-collection-track" id="our-collection-track">
+                <!-- card 1 -->
+                <a href="#" class="our-collection-card">
+                    <img src="img/home/women jewelery.jpg" alt="Jewellery collection">
+                    <div class="our-collection-info">
+                        <span>01</span>
+                        <h3>Jewellery</h3>
+                        <p>Explore collection →</p>
+                    </div>
+                </a>
+                <!-- card 2 -->
+                <a href="#" class="our-collection-card">
+                    <img src="img/home/necklace collection.jpg" alt="Necklaces collection">
+                    <div class="our-collection-info">
+                        <span>02</span>
+                        <h3>Necklaces</h3>
+                        <p>Explore collection →</p>
+                    </div>
+                </a>
+                <!-- card 3 -->
+                <a href="#" class="our-collection-card">
+                    <img src="img/home/watch collection.jpg" alt="Watches collection">
+                    <div class="our-collection-info">
+                        <span>03</span>
+                        <h3>Watches</h3>
+                        <p>Explore collection →</p>
+                    </div>
+                </a>
+                <!-- card 4 -->
+                <a href="#" class="our-collection-card">
+                    <img src="img/home/bag collection.jpg" alt="Bags collection">
+                    <div class="our-collection-info">
+                        <span>04</span>
+                        <h3>Bags</h3>
+                        <p>Explore collection →</p>
+                    </div>
+                </a>
+            </div>
+            <!-- progress -->
+        </div>
+    </section>
+    <!-- new collection -->
+    <section class="aurelia-new-collections">
+        <div class="aurelia-collections-header">
+            <h2>NEW COLLECTIONS</h2>
+        </div>
+        <div class="aurelia-collections-grid">
+            <!-- 01 -->
+            <a href="#" class="aurelia-collection-card card-one">
+                <div class="aurelia-card-top">
+                    <span>01</span>
+                    <span>JEWELLERY</span>
+                </div>
+                <div class="aurelia-image">
+                    <img src="img/home/earring.jpg" alt="Jewellery Collection">
+                    <div class="aurelia-image-overlay"><span>01 / THE DETAILS</span>
+                        <h3>The Art of Detail</h3>
+                        <p>Discover jewellery <i class="bi bi-arrow-up-right"></i></p>
+                    </div>
+                </div>
+            </a>
+            <!-- 02 -->
+            <a href="#" class="aurelia-collection-card card-two">
+                <div class="aurelia-card-top">
+                    <span>02</span>
+                    <span>BAGS</span>
+                </div>
+                <div class="aurelia-image">
+                    <img src="img/home/bag.jpg" alt="Bags Collection">
+                    <div class="aurelia-image-overlay"><span>02 / EVERYDAY ICONS</span>
+                        <h3>Carry Your Story</h3>
+                        <p>Explore bags <i class="bi bi-arrow-up-right"></i></p>
+                    </div>
+                </div>
+            </a>
+            <!-- 03 -->
+            <a href="#" class="aurelia-collection-card card-three">
+                <div class="aurelia-card-top">
+                    <span>03</span>
+                    <span>WATCHES</span>
+                </div>
+                <div class="aurelia-image">
+                    <img src="img/home/watch.jpg" alt="Watches Collection">
+                    <div class="aurelia-image-overlay"><span>03 / TIMELESS DESIGN</span>
+                        <h3>Time, Refined</h3>
+                        <p>Discover watches <i class="bi bi-arrow-up-right"></i></p>
+                    </div>
+                </div>
+            </a>
+            <!-- 04 -->
+            <a href="#" class="aurelia-collection-card card-four">
+                <div class="aurelia-card-top">
+                    <span>04</span>
+                    <span>RING</span>
+                </div>
+                <div class="aurelia-image">
+                    <img src="img/home/men-ring.jpg" alt="Accessories Collection">
+                    <div class="aurelia-image-overlay"><span>04 / THE FINAL TOUCH</span>
+                        <h3>Quiet Confidence</h3>
+                        <p>Explore accessories <i class="bi bi-arrow-up-right"></i></p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="aurelia-collections-footer">
+            <a href="#" class="aurelia-view-btn">View All Collections</a>
+        </div>
+    </section>
+    <!-- our gallery  -->
+    <section class="aurelia-gallery">
+        <div class="aurelia-gallery-heading">
+            <h2>OUR GALLERY</h2>
+        </div>
+        <div class="aurelia-gallery-grid">
+            <!-- img 1  -->
+            <div class="aurelia-gallery-item gallery-item-one">
+                <img src="img/home/woman jewelry.jpg" alt="Women's jewellery">
+                <div class="aurelia-gallery-overlay">
+                    <span>01</span>
+                    <p>WOMEN'S JEWELLERY</p>
+                </div>
+            </div>
+            <!-- img 2 -->
+            <div class="aurelia-gallery-item gallery-item-two">
+                <img src="img/home/ruby-necklce.jpg" alt="Luxury necklace">
+                <div class="aurelia-gallery-overlay">
+                    <span>02</span>
+                    <p>STATEMENT PIECES</p>
+                </div>
+            </div>
+            <!-- img 3 -->
+            <div class="aurelia-gallery-item gallery-item-three">
+                <img src="img/home/man jewlry.jpg" alt="Aurelia accessories">
+                <div class="aurelia-gallery-overlay">
+                    <span>03</span>
+                    <p>EVERYDAY ESSENTIALS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- video -->
+    <section class="aurelia-film" id="aurelia-film">
+        <div class="aurelia-film-top">
+            <span>AURELIA / 05</span>
+            <span>THE ART OF ADORNMENT</span>
+        </div>
+        <div class="aurelia-film-frame">
+            <video class="aurelia-film-video" id="aureliaFilmVideo" autoplay muted loop playsinline preload="metadata"
+                poster="img/home/woman jewelry.jpg" aria-label="Cinematic Aurelia jewellery and accessories campaign">
+                <source src="img/home/video.mp4" type="video/mp4">
+            </video>
+            <div class="aurelia-film-shade"></div>
+            <div class="aurelia-film-content">
+                <span class="aurelia-film-kicker">THE AURELIA EXPERIENCE</span>
+                <h2>Not Just Worn.<br><em>Experienced.</em></h2>
+                <p>Thoughtful details. Timeless forms. Pieces that become a part of you.</p>
+                <a href="collection.html" class="aurelia-film-link">DISCOVER THE COLLECTION<i
+                        class="bi bi-arrow-up-right"></i></a>
+            </div>
+            <div class="aurelia-film-bottom">
+                <span>DESIGNED TO BE FELT</span>
+                <button class="aurelia-film-toggle" id="aureliaFilmToggle" type="button"
+                    aria-label="Pause campaign video" aria-pressed="false">
+                    <i class="bi bi-pause-fill" aria-hidden="true"></i>
+                    <span>PAUSE FILM</span>
+                </button>
+                <span>NEW SEASON — 2026</span>
+            </div>
+        </div>
+        <div class="aurelia-film-caption">
+            <span>FORM FOLLOWS FEELING.</span>
+            <span>01 — THE AURELIA FILM</span>
+        </div>
+    </section>
+    <!-- end of video -->
+    <!-- philosophy -->
+    <section class="aurelia-philosophy" id="our-philosophy">
+        <div class="philosophy-top">
+            <span>AURELIA / OUR PHILOSOPHY</span>
+            <span>05 — THE WAY WE SEE IT</span>
+        </div>
+        <div class="philosophy-layout">
+            <!-- left -->
+            <div class="philosophy-visual">
+                <img src="img/home/woman jewelry.jpg" alt="Aurelia jewellery styled for an elegant everyday look"
+                    loading="lazy">
+                <div class="philosophy-image-shade"></div>
+                <div class="philosophy-image-note">
+                    <span>THE AURELIA APPROACH</span>
+                    <span>01 / 03</span>
+                </div>
+                <div class="philosophy-image-caption">
+                    <span>BEAUTY IN THE DETAILS.</span>
+                </div>
+            </div>
+            <!-- right -->
+            <div class="philosophy-copy">
+                <span class="philosophy-kicker">MORE THAN AN ACCESSORY</span>
+                <h2>Designed with<em>intention.</em></h2>
+                <p class="philosophy-intro">
+                    We believe the smallest details can makethe biggest difference.</p>
+                <p class="philosophy-description">
+                    At Aurelia, we bring together considered design, distinctive details and everyday versatility. From
+                    jewellery that completes
+                    a look to accessories that become part of your routine, every piece is chosen to complement your
+                    individual style.
+                </p>
+                <!-- philosophy principles -->
+                <div class="philosophy-principles">
+                    <div class="philosophy-principle">
+                        <span class="principle-number">01</span>
+                        <div>
+                            <h3>Thoughtful Design</h3>
+                            <p>Clean forms. Considered details.Nothing without a purpose.</p>
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+                    <div class="philosophy-principle">
+                        <span class="principle-number">02</span>
+                        <div>
+                            <h3>Details That Matter</h3>
+                            <p>A closer look reveals the beautyin every finish and form.</p>
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+                    <div class="philosophy-principle">
+                        <span class="principle-number">03</span>
+                        <div>
+                            <h3>Made for Everyday</h3>
+                            <p>Versatile pieces that feel naturally yours.</p>
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+                </div>
+                <!-- CTA -->
+                <a href="collection.html" class="philosophy-cta">
+                    EXPLORE OUR COLLECTION
+                    <span><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+            </div>
+        </div>
+        <!-- Bottom signature -->
+        <div class="philosophy-bottom">
+            <span>DESIGNED WITH INTENTION</span>
+            <span>MADE TO BE YOURS.</span>
+        </div>
+    </section>
+    <!-- End of philosophy -->
+    <!-- footer  -->
+<footer class="aurelia-footer">
+
+    <div class="footer-main">
+
+        <!-- Brand Section -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                AURELIA
+            </a>
+
+            <p>
+                Fine jewellery and timeless accessories,
+                thoughtfully designed for everyday elegance.
+            </p>
+
+            <div class="footer-socials">
+                <a href="https://instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">ig</a>
+
+                <a href="https://pinterest.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Pinterest">p</a>
+
+                <a href="https://facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">f</a>
+            </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="footer-column">
+            <h4>Shop</h4>
+            <a href="shop.html">All Products</a>
+            <a href="shop.html">Jewellery</a>
+            <a href="shop.html">Watches</a>
+            <a href="shop.html">Accessories</a>
+        </div>
+
+        <!-- Discover -->
+        <div class="footer-column">
+            <h4>Discover</h4>
+            <a href="about.html">Our Story</a>
+            <a href="shop.html">New Arrivals</a>
+            <a href="shop.html">Collections</a>
+            <a href="coming-soon.html">Coming Soon</a>
+        </div>
+
+        <!-- Follow -->
+        <div class="footer-column">
+            <h4>Follow</h4>
+            <a href="https://instagram.com/"
+               target="_blank"
+               rel="noopener noreferrer">Instagram ↗</a>
+
+            <a href="https://pinterest.com/"
+               target="_blank"
+               rel="noopener noreferrer">Pinterest ↗</a>
+
+            <a href="mailto:hello@aurelia.com">Contact</a>
+            <span>Delhi, India</span>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <span>© 2026 AURELIA. All rights reserved.</span>
+
+        <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+    </div>
+
+</footer>
+    <!-- end of the footer  -->
+    <script>
+        const cursor = document.querySelector(".aurelia-cursor");
+        const cursorRing = document.querySelector(".aurelia-cursor-ring");
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.18;
+            cursorY += (mouseY - cursorY) * 0.18;
+            if (cursor) {
+                cursor.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            if (cursorRing) {
+                cursorRing.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            requestAnimationFrame(animateCursor);
+        }
+        if (cursor && cursorRing) {
+            animateCursor();
+            document.querySelectorAll("a, button").forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.add("is-hovering");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-hovering");
+                });
+            });
+            document.querySelectorAll(
+                ".aurelia-gallery-item, .aurelia-collection-card, .aurelia-image"
+            ).forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.remove("is-hovering");
+                    cursorRing.classList.add("is-image");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-image");
+                });
+            });
+        }
+        const aureliaHero = document.querySelector("#aureliaHeroSlider");
+        if (aureliaHero && window.bootstrap) {
+            const heroCarousel = bootstrap.Carousel.getOrCreateInstance(
+                aureliaHero,
+                {
+                    interval: 5500,
+                    ride: "carousel",
+                    pause: "hover",
+                    touch: true,
+                    wrap: true
+                }
+            );
+            aureliaHero.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowLeft") {
+                    event.preventDefault();
+                    heroCarousel.prev();
+                }
+                if (event.key === "ArrowRight") {
+                    event.preventDefault();
+                    heroCarousel.next();
+                }
+            });
+        }
+        // film 
+        const filmVideo = document.getElementById("aureliaFilmVideo");
+        const filmToggle = document.getElementById("aureliaFilmToggle");
+        if (filmVideo && filmToggle) {
+            const filmIcon = filmToggle.querySelector("i");
+            const filmLabel = filmToggle.querySelector("span");
+            function updateFilmButton(isPlaying) {
+                filmIcon.className = isPlaying
+                    ? "bi bi-pause-fill"
+                    : "bi bi-play-fill";
+                filmLabel.textContent = isPlaying
+                    ? "PAUSE FILM"
+                    : "PLAY FILM";
+                filmToggle.setAttribute(
+                    "aria-label",
+                    isPlaying ? "Pause campaign video" : "Play campaign video"
+                );
+                filmToggle.setAttribute(
+                    "aria-pressed",
+                    String(!isPlaying)
+                );
+            }
+            filmToggle.addEventListener("click", async () => {
+                if (filmVideo.paused) {
+                    try {
+                        await filmVideo.play();
+                        updateFilmButton(true);
+                    } catch (error) {
+                        updateFilmButton(false);
+                    }
+                } else {
+                    filmVideo.pause();
+                    updateFilmButton(false);
+                }
+            });
+            filmVideo.addEventListener("play", () => {
+                updateFilmButton(true);
+            });
+            filmVideo.addEventListener("pause", () => {
+                updateFilmButton(false);
+            });
+        }
+    </script>
+</body>
+
+</html>
