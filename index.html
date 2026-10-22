@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <body>
-         <!-- CUSTOM CURSOR -->
+</head>
+<body>
+    <!-- CUSTOM CURSOR -->
     <div class="aurelia-cursor"></div>
     <div class="aurelia-cursor-ring"></div>
     <nav class="navbar luxury-navbar">
@@ -174,18 +175,29 @@
             <span>AURELIA</span>
             <p>Objects of everyday elegance.</p>
         </div>
-        <!-- benefits -->
-        <div class="benefits">
-            <div>
-                <span>01</span>Ethically Sourced Materials
-            </div>
-            <div>
-                <span>02</span>
-                Premium Craftsmanship
-            </div>
-            <div><span>03</span>Free Worldwide Shipping</div>
-            <div>
-                <span>04</span>Easy Returns & Lifetime Care
+        <!-- continuously moving benefits marquee -->
+        <div class="benefits-marquee" aria-label="Aurelia shopping benefits">
+            <div class="benefits-marquee-track">
+                <div class="benefits-marquee-group">
+                    <span><i class="fa-solid fa-leaf" aria-hidden="true"></i> ETHICALLY SOURCED MATERIALS</span>
+                    <i class="benefit-separator" aria-hidden="true">✳</i>
+                    <span><i class="fa-solid fa-gem" aria-hidden="true"></i> PREMIUM CRAFTSMANSHIP</span>
+                    <i class="benefit-separator" aria-hidden="true">✳</i>
+                    <span><i class="fa-solid fa-globe" aria-hidden="true"></i> COMPLIMENTARY WORLDWIDE SHIPPING</span>
+                    <i class="benefit-separator" aria-hidden="true">✳</i>
+                    <span><i class="fa-solid fa-heart" aria-hidden="true"></i> EASY RETURNS & LIFETIME CARE</span>
+                    <i class="benefit-separator" aria-hidden="true">✳</i>
+                </div>
+                <div class="benefits-marquee-group" aria-hidden="true">
+                    <span><i class="fa-solid fa-leaf"></i> ETHICALLY SOURCED MATERIALS</span>
+                    <i class="benefit-separator">✳</i>
+                    <span><i class="fa-solid fa-gem"></i> PREMIUM CRAFTSMANSHIP</span>
+                    <i class="benefit-separator">✳</i>
+                    <span><i class="fa-solid fa-globe"></i> COMPLIMENTARY WORLDWIDE SHIPPING</span>
+                    <i class="benefit-separator">✳</i>
+                    <span><i class="fa-solid fa-heart"></i> EASY RETURNS & LIFETIME CARE</span>
+                    <i class="benefit-separator">✳</i>
+                </div>
             </div>
         </div>
     </section>
@@ -211,7 +223,7 @@
         <div class="our-collection-right">
             <div class="our-collection-track" id="our-collection-track">
                 <!-- card 1 -->
-                <a href="#" class="our-collection-card">
+                <a href="jewellery.html" class="our-collection-card" aria-label="Explore jewellery">
                     <img src="img/home/women jewelery.jpg" alt="Jewellery collection">
                     <div class="our-collection-info">
                         <span>01</span>
@@ -220,7 +232,7 @@
                     </div>
                 </a>
                 <!-- card 2 -->
-                <a href="#" class="our-collection-card">
+                <a href="necklaces.html" class="our-collection-card" aria-label="Explore necklaces">
                     <img src="img/home/necklace collection.jpg" alt="Necklaces collection">
                     <div class="our-collection-info">
                         <span>02</span>
@@ -229,7 +241,7 @@
                     </div>
                 </a>
                 <!-- card 3 -->
-                <a href="#" class="our-collection-card">
+                <a href="watches.html" class="our-collection-card" aria-label="Explore watches">
                     <img src="img/home/watch collection.jpg" alt="Watches collection">
                     <div class="our-collection-info">
                         <span>03</span>
@@ -238,7 +250,7 @@
                     </div>
                 </a>
                 <!-- card 4 -->
-                <a href="#" class="our-collection-card">
+                <a href="bags.html" class="our-collection-card" aria-label="Explore bags">
                     <img src="img/home/bag collection.jpg" alt="Bags collection">
                     <div class="our-collection-info">
                         <span>04</span>
@@ -257,7 +269,7 @@
         </div>
         <div class="aurelia-collections-grid">
             <!-- 01 -->
-            <a href="#" class="aurelia-collection-card card-one">
+            <a href="jewellery.html" class="aurelia-collection-card card-one">
                 <div class="aurelia-card-top">
                     <span>01</span>
                     <span>JEWELLERY</span>
@@ -271,7 +283,7 @@
                 </div>
             </a>
             <!-- 02 -->
-            <a href="#" class="aurelia-collection-card card-two">
+            <a href="bags.html" class="aurelia-collection-card card-two">
                 <div class="aurelia-card-top">
                     <span>02</span>
                     <span>BAGS</span>
@@ -285,7 +297,7 @@
                 </div>
             </a>
             <!-- 03 -->
-            <a href="#" class="aurelia-collection-card card-three">
+            <a href="watches.html" class="aurelia-collection-card card-three">
                 <div class="aurelia-card-top">
                     <span>03</span>
                     <span>WATCHES</span>
@@ -299,7 +311,7 @@
                 </div>
             </a>
             <!-- 04 -->
-            <a href="#" class="aurelia-collection-card card-four">
+            <a href="rings.html" class="aurelia-collection-card card-four">
                 <div class="aurelia-card-top">
                     <span>04</span>
                     <span>RING</span>
@@ -315,39 +327,39 @@
             </a>
         </div>
         <div class="aurelia-collections-footer">
-            <a href="#" class="aurelia-view-btn">View All Collections</a>
+            <a href="collection.html" class="aurelia-view-btn">View All Collections</a>
         </div>
     </section>
-    <!-- our gallery  -->
-    <section class="aurelia-gallery">
+    <!-- our gallery -->
+    <section class="aurelia-gallery" id="aurelia-gallery">
         <div class="aurelia-gallery-heading">
-            <h2>OUR GALLERY</h2>
+            <span class="section-eyebrow">AURELIA / 04 — A VISUAL JOURNAL</span>
+            <h2>OUR GALLERY<span>.</span></h2>
+            <p>Little details. Lasting impressions.</p>
         </div>
         <div class="aurelia-gallery-grid">
-            <!-- img 1  -->
-            <div class="aurelia-gallery-item gallery-item-one">
-                <img src="img/home/woman jewelry.jpg" alt="Women's jewellery">
-                <div class="aurelia-gallery-overlay">
-                    <span>01</span>
-                    <p>WOMEN'S JEWELLERY</p>
+            <a href="jewellery.html" class="aurelia-gallery-item gallery-item-one"
+                aria-label="Explore women's jewellery">
+                <img src="img/home/woman jewelry.jpg" alt="Women's jewellery styled in warm light" loading="lazy">
+                <div class="aurelia-gallery-overlay"><span>01 / THE WOMEN'S EDIT</span>
+                    <p>WOMEN'S JEWELLERY <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
                 </div>
-            </div>
-            <!-- img 2 -->
-            <div class="aurelia-gallery-item gallery-item-two">
-                <img src="img/home/ruby-necklce.jpg" alt="Luxury necklace">
-                <div class="aurelia-gallery-overlay">
-                    <span>02</span>
-                    <p>STATEMENT PIECES</p>
+            </a>
+            <a href="necklaces.html" class="aurelia-gallery-item gallery-item-two"
+                aria-label="Explore statement necklaces">
+                <img src="img/home/ruby-necklce.jpg" alt="Ruby statement necklace" loading="lazy">
+                <div class="aurelia-gallery-overlay"><span>02 / A SIGNATURE PIECE</span>
+                    <p>STATEMENT JEWELLERY <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
                 </div>
-            </div>
-            <!-- img 3 -->
-            <div class="aurelia-gallery-item gallery-item-three">
-                <img src="img/home/man jewlry.jpg" alt="Aurelia accessories">
-                <div class="aurelia-gallery-overlay">
-                    <span>03</span>
-                    <p>EVERYDAY ESSENTIALS</p>
+            </a>
+            <a href="watches.html" class="aurelia-gallery-item gallery-item-three"
+                aria-label="Explore men's accessories">
+                <img src="img/home/man jewlry.jpg" alt="Men's jewellery and everyday accessories" loading="lazy">
+                <div class="aurelia-gallery-overlay"><span>03 / THE MEN'S EDIT</span>
+                    <p>EVERYDAY ESSENTIALS <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
                 </div>
-            </div>
+            </a>
+
         </div>
     </section>
 
@@ -460,85 +472,59 @@
     </section>
     <!-- End of philosophy -->
     <!-- footer  -->
-<footer class="aurelia-footer">
-
-    <div class="footer-main">
-
-        <!-- Brand Section -->
-        <div class="footer-brand">
-            <a href="index.html" class="footer-logo">
-                AURELIA
-            </a>
-
-            <p>
-                Fine jewellery and timeless accessories,
-                thoughtfully designed for everyday elegance.
-            </p>
-
-            <div class="footer-socials">
-                <a href="https://instagram.com/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Instagram">ig</a>
-
-                <a href="https://pinterest.com/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Pinterest">p</a>
-
-                <a href="https://facebook.com/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Facebook">f</a>
+    <footer class="aurelia-footer">
+        <div class="footer-main">
+            <!-- brand Section -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">AURELIA</a>
+                <p>Fine jewellery and timeless accessories,thoughtfully designed for everyday elegance.</p>
+                <div class="footer-socials" aria-label="Social media">
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- shop -->
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <a href="shop.html">All Products</a>
+                <a href="shop.html">Jewellery</a>
+                <a href="shop.html">Watches</a>
+                <a href="shop.html">Accessories</a>
+            </div>
+            <!-- discover -->
+            <div class="footer-column">
+                <h4>Discover</h4>
+                <a href="about.html">Our Story</a>
+                <a href="shop.html">New Arrivals</a>
+                <a href="shop.html">Collections</a>
+                <a href="coming-soon.html">Coming Soon</a>
+            </div>
+            <!-- follow -->
+            <div class="footer-column">
+                <h4>Follow</h4>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest ↗</a>
+                <a href="mailto:hello@aurelia.com">Contact</a>
+                <span>Delhi, India</span>
             </div>
         </div>
 
-        <!-- Shop -->
-        <div class="footer-column">
-            <h4>Shop</h4>
-            <a href="shop.html">All Products</a>
-            <a href="shop.html">Jewellery</a>
-            <a href="shop.html">Watches</a>
-            <a href="shop.html">Accessories</a>
+        <!-- bottom Bar -->
+        <div class="footer-bottom">
+            <span>© 2026 AURELIA. All rights reserved.</span>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
         </div>
-
-        <!-- Discover -->
-        <div class="footer-column">
-            <h4>Discover</h4>
-            <a href="about.html">Our Story</a>
-            <a href="shop.html">New Arrivals</a>
-            <a href="shop.html">Collections</a>
-            <a href="coming-soon.html">Coming Soon</a>
-        </div>
-
-        <!-- Follow -->
-        <div class="footer-column">
-            <h4>Follow</h4>
-            <a href="https://instagram.com/"
-               target="_blank"
-               rel="noopener noreferrer">Instagram ↗</a>
-
-            <a href="https://pinterest.com/"
-               target="_blank"
-               rel="noopener noreferrer">Pinterest ↗</a>
-
-            <a href="mailto:hello@aurelia.com">Contact</a>
-            <span>Delhi, India</span>
-        </div>
-
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-        <span>© 2026 AURELIA. All rights reserved.</span>
-
-        <div class="footer-legal">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-        </div>
-    </div>
-
-</footer>
+    </footer>
     <!-- end of the footer  -->
     <script>
         const cursor = document.querySelector(".aurelia-cursor");
@@ -609,6 +595,51 @@
                 }
             });
         }
+        // Our Collection: smooth horizontal editorial slider
+        const collectionTrack = document.getElementById("our-collection-track");
+        const collectionPrev = document.getElementById("our-collection-prev");
+        const collectionNext = document.getElementById("our-collection-next");
+        if (collectionTrack && collectionPrev && collectionNext) {
+            const collectionCards = Array.from(collectionTrack.querySelectorAll(".our-collection-card"));
+            let collectionIndex = 0;
+
+            const getCollectionStep = () => {
+                const firstCard = collectionCards[0];
+                if (!firstCard) return 0;
+                const trackStyle = window.getComputedStyle(collectionTrack);
+                const gap = parseFloat(trackStyle.columnGap || trackStyle.gap) || 18;
+                return firstCard.getBoundingClientRect().width + gap;
+            };
+
+            const visibleCollectionCards = () => {
+                const step = getCollectionStep();
+                const right = collectionTrack.parentElement.getBoundingClientRect().width;
+                return Math.max(1, Math.floor((right + 1) / Math.max(step, 1)));
+            };
+
+            const updateCollectionSlider = () => {
+                const maxIndex = Math.max(0, collectionCards.length - visibleCollectionCards());
+                collectionIndex = Math.min(collectionIndex, maxIndex);
+                collectionTrack.style.transform = `translate3d(${-collectionIndex * getCollectionStep()}px, 0, 0)`;
+                collectionPrev.disabled = collectionIndex <= 0;
+                collectionNext.disabled = collectionIndex >= maxIndex;
+                collectionPrev.setAttribute("aria-label", "Previous collections");
+                collectionNext.setAttribute("aria-label", "Next collections");
+            };
+
+            collectionPrev.addEventListener("click", () => {
+                collectionIndex = Math.max(0, collectionIndex - 1);
+                updateCollectionSlider();
+            });
+            collectionNext.addEventListener("click", () => {
+                const maxIndex = Math.max(0, collectionCards.length - visibleCollectionCards());
+                collectionIndex = Math.min(maxIndex, collectionIndex + 1);
+                updateCollectionSlider();
+            });
+            window.addEventListener("resize", updateCollectionSlider);
+            updateCollectionSlider();
+        }
+
         // film 
         const filmVideo = document.getElementById("aureliaFilmVideo");
         const filmToggle = document.getElementById("aureliaFilmToggle");
@@ -653,5 +684,4 @@
         }
     </script>
 </body>
-
 </html>
