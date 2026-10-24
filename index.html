@@ -338,31 +338,33 @@
             <p>Little details. Lasting impressions.</p>
         </div>
         <div class="aurelia-gallery-grid">
-            <a href="jewellery.html" class="aurelia-gallery-item gallery-item-one"
-                aria-label="Explore women's jewellery">
+            <!-- image 01: women's jewellery -->
+            <a href="jewellery.html" class="aurelia-gallery-item gallery-item-one" aria-label="Explore women's jewellery">
                 <img src="img/home/woman jewelry.jpg" alt="Women's jewellery styled in warm light" loading="lazy">
-                <div class="aurelia-gallery-overlay"><span>01 / THE WOMEN'S EDIT</span>
-                    <p>WOMEN'S JEWELLERY <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                <div class="aurelia-gallery-overlay">
+                    <span>01 / THE WOMEN'S EDIT</span>
+                    <p>WOMEN'S JEWELLERY<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></p>
                 </div>
             </a>
-            <a href="necklaces.html" class="aurelia-gallery-item gallery-item-two"
-                aria-label="Explore statement necklaces">
+            <!-- image 02: statement jewellery -->
+            <a href="necklaces.html" class="aurelia-gallery-item gallery-item-two" aria-label="Explore statement necklaces">
                 <img src="img/home/ruby-necklce.jpg" alt="Ruby statement necklace" loading="lazy">
-                <div class="aurelia-gallery-overlay"><span>02 / A SIGNATURE PIECE</span>
-                    <p>STATEMENT JEWELLERY <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                <div class="aurelia-gallery-overlay">
+                    <span>02 / A SIGNATURE PIECE</span>
+                    <p>STATEMENT JEWELLERY<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></p>
                 </div>
             </a>
-            <a href="watches.html" class="aurelia-gallery-item gallery-item-three"
-                aria-label="Explore men's accessories">
+            <!-- image 03: men's accessories -->
+            <a href="watches.html" class="aurelia-gallery-item gallery-item-three" aria-label="Explore men's accessories">
                 <img src="img/home/man jewlry.jpg" alt="Men's jewellery and everyday accessories" loading="lazy">
-                <div class="aurelia-gallery-overlay"><span>03 / THE MEN'S EDIT</span>
-                    <p>EVERYDAY ESSENTIALS <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                <div class="aurelia-gallery-overlay">
+                    <span>03 / THE MEN'S EDIT</span>
+                    <p>EVERYDAY ESSENTIALS<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></p>
                 </div>
             </a>
-
         </div>
     </section>
-
+    <!-- end of our gallery -->
     <!-- video -->
     <section class="aurelia-film" id="aurelia-film">
         <div class="aurelia-film-top">
@@ -595,51 +597,6 @@
                 }
             });
         }
-        // Our Collection: smooth horizontal editorial slider
-        const collectionTrack = document.getElementById("our-collection-track");
-        const collectionPrev = document.getElementById("our-collection-prev");
-        const collectionNext = document.getElementById("our-collection-next");
-        if (collectionTrack && collectionPrev && collectionNext) {
-            const collectionCards = Array.from(collectionTrack.querySelectorAll(".our-collection-card"));
-            let collectionIndex = 0;
-
-            const getCollectionStep = () => {
-                const firstCard = collectionCards[0];
-                if (!firstCard) return 0;
-                const trackStyle = window.getComputedStyle(collectionTrack);
-                const gap = parseFloat(trackStyle.columnGap || trackStyle.gap) || 18;
-                return firstCard.getBoundingClientRect().width + gap;
-            };
-
-            const visibleCollectionCards = () => {
-                const step = getCollectionStep();
-                const right = collectionTrack.parentElement.getBoundingClientRect().width;
-                return Math.max(1, Math.floor((right + 1) / Math.max(step, 1)));
-            };
-
-            const updateCollectionSlider = () => {
-                const maxIndex = Math.max(0, collectionCards.length - visibleCollectionCards());
-                collectionIndex = Math.min(collectionIndex, maxIndex);
-                collectionTrack.style.transform = `translate3d(${-collectionIndex * getCollectionStep()}px, 0, 0)`;
-                collectionPrev.disabled = collectionIndex <= 0;
-                collectionNext.disabled = collectionIndex >= maxIndex;
-                collectionPrev.setAttribute("aria-label", "Previous collections");
-                collectionNext.setAttribute("aria-label", "Next collections");
-            };
-
-            collectionPrev.addEventListener("click", () => {
-                collectionIndex = Math.max(0, collectionIndex - 1);
-                updateCollectionSlider();
-            });
-            collectionNext.addEventListener("click", () => {
-                const maxIndex = Math.max(0, collectionCards.length - visibleCollectionCards());
-                collectionIndex = Math.min(maxIndex, collectionIndex + 1);
-                updateCollectionSlider();
-            });
-            window.addEventListener("resize", updateCollectionSlider);
-            updateCollectionSlider();
-        }
-
         // film 
         const filmVideo = document.getElementById("aureliaFilmVideo");
         const filmToggle = document.getElementById("aureliaFilmToggle");
