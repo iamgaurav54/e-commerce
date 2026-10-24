@@ -1040,7 +1040,7 @@ select {
     max-width: 325px;
     margin: 20px 0 22px;
     color: var(--muted);
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.9;
 }
 .footer-socials {
@@ -1073,7 +1073,7 @@ select {
 .footer-column h4 {
     margin: 1px 0 8px;
     color: var(--black);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: .15em;
     text-transform: uppercase;
