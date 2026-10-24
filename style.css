@@ -1074,7 +1074,7 @@ select {
     margin: 1px 0 8px;
     color: var(--black);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .15em;
     text-transform: uppercase;
 }
