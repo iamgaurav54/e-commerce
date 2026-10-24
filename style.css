@@ -473,7 +473,7 @@ select {
     max-width: 360px;
     margin: 25px 0 0;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.9;
 }
 .our-collection-controls {
@@ -1081,7 +1081,7 @@ select {
 .footer-column a,
 .footer-column span {
     color: var(--muted);
-    font-size: 18px;
+    font-size: 16px;
     line-height: 2;
     text-decoration: none;
     transition: color var(--transition);
