@@ -1826,7 +1826,7 @@ select {
     aspect-ratio: 16 / 7;
 }
 
-.aurelia-gallery-item.gallery-item-three img,
+.aurelia-gallery-item.gallery-item-three img
  {
     aspect-ratio: 16 / 9;
 }
