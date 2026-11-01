@@ -3378,4 +3378,4 @@ select {
 @media(max-width:991px){.ac-collection-page .ac-intro-content{grid-template-columns:1fr;gap:22px;}.ac-collection-page .ac-collection-editorial{grid-template-columns:repeat(2,minmax(0,1fr));}.ac-collection-page .ac-collection-statement{grid-template-columns:1fr 1fr;}.ac-collection-page .ac-statement-label{grid-column:1/-1;}}
 @media(max-width:600px){.ac-collection-page .ac-collection-intro{padding-left:18px;padding-right:18px;}.ac-collection-page .ac-collection-editorial{grid-template-columns:1fr;padding-left:18px;padding-right:18px;gap:32px;}.ac-collection-page .ac-editorial-image{aspect-ratio:4/4.5;}.ac-collection-page .ac-collection-statement{grid-template-columns:1fr;padding-left:18px;padding-right:18px;}.ac-collection-page .ac-statement-label{grid-column:auto;}.ac-collection-page .ac-statement-image{max-width:100%;}.ac-collection-page .ac-intro-bottomline{display:flex;flex-wrap:wrap;gap:10px;}.ac-collection-page .ac-collection-cta{padding-left:18px;padding-right:18px;}}
 
-/* end of the collection.html  */
+
