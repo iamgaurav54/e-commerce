@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#f7f5ef">
+
+    <title>Coming Soon — AURELIA Accessories</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="coming-page">
+
+        <!-- MAIN CONTENT -->
+        <section class="coming-section">
+
+            <div class="coming-content">
+
+                <span class="coming-label">
+                    <span></span>
+                    SOMETHING BEAUTIFUL IS ON ITS WAY
+                </span>
+
+                <h1 id="comingTitle">
+                    Coming<br>
+                    Soon.
+                </h1>
+
+                <div class="coming-line"></div>
+
+                <p id="comingDescription">
+                    We are carefully crafting something special.
+                    A new experience from AURELIA is coming soon.
+                    Stay close as we prepare to share more with you.
+                </p>
+
+                <div class="coming-actions">
+
+                    <a href="index.html" class="coming-home">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to Homepage
+                    </a>
+
+                </div>
+
+                <div class="coming-bottom">
+
+                    <span>CRAFTED WITH INTENTION.</span>
+
+                    <span>EST. 2026</span>
+
+                </div>
+
+            </div>
+
+            <!-- EDITORIAL IMAGE -->
+            <div class="coming-image">
+
+                <img src="img/coming-soon/editorial.jpg"
+                    alt="AURELIA luxury accessories editorial">
+
+                <div class="coming-image-caption">
+                    <span>THE AURELIA EDIT</span>
+                    <p>Elegance in every detail.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER TEXT -->
+        <div class="coming-footer">
+
+            <span>AURELIA ACCESSORIES</span>
+
+            <span>TIMELESS BY DESIGN.</span>
+
+        </div>
+
+    </main>
+
+
+    <!-- PAGE CONFIGURATION -->
+    <script>
+
+        const pages = {
+
+            about: {
+                title: "Our Story<br>Unfolds Soon.",
+                description:
+                    "Every detail has a story. We are preparing to share the inspiration, craftsmanship and philosophy behind AURELIA."
+            },
+
+            journal: {
+                title: "Stories<br>Coming Soon.",
+                description:
+                    "A collection of inspiration, style notes and thoughtful stories. Discover the world of AURELIA through our upcoming journal."
+            },
+
+            help: {
+                title: "Here to Help.<br>Coming Soon.",
+                description:
+                    "Your experience matters to us. Our customer care and support experience is currently being prepared."
+            }
+
+        };
+
+        const params = new URLSearchParams(window.location.search);
+
+        const page = params.get("page") || "about";
+
+        const currentPage = pages[page] || pages.about;
+
+        document.getElementById("comingTitle").innerHTML =
+            currentPage.title;
+
+        document.getElementById("comingDescription").textContent =
+            currentPage.description;
+
+        document.title =
+            page.charAt(0).toUpperCase() +
+            page.slice(1) +
+            " — AURELIA Accessories";
+
+    </script>
+
+</body>
+</html>
