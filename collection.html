@@ -227,6 +227,48 @@
   <!-- TOAST -->
   <div class="ac-collection-toast" id="collectionToast" role="status"></div>
 </main>
+  <script>
+
+const cursor = document.querySelector(".aurelia-cursor");
+const cursorRing = document.querySelector(".aurelia-cursor-ring");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let cursorX = 0;
+let cursorY = 0;
+
+
+/* Mouse position */
+
+document.addEventListener("mousemove", (e) => {
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+});
+
+
+/* Smooth movement */
+
+function animateCursor() {
+
+    cursorX += (mouseX - cursorX) * 0.18;
+    cursorY += (mouseY - cursorY) * 0.18;
+
+    cursor.style.transform =
+        `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+
+    cursorRing.style.transform =
+        `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+
+    requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+
+</script>
+    <div id="site-footer"></div>
 <script src="script.js"></script>
 </body>
 </html>
