@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the AURELIA collection of thoughtfully selected jewellery, bags, watches and accessories.">
+  <title>The Collection — AURELIA Accessories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="components.js" defer></script>
+    <div id="site-header"></div>
+<main class="collection-page">
+  <!-- HERO -->
+  <section class="collection-hero">
+    <div class="hero-image">
+      <img
+        src="img/collection/collection-main.png"alt="Luxury gold jewellery">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="eyebrow">THE AURELIA EDIT — 2026</span>
+      <h1>
+        Elegance in
+        <br>
+        <em>Every Detail.</em>
+      </h1>
+      <p>
+        Objects of beauty. Pieces of personality.
+        <br>
+        Discover accessories designed to stay timeless.
+      </p>
+
+      <a href="#curated-edit" class="collection-btn">
+        EXPLORE COLLECTION
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+    <span class="hero-index">01 / THE COLLECTION</span>
+  </section>
+  <!-- INTRO -->
+  <section class="collection-intro section-space">
+    <div class="intro-label">
+      01 — DISCOVER AURELIA
+    </div>
+    <div class="intro-content">
+      <h2>
+        More than accessories.
+        <br>
+        <em>A personal expression.</em>
+      </h2>
+      <p>
+        A considered collection of jewellery, bags, watches and everyday
+        essentials. Created for the moments that make life yours.
+      </p>
+    </div>
+  </section>
+  <!-- CATEGORY -->
+  <section class="category-section section-space" id="categories">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow dark">CURATED FOR YOU</span>
+        <h2>Explore by <em>Category</em></h2>
+      </div>
+      <span class="section-number">02 / 04</span>
+    </div>
+    <div class="category-grid">
+      <a href="#curated-edit" class="category-card" data-category="jewellery">
+        <img
+          src="img/collection/jewellery.jpg" alt="Jewellery">
+        <div class="category-info">
+          <span>01 / THE DETAILS</span>
+          <h3>Jewellery</h3>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+      <a href="#curated-edit" class="category-card" data-category="bags">
+        <img
+          src="img/collection/handbag.jpg"alt="Bags">
+        <div class="category-info">
+          <span>02 / CARRY YOUR STYLE</span>
+          <h3>Bags</h3>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+      <a href="#curated-edit" class="category-card" data-category="watches">
+        <img
+          src="img/collection/watch.jpg"alt="Watches">
+        <div class="category-info">
+          <span>03 / TIMELESS FORM</span>
+          <h3>Watches</h3>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+      <a href="#curated-edit" class="category-card" data-category="accessories">
+        <img
+          src="img/collection/wallet.jpg"alt="Accessories">
+        <div class="category-info">
+          <span>04 / THE FINISHING TOUCH</span>
+          <h3>Accessories</h3>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+    </div>
+  </section>
+  <!-- FEATURED EDIT -->
+  <section class="featured-edit section-space">
+    <div class="featured-image">
+      <img
+        src="img/collection/Carlette Jewellery.jpg"
+        alt="Aurelia jewellery edit">
+    </div>
+    <div class="featured-copy">
+      <span class="eyebrow dark">THE SIGNATURE EDIT</span>
+      <h2>
+        Made to be
+        <br>
+        <em>remembered.</em>
+      </h2>
+      <p>
+        Thoughtful forms, refined finishes and details that make
+        an impression without saying too much.
+      </p>
+      <a href="#curated-edit" class="text-link">
+        DISCOVER THE EDIT
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+  <!-- PRODUCTS -->
+  <section class="product-section section-space" id="curated-edit">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow dark">THE COLLECTION</span>
+        <h2>Find your <em>signature.</em></h2>
+      </div>
+      <span class="section-number">03 / 04</span>
+    </div>
+    <!-- CATEGORY FILTER -->
+    <div class="product-toolbar">
+      <div class="filter-heading">
+        <span>EXPLORE PIECES</span>
+        <h3>All Pieces</h3>
+      </div>
+      <div class="filter-list" id="filterList">
+            <a href="collection.html#curated-edit"class="filter-link active">
+            All Pieces <span>08</span>
+            </a>
+            <a href="jewellery.html" class="filter-link">Jewellery</a>
+            <a href="necklaces.html" class="filter-link">Necklaces</a>
+            <a href="bags.html" class="filter-link">Bags</a>
+            <a href="watches.html" class="filter-link">Watches</a>
+            <a href="accessories.html" class="filter-link">Accessories</a>
+    </div>
+      <label class="sort-control">
+        <span>Sort by</span>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="low">Price: Low to high</option>
+          <option value="high">Price: High to low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </label>
+    </div>
+    <div class="product-count">
+      <span id="resultCount">8 PRODUCTS</span>
+      <span>CONSIDERED. CURATED. AURELIA.</span>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+  <!-- EDITORIAL BANNER -->
+  <section class="editorial-banner">
+    <img
+      src="img/collection/collection-editorial.png"
+      alt="Aurelia editorial jewellery"
+    >
+    <div class="editorial-overlay"></div>
+    <div class="editorial-content">
+      <span class="eyebrow">A STUDY IN SIMPLICITY</span>
+      <h2>
+        Beauty lives
+        <br>
+        <em>in the details.</em>
+      </h2>
+      <a href="#categories" class="collection-btn">
+        EXPLORE THE WORLD OF AURELIA
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+  <!-- PHILOSOPHY -->
+  <section class="philosophy-section section-space">
+    <span class="eyebrow dark">
+      04 — THE AURELIA PHILOSOPHY
+    </span>
+    <h2>
+      Not made for a moment.
+      <br>
+      <em>Made to mean something.</em>
+    </h2>
+    <p>
+      We believe personal style is found in the details. In the pieces
+      you reach for, the memories they hold and the confidence they bring.
+    </p>
+    <span class="philosophy-signature">AURELIA</span>
+  </section>
+  <!-- QUICK VIEW MODAL -->
+  <div class="quick-view" id="quickView" aria-hidden="true">
+    <div class="quick-view-backdrop" data-close></div>
+    <div
+      class="quick-view-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Product quick view"
+    >
+      <button class="quick-close" data-close aria-label="Close quick view">
+        &times;
+      </button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+  <!-- TOAST -->
+  <div class="collection-toast" id="collectionToast" role="status"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
