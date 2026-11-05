@@ -3547,3 +3547,1013 @@ select {
     }
 
 }
+/* collection  */
+
+.ac-collection-page {
+    --ink: #171714;
+    --ivory: #f7f5ef;
+    --paper: #fffefa;
+    --muted: #77736c;
+    --gold: #b4975a;
+    --line: #e7e3da;
+    --page-gutter: clamp(22px, 4.5vw, 68px);
+    --transition: .35s ease;
+
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    overflow: hidden;
+}
+
+.ac-collection-page *,
+.ac-collection-page *::before,
+.ac-collection-page *::after {
+    box-sizing: border-box;
+}
+
+.ac-collection-page img {
+    display: block;
+    width: 100%;
+}
+
+.ac-collection-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ac-collection-page button,
+.ac-collection-page select {
+    font: inherit;
+}
+
+.ac-collection-page .ac-section-space {
+    max-width: 1600px;
+    margin: auto;
+    padding: 64px var(--page-gutter);
+}
+
+.ac-collection-page h1,
+.ac-collection-page h2,
+.ac-collection-page h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+}
+
+.ac-collection-page h2 {
+    font-size: clamp(42px, 4vw, 58px);
+    line-height: 1.02;
+    margin: 14px 0;
+}
+
+.ac-collection-page h1 em,
+.ac-collection-page h2 em {
+    font-weight: 400;
+}
+
+.ac-collection-page .ac-eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    color: #e9dfc8;
+}
+
+.ac-collection-page .ac-eyebrow.ac-dark {
+    color: var(--gold);
+}
+
+.ac-collection-page .ac-section-number,
+.ac-collection-page .ac-intro-label {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    color: var(--muted);
+}
+
+/* HERO */
+
+.ac-collection-page .ac-collection-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 550px;
+    height: min(680px, 76vh);
+    color: white;
+    overflow: hidden;
+}
+
+.ac-collection-page .ac-hero-image,
+.ac-collection-page .ac-hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.ac-collection-page .ac-hero-image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+    animation: ac-hero-reveal 1.2s ease both;
+}
+
+.ac-collection-page .ac-hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(13,13,11,.76) 0%,
+        rgba(13,13,11,.35) 48%,
+        rgba(13,13,11,.05) 100%
+    );
+}
+
+.ac-collection-page .ac-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 var(--page-gutter);
+    animation: ac-fade-up .9s ease both;
+}
+
+.ac-collection-page .ac-hero-content h1 {
+    font-size: clamp(68px, 7.2vw, 100px);
+    line-height: .91;
+    margin: 24px 0;
+}
+
+.ac-collection-page .ac-hero-content p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(255,255,255,.85);
+    margin-bottom: 30px;
+}
+
+.ac-collection-page .ac-collection-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 22px;
+    border: 1px solid rgba(255,255,255,.7);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    transition: var(--transition);
+}
+
+.ac-collection-page .ac-collection-btn:hover {
+    background: white;
+    color: var(--ink);
+}
+
+.ac-collection-page .ac-hero-index {
+    position: absolute;
+    right: var(--page-gutter);
+    bottom: 28px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+/* INTRO */
+
+.ac-collection-page .ac-collection-intro {
+    display: grid;
+    grid-template-columns: .75fr 2fr;
+    gap: 35px;
+    align-items: start;
+    padding-top: 76px;
+    padding-bottom: 65px;
+}
+
+.ac-collection-page .ac-intro-content {
+    max-width: 780px;
+}
+
+.ac-collection-page .ac-intro-content p {
+    max-width: 530px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.85;
+    margin-top: 20px;
+}
+
+/* SECTION HEADINGS */
+
+.ac-collection-page .ac-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.ac-collection-page .ac-section-heading h2 {
+    margin-bottom: 0;
+}
+
+.ac-collection-page .ac-section-number {
+    padding-bottom: 7px;
+}
+
+/* CATEGORY GRID */
+
+.ac-collection-page .ac-category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.ac-collection-page .ac-category-card {
+    position: relative;
+    aspect-ratio: .76;
+    overflow: hidden;
+    background: #e8e3d9;
+}
+
+.ac-collection-page .ac-category-card img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.ac-collection-page .ac-category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,.72),
+        rgba(0,0,0,.03) 70%
+    );
+    transition: opacity .4s ease;
+}
+
+.ac-collection-page .ac-category-card:hover img {
+    transform: scale(1.07);
+}
+
+.ac-collection-page .ac-category-card:hover::after {
+    opacity: .88;
+}
+
+.ac-collection-page .ac-category-info {
+    position: absolute;
+    z-index: 2;
+    left: 23px;
+    right: 20px;
+    bottom: 25px;
+    color: white;
+}
+
+.ac-collection-page .ac-category-info span {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+}
+
+.ac-collection-page .ac-category-info h3 {
+    font-size: clamp(32px, 3vw, 43px);
+    line-height: 1;
+    margin: 9px 0 0;
+    transition: transform .35s ease;
+}
+
+.ac-collection-page .ac-category-card:hover .ac-category-info h3 {
+    transform: translateY(-4px);
+}
+
+.ac-collection-page .ac-category-info i {
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: var(--transition);
+}
+
+.ac-collection-page .ac-category-card:hover .ac-category-info i {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FEATURED EDIT */
+
+.ac-collection-page .ac-featured-edit {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 7%;
+    background: #efede6;
+}
+
+.ac-collection-page .ac-featured-image {
+    height: 450px;
+    overflow: hidden;
+}
+
+.ac-collection-page .ac-featured-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.ac-collection-page .ac-featured-edit:hover .ac-featured-image img {
+    transform: scale(1.025);
+}
+
+.ac-collection-page .ac-featured-copy {
+    max-width: 450px;
+}
+
+.ac-collection-page .ac-featured-copy h2 {
+    font-size: clamp(50px, 5vw, 72px);
+    margin: 20px 0;
+}
+
+.ac-collection-page .ac-featured-copy p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 27px;
+}
+
+.ac-collection-page .ac-text-link {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 9px;
+}
+
+.ac-collection-page .ac-text-link i {
+    margin-left: 10px;
+}
+
+/* PRODUCT SECTION */
+
+.ac-collection-page .ac-product-section {
+    padding-top: 65px;
+    padding-bottom: 75px;
+}
+
+/* CATEGORY NAVIGATION */
+
+.ac-collection-page .ac-product-toolbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ac-collection-page .ac-filter-heading {
+    padding-right: 24px;
+    border-right: 1px solid var(--line);
+}
+
+.ac-collection-page .ac-filter-heading span {
+    display: block;
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    margin-bottom: 5px;
+}
+
+.ac-collection-page .ac-filter-heading h3 {
+    font-size: 27px;
+    line-height: 1;
+    margin: 0;
+}
+
+.ac-collection-page .ac-filter-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+/* CATEGORY LINKS */
+
+.ac-collection-page .ac-filter-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all .3s ease;
+}
+
+.ac-collection-page .ac-filter-link span {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.ac-collection-page .ac-filter-link:hover {
+    color: var(--ink);
+    background: #eeece5;
+}
+
+.ac-collection-page .ac-filter-link.ac-active {
+    color: white;
+    background: var(--ink);
+    border-color: var(--ink);
+}
+
+.ac-collection-page .ac-filter-link.ac-active span {
+    color: #d6bd87;
+}
+
+.ac-collection-page .ac-sort-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.ac-collection-page .ac-sort-control select {
+    padding: 8px 3px;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.ac-collection-page .ac-product-count {
+    display: flex;
+    justify-content: space-between;
+    margin: 19px 0;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1.3px;
+}
+
+/* PRODUCT GRID */
+
+.ac-collection-page .ac-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 34px 16px;
+}
+
+.ac-collection-page .ac-product-card {
+    min-width: 0;
+}
+
+.ac-collection-page .ac-product-image {
+    position: relative;
+    aspect-ratio: .82;
+    overflow: hidden;
+    background: #eeece6;
+}
+
+.ac-collection-page .ac-product-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.ac-collection-page .ac-product-card:hover .ac-product-image img {
+    transform: scale(1.05);
+}
+
+.ac-collection-page .ac-product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 7px 10px;
+    background: var(--paper);
+    font-size: 10px;
+    letter-spacing: .8px;
+}
+
+.ac-collection-page .ac-wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--paper);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.ac-collection-page .ac-wishlist-btn:hover {
+    transform: scale(1.08);
+}
+
+.ac-collection-page .ac-wishlist-btn.ac-active {
+    color: #a43b3b;
+}
+
+.ac-collection-page .ac-quick-btn {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+    padding: 13px;
+    border: 0;
+    background: rgba(255,254,250,.96);
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.ac-collection-page .ac-product-card:hover .ac-quick-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ac-collection-page .ac-product-info {
+    padding-top: 14px;
+}
+
+.ac-collection-page .ac-product-category {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.ac-collection-page .ac-product-name {
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin: 8px 0 5px;
+}
+
+.ac-collection-page .ac-product-price {
+    font-size: 14px;
+    color: var(--ink);
+}
+
+.ac-collection-page .ac-add-btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 14px;
+    border: 1px solid var(--line);
+    background: transparent;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.ac-collection-page .ac-add-btn:hover {
+    background: var(--ink);
+    color: white;
+    border-color: var(--ink);
+}
+
+/* EDITORIAL BANNER */
+
+.ac-collection-page .ac-editorial-banner {
+    position: relative;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.ac-collection-page .ac-editorial-banner > img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ac-collection-page .ac-editorial-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(18,17,14,.48);
+}
+
+.ac-collection-page .ac-editorial-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 var(--page-gutter);
+}
+
+.ac-collection-page .ac-editorial-content h2 {
+    font-size: clamp(58px, 6vw, 82px);
+    line-height: .96;
+    margin: 20px 0 28px;
+}
+
+/* PHILOSOPHY */
+
+.ac-collection-page .ac-philosophy-section {
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 85px;
+}
+
+.ac-collection-page .ac-philosophy-section h2 {
+    font-size: clamp(44px, 5vw, 68px);
+    margin: 25px auto;
+}
+
+.ac-collection-page .ac-philosophy-section p {
+    max-width: 540px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.ac-collection-page .ac-philosophy-signature {
+    display: block;
+    margin-top: 35px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    letter-spacing: 8px;
+}
+
+/* QUICK VIEW */
+
+.ac-collection-page .ac-quick-view {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ac-collection-page .ac-quick-view.ac-open {
+    display: flex;
+}
+
+.ac-collection-page .ac-quick-view-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+}
+
+.ac-collection-page .ac-quick-view-panel {
+    position: relative;
+    z-index: 2;
+    width: min(850px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    background: var(--paper);
+}
+
+.ac-collection-page .ac-quick-close {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    z-index: 3;
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.ac-collection-page .ac-quick-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.ac-collection-page .ac-quick-product img {
+    aspect-ratio: .85;
+    object-fit: cover;
+}
+
+.ac-collection-page .ac-quick-product h3 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.ac-collection-page .ac-quick-product p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+.ac-collection-page .ac-quick-product .ac-add-btn {
+    margin-top: 25px;
+}
+
+/* TOAST */
+
+.ac-collection-page .ac-collection-toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    z-index: 10000;
+    padding: 14px 22px;
+    background: var(--ink);
+    color: white;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 20px);
+    transition: var(--transition);
+}
+
+.ac-collection-page .ac-collection-toast.ac-show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* ANIMATIONS */
+
+@keyframes ac-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ac-hero-reveal {
+    from {
+        transform: scale(1.06);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .ac-collection-page .ac-product-toolbar {
+        grid-template-columns: 1fr auto;
+    }
+
+    .ac-collection-page .ac-filter-heading {
+        display: none;
+    }
+
+    .ac-collection-page .ac-filter-list {
+        gap: 5px;
+    }
+
+    .ac-collection-page .ac-filter-link {
+        padding: 11px 13px;
+        font-size: 13px;
+    }
+
+    .ac-collection-page .ac-category-info h3 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 992px) {
+    .ac-collection-page .ac-section-space {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .ac-collection-page .ac-category-grid,
+    .ac-collection-page .ac-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ac-collection-page .ac-featured-edit {
+        gap: 30px;
+    }
+
+    .ac-collection-page .ac-featured-image {
+        height: 380px;
+    }
+
+    .ac-collection-page .ac-product-toolbar {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .ac-collection-page .ac-filter-heading {
+        display: block;
+        border: 0;
+        padding: 0;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .ac-collection-page {
+        --page-gutter: 20px;
+    }
+
+    .ac-collection-page .ac-section-space {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .ac-collection-page .ac-collection-hero {
+        min-height: 530px;
+        height: 72vh;
+    }
+
+    .ac-collection-page .ac-hero-content h1 {
+        font-size: 59px;
+    }
+
+    .ac-collection-page .ac-hero-content p {
+        font-size: 13px;
+    }
+
+    .ac-collection-page .ac-collection-intro {
+        grid-template-columns: 1fr;
+        gap: 17px;
+        padding-top: 55px;
+        padding-bottom: 45px;
+    }
+
+    .ac-collection-page .ac-intro-content p {
+        font-size: 14px;
+    }
+
+    .ac-collection-page .ac-section-heading {
+        align-items: center;
+        margin-bottom: 22px;
+    }
+
+    .ac-collection-page .ac-section-heading h2 {
+        font-size: 39px;
+    }
+
+    .ac-collection-page .ac-section-number {
+        font-size: 9px;
+    }
+
+    .ac-collection-page .ac-category-grid {
+        gap: 10px;
+    }
+
+    .ac-collection-page .ac-category-card {
+        aspect-ratio: .73;
+    }
+
+    .ac-collection-page .ac-category-info {
+        left: 12px;
+        right: 10px;
+        bottom: 14px;
+    }
+
+    .ac-collection-page .ac-category-info h3 {
+        font-size: 27px;
+    }
+
+    .ac-collection-page .ac-category-info span {
+        font-size: 8px;
+        letter-spacing: .9px;
+    }
+
+    .ac-collection-page .ac-featured-edit {
+        grid-template-columns: 1fr;
+        gap: 23px;
+    }
+
+    .ac-collection-page .ac-featured-image {
+        height: 330px;
+    }
+
+    .ac-collection-page .ac-featured-copy h2 {
+        font-size: 48px;
+    }
+
+    .ac-collection-page .ac-product-toolbar {
+        gap: 12px;
+    }
+
+    .ac-collection-page .ac-filter-heading h3 {
+        font-size: 25px;
+    }
+
+    .ac-collection-page .ac-filter-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .ac-collection-page .ac-filter-link {
+        padding: 10px 11px;
+        font-size: 11px;
+    }
+
+    .ac-collection-page .ac-sort-control {
+        font-size: 12px;
+    }
+
+    .ac-collection-page .ac-product-grid {
+        gap: 25px 10px;
+    }
+
+    .ac-collection-page .ac-product-image {
+        aspect-ratio: .76;
+    }
+
+    .ac-collection-page .ac-product-name {
+        font-size: 21px;
+    }
+
+    .ac-collection-page .ac-product-price {
+        font-size: 13px;
+    }
+
+    .ac-collection-page .ac-product-category {
+        font-size: 9px;
+    }
+
+    .ac-collection-page .ac-product-badge {
+        top: 8px;
+        left: 8px;
+        padding: 6px;
+        font-size: 8px;
+    }
+
+    .ac-collection-page .ac-wishlist-btn {
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .ac-collection-page .ac-quick-btn {
+        opacity: 1;
+        transform: none;
+        bottom: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        font-size: 9px;
+    }
+
+    .ac-collection-page .ac-add-btn {
+        font-size: 9px;
+        padding: 10px 5px;
+    }
+
+    .ac-collection-page .ac-product-count span:last-child {
+        display: none;
+    }
+
+    .ac-collection-page .ac-editorial-banner {
+        height: 390px;
+    }
+
+    .ac-collection-page .ac-editorial-content h2 {
+        font-size: 55px;
+    }
+
+    .ac-collection-page .ac-editorial-content .ac-collection-btn {
+        font-size: 9px;
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .ac-collection-page .ac-philosophy-section {
+        padding-top: 60px;
+        padding-bottom: 65px;
+    }
+
+    .ac-collection-page .ac-philosophy-section h2 {
+        font-size: 40px;
+    }
+
+    .ac-collection-page .ac-philosophy-section p {
+        font-size: 13px;
+    }
+
+    .ac-collection-page .ac-quick-view-panel {
+        padding: 20px;
+    }
+
+    .ac-collection-page .ac-quick-product {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ac-collection-page .ac-quick-product h3 {
+        font-size: 35px;
+    }
+}
+/* end of collection  */
