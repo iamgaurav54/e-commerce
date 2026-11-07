@@ -445,6 +445,78 @@
         </div>
     </section>
 </main>
+    <!-- footer  -->
+    <div id="site-footer"></div>
+    <!-- end of the footer  -->
+    <script>
+        const cursor = document.querySelector(".aurelia-cursor");
+        const cursorRing = document.querySelector(".aurelia-cursor-ring");
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.18;
+            cursorY += (mouseY - cursorY) * 0.18;
+            if (cursor) {
+                cursor.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            if (cursorRing) {
+                cursorRing.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            requestAnimationFrame(animateCursor);
+        }
+        if (cursor && cursorRing) {
+            animateCursor();
+            document.querySelectorAll("a, button").forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.add("is-hovering");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-hovering");
+                });
+            });
+            document.querySelectorAll(
+                ".aurelia-gallery-item, .aurelia-collection-card, .aurelia-image"
+            ).forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.remove("is-hovering");
+                    cursorRing.classList.add("is-image");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-image");
+                });
+            });
+        }
+        const aureliaHero = document.querySelector("#aureliaHeroSlider");
+        if (aureliaHero && window.bootstrap) {
+            const heroCarousel = bootstrap.Carousel.getOrCreateInstance(
+                aureliaHero,
+                {
+                    interval: 5500,
+                    ride: "carousel",
+                    pause: "hover",
+                    touch: true,
+                    wrap: true
+                }
+            );
+            aureliaHero.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowLeft") {
+                    event.preventDefault();
+                    heroCarousel.prev();
+                }
+                if (event.key === "ArrowRight") {
+                    event.preventDefault();
+                    heroCarousel.next();
+                }
+            });
+        }
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
