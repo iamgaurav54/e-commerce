@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your selected AURELIA accessories and complete your order.">
+    <title>Shopping Bag — AURELIA</title>
+    <!-- Existing website styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="img/fevicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+     <script src="components.js" defer></script>
+    <!-- CUSTOM CURSOR -->
+    <div class="aurelia-cursor"></div>
+    <div class="aurelia-cursor-ring"></div>
+    <div id="site-header"></div>
+    <main class="atc-page">
+        <!-- PAGE INTRO -->
+        <section class="atc-intro">
+            <div class="atc-intro-inner">
+                <span class="atc-eyebrow">YOUR SELECTION</span>
+                <h1>Your Shopping Bag<span>.</span></h1>
+                <p>Considered pieces, chosen by you.</p>
+            </div>
+            <div class="atc-bag-count">
+                <span class="atc-count-number">0</span>
+                <span>ITEMS</span>
+            </div>
+        </section>
+        <!-- SHOPPING BAG -->
+        <section class="atc-main">
+            <div class="atc-cart-column">
+                <div class="atc-cart-heading">
+                    <span>PRODUCT</span>
+                    <span>QUANTITY</span>
+                    <span>PRICE</span>
+                </div>
+                <div class="atc-products" id="atc-products">
+                    <!-- Products generated through JavaScript -->
+                </div>
+                <!-- EMPTY CART -->
+                <div class="atc-empty" id="atc-empty" hidden>
+                    <div class="atc-empty-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <span class="atc-eyebrow">A LITTLE SOMETHING IS MISSING</span>
+                    <h2>Your bag is waiting.</h2>
+                    <p>Discover timeless pieces made to become part of your story.</p>
+
+                    <a href="shop.html" class="atc-shop-btn">
+                        EXPLORE THE COLLECTION
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="atc-cart-actions" id="atc-cart-actions">
+                    <a href="shop.html" class="atc-continue-link">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Continue Shopping
+                    </a>
+                    <button type="button" class="atc-update-btn" id="atc-update">
+                        UPDATE BAG
+                    </button>
+                </div>
+
+            </div>
+            <!-- ORDER SUMMARY -->
+            <aside class="atc-summary" id="atc-summary">
+
+                <div class="atc-summary-top">
+                    <span class="atc-eyebrow">THE DETAILS</span>
+                    <h2>Order Summary</h2>
+                </div>
+                <!-- COUPON -->
+                <form class="atc-coupon" id="atc-coupon-form">
+                    <label for="atc-coupon-input">PROMOTION CODE</label>
+
+                    <div class="atc-coupon-field">
+                        <input
+                            type="text"
+                            id="atc-coupon-input"
+                            placeholder="Enter your code"
+                            autocomplete="off"
+                        >
+                        <button type="submit">APPLY</button>
+                    </div>
+                    <p class="atc-coupon-message" id="atc-coupon-message"></p>
+                </form>
+                <!-- PRICE DETAILS -->
+                <div class="atc-price-details">
+
+                    <div class="atc-price-row">
+                        <span>Subtotal</span>
+                        <span id="atc-subtotal">₹0</span>
+                    </div>
+
+                    <div class="atc-price-row">
+                        <span>Discount</span>
+                        <span id="atc-discount">₹0</span>
+                    </div>
+
+                    <div class="atc-price-row">
+                        <span>Shipping</span>
+                        <span id="atc-shipping">₹0</span>
+                    </div>
+
+                    <div class="atc-shipping-note" id="atc-shipping-note">
+                        Complimentary shipping on orders above ₹5,000.
+                    </div>
+                </div>
+                <!-- TOTAL -->
+                <div class="atc-total">
+                    <span>Estimated Total</span>
+                    <strong id="atc-total">₹0</strong>
+                </div>
+                <p class="atc-tax-note">Inclusive of applicable taxes.</p>
+                <!-- CHECKOUT -->
+                <button type="button" class="atc-checkout-btn" id="atc-checkout">
+                    PROCEED TO CHECKOUT
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="atc-secure-note">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Secure checkout · Thoughtful delivery</span>
+                </div>
+                <!-- TRUST INFORMATION -->
+                <div class="atc-trust">
+                    <div class="atc-trust-item">
+                        <i class="fa-solid fa-box-open"></i>
+                        <div>
+                            <strong>Carefully packaged</strong>
+                            <span>Every order, a little experience.</span>
+                        </div>
+                    </div>
+                    <div class="atc-trust-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div>
+                            <strong>Complimentary shipping</strong>
+                            <span>On orders above ₹5,000.</span>
+                        </div>
+                    </div>
+                    <div class="atc-trust-item">
+                        <i class="fa-solid fa-heart"></i>
+                        <div>
+                            <strong>Made to be treasured</strong>
+                            <span>Pieces worth keeping.</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <!-- EDITORIAL CTA -->
+        <section class="atc-editorial">
+
+            <div class="atc-editorial-image">
+                <img
+                    src="img/cart/luxury.jpg"
+                    alt="AURELIA accessories editorial"
+                    loading="lazy"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+            <div class="atc-editorial-content">
+                <span class="atc-eyebrow">THE AURELIA EXPERIENCE</span>
+                <h2>Some things are<br>worth keeping.</h2>
+
+                <p>
+                    Thoughtfully selected accessories.
+                    Timeless details. A little luxury in
+                    the everyday.
+                </p>
+                <a href="collection.html" class="atc-editorial-link">
+                    DISCOVER THE COLLECTION
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+     <div id="site-footer"></div>
+    <!-- end of the footer  -->
+    <script>
+        const cursor = document.querySelector(".aurelia-cursor");
+        const cursorRing = document.querySelector(".aurelia-cursor-ring");
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.18;
+            cursorY += (mouseY - cursorY) * 0.18;
+            if (cursor) {
+                cursor.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            if (cursorRing) {
+                cursorRing.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            requestAnimationFrame(animateCursor);
+        }
+        if (cursor && cursorRing) {
+            animateCursor();
+            document.querySelectorAll("a, button").forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.add("is-hovering");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-hovering");
+                });
+            });
+            document.querySelectorAll(
+                ".aurelia-gallery-item, .aurelia-collection-card, .aurelia-image"
+            ).forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.remove("is-hovering");
+                    cursorRing.classList.add("is-image");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-image");
+                });
+            });
+        }
+        const aureliaHero = document.querySelector("#aureliaHeroSlider");
+        if (aureliaHero && window.bootstrap) {
+            const heroCarousel = bootstrap.Carousel.getOrCreateInstance(
+                aureliaHero,
+                {
+                    interval: 5500,
+                    ride: "carousel",
+                    pause: "hover",
+                    touch: true,
+                    wrap: true
+                }
+            );
+            aureliaHero.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowLeft") {
+                    event.preventDefault();
+                    heroCarousel.prev();
+                }
+                if (event.key === "ArrowRight") {
+                    event.preventDefault();
+                    heroCarousel.next();
+                }
+            });
+        }
+        </script>
+    <script src="script.js"></script>
+</body>
+</html>
