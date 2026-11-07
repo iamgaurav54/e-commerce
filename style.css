@@ -4558,7 +4558,7 @@ select {
 }
 /* end of collection  */
 /* starting of the about html  */
-.aa-about-page:root {
+:root {
     --aa-about-black: #11110f;
     --aa-about-dark: #191815;
     --aa-about-ivory: #f7f5ef;
@@ -4575,59 +4575,53 @@ select {
     --aa-about-gutter: clamp(24px, 6vw, 90px);
     --aa-about-transition: 0.4s ease;
 }
-.aa-about-page * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.aa-about-page html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 30px;
-}
-.aa-about-page body {
-    background: var(--aa-about-ivory);
-    color: var(--aa-about-text);
-    font-family: var(--aa-about-body);
-    overflow-x: hidden;
-}
-
 .aa-about-page {
     width: 100%;
     overflow: hidden;
+    background: var(--aa-about-ivory);
+    color: var(--aa-about-text);
+    font-family: var(--aa-about-body);
+    line-height: normal;
 }
-
+.aa-about-page *,
+.aa-about-page *::before,
+.aa-about-page *::after {
+    box-sizing: border-box;
+}
 .aa-about-page img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .aa-about-page a {
     color: inherit;
     text-decoration: none;
 }
-
 .aa-about-page button {
     font: inherit;
 }
-
 .aa-about-page h1,
 .aa-about-page h2,
 .aa-about-page h3,
 .aa-about-page p {
-    margin-top: 0;
+    margin: 0;
 }
-
 .aa-about-page h1,
 .aa-about-page h2,
 .aa-about-page h3 {
     font-family: var(--aa-about-heading);
     font-weight: 400;
 }
-
 .aa-about-page em {
     font-style: italic;
+}
+html:has(.aa-about-page) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+body:has(.aa-about-page) {
+    overflow-x: hidden;
 }
 .aa-about-eyebrow {
     display: flex;
@@ -4661,15 +4655,12 @@ select {
     display: inline-flex;
     align-items: center;
     gap: 15px;
-
     padding-bottom: 8px;
     border-bottom: 1px solid var(--aa-about-gold);
-
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1.2px;
     text-transform: uppercase;
-
     transition: var(--aa-about-transition);
 }
 
@@ -4684,11 +4675,7 @@ select {
 .aa-about-text-link:hover i {
     transform: translateX(5px);
 }
-
-
-/* 03. HERO SECTION
-===================================================== */
-
+/* hero section  */
 .aa-about-hero {
     position: relative;
 
@@ -6054,4 +6041,4 @@ select {
         transition-duration: 0.01ms !important;
     }
 }
-/* end of the about.html */
+/* end of about html  */
