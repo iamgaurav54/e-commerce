@@ -579,19 +579,20 @@ renderProducts();
 
 updateBagCount();
 // end of product 
+// starting of about js 
 document.addEventListener("DOMContentLoaded", () => {
     const revealElements = [
-        ".ac-our-philosophy-image",
-        ".ac-our-philosophy-content",
-        ".ac-our-founder-image",
-        ".ac-our-founder-content",
-        ".ac-our-film-content",
-        ".ac-our-team-intro",
-        ".ac-our-team-member",
-        ".ac-our-behind-content",
-        ".ac-our-gallery-item",
-        ".ac-our-universe-content",
-        ".ac-our-universe-value"
+        ".aa-about-philosophy-image",
+        ".aa-about-philosophy-content",
+        ".aa-about-founder-image",
+        ".aa-about-founder-content",
+        ".aa-about-film-content",
+        ".aa-about-team-intro",
+        ".aa-about-team-member",
+        ".aa-about-behind-content",
+        ".aa-about-gallery-item",
+        ".aa-about-universe-content",
+        ".aa-about-universe-value"
     ];
     const elements = document.querySelectorAll(
         revealElements.join(", ")
@@ -606,14 +607,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     } else {
         elements.forEach(element => {
-            element.classList.add("ac-our-reveal");
+            element.classList.add("aa-about-reveal");
         });
         const revealObserver = new IntersectionObserver(
             (entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add(
-                            "ac-our-revealed"
+                            "aa-about-revealed"
                         );
                         observer.unobserve(entry.target);
                     }
@@ -630,22 +631,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     const teamMembers = document.querySelectorAll(
-        ".ac-our-team-member"
+        ".aa-about-team-member"
     );
     teamMembers.forEach((member, index) => {
         member.style.setProperty(
-            "--ac-our-delay",
+            "--aa-about-delay",
             `${index * 120}ms`
         );
     });
     const video = document.getElementById(
-        "ac-our-video"
+        "aa-about-video"
     );
     const playButton = document.getElementById(
-        "ac-our-film-play"
+        "aa-about-film-play"
     );
     const muteButton = document.getElementById(
-        "ac-our-film-mute"
+        "aa-about-film-mute"
     );
     const playIcon = playButton?.querySelector("i");
     const muteIcon = muteButton?.querySelector("i");
@@ -733,12 +734,12 @@ document.addEventListener("DOMContentLoaded", () => {
         videoObserver.observe(video);
     }
     const galleryImages = document.querySelectorAll(
-        ".ac-our-gallery-item img"
+        ".aa-about-gallery-item img"
     );
     let currentImageIndex = 0;
     if (galleryImages.length) {
         const lightbox = document.createElement("div");
-        lightbox.className = "ac-our-lightbox";
+        lightbox.className = "aa-about-lightbox";
         lightbox.setAttribute("role", "dialog");
         lightbox.setAttribute("aria-modal", "true");
         lightbox.setAttribute("aria-label", "Image gallery");
@@ -757,7 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const galleryItem =
                 selectedImage.closest(
-                    ".ac-our-gallery-item"
+                    ".aa-about-gallery-item"
                 );
 
             const caption = galleryItem?.querySelector(
@@ -775,7 +776,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const openGallery = index => {
             showGalleryImage(index);
             lightbox.classList.add(
-                "ac-our-lightbox-active"
+                "aa-about-lightbox-active"
             );
 
             lightbox.setAttribute(
@@ -789,7 +790,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Close gallery
         const closeGallery = () => {
             lightbox.classList.remove(
-                "ac-our-lightbox-active"
+                "aa-about-lightbox-active"
             );
             lightbox.setAttribute(
                 "aria-hidden",
@@ -797,33 +798,33 @@ document.addEventListener("DOMContentLoaded", () => {
             );
             document.body.style.overflow = "";
             galleryImages[currentImageIndex].closest(
-                ".ac-our-gallery-item"
+                ".aa-about-gallery-item"
             )?.focus();
 
         };
         galleryImages.forEach((image, index) => {
             image.closest(
-                ".ac-our-gallery-item"
+                ".aa-about-gallery-item"
             ).style.cursor = "zoom-in";
             image.closest(
-                ".ac-our-gallery-item"
+                ".aa-about-gallery-item"
             ).setAttribute("tabindex", "0");
             image.closest(
-                ".ac-our-gallery-item"
+                ".aa-about-gallery-item"
             ).setAttribute("role", "button");
             image.closest(
-                ".ac-our-gallery-item"
+                ".aa-about-gallery-item"
             ).setAttribute(
                 "aria-label",
                 `Open image ${index + 1}: ${image.alt}`
             );
             image.closest(
-                ".ac-our-gallery-item"
+                ".aa-about-gallery-item"
             ).addEventListener("click", () => {
                 openGallery(index);
             });
             image.closest(
-                ".ac-our-gallery-item"
+                ".aa-about-gallery-item"
             ).addEventListener("keydown", event => {
                 if (
                     event.key === "Enter" ||
@@ -853,7 +854,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener("keydown", event => {
             if (
                 !lightbox.classList.contains(
-                    "ac-our-lightbox-active"
+                    "aa-about-lightbox-active"
                 )
             ) {
                 return;
@@ -870,7 +871,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     document.querySelectorAll(
-        '.ac-our-page a[href^="#"]'
+        '.aa-about-page a[href^="#"]'
     ).forEach(link => {
         link.addEventListener("click", event => {
             const targetId = link.getAttribute("href");
@@ -886,7 +887,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     document.querySelectorAll(
-        ".ac-our-page img"
+        ".aa-about-page img"
     ).forEach(image => {
         image.addEventListener("error", () => {
             console.warn(
