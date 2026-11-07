@@ -1,146 +1,553 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="theme-color" content="#f7f5ef">
-
-    <title>Coming Soon — AURELIA Accessories</title>
-
+    <meta name="description" content="AURELIA Client Care — Find answers about orders, shipping, payments, returns, jewellery care and more.">
+    <title>Help & Client Care — AURELIA Accessories</title>
+    <link rel="icon" type="image/svg+xml" href="img/fevicon.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Help CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
+<main class="ah-help-page">
+    <script src="components.js" defer></script>
+    <!-- CUSTOM CURSOR -->
+    <div class="aurelia-cursor"></div>
+    <div class="aurelia-cursor-ring"></div>
+    <div id="site-header"></div>
+    <!-- HERO -->
+    <section class="ah-help-hero">
+        <div class="ah-help-hero-image"></div>
+        <div class="ah-help-hero-overlay"></div>
+        <div class="ah-help-hero-content">
+            <span class="ah-help-eyebrow">AURELIA CLIENT CARE</span>
+            <h1>
+                How may we<br>
+                <span>assist you?</span>
+            </h1>
+            <p>
+                Thoughtful service, just like everything we create.
+                Find answers to your questions below.
+            </p>
 
-    <main class="coming-page">
+            <div class="ah-help-search-wrap">
+                <i class="bi bi-search"></i>
 
-        <!-- MAIN CONTENT -->
-        <section class="coming-section">
+                <input
+                    type="search"
+                    id="ahSearch"
+                    placeholder="Search orders, shipping, returns..."
+                    aria-label="Search help articles"
+                >
 
-            <div class="coming-content">
-
-                <span class="coming-label">
-                    <span></span>
-                    SOMETHING BEAUTIFUL IS ON ITS WAY
-                </span>
-
-                <h1 id="comingTitle">
-                    Coming<br>
-                    Soon.
-                </h1>
-
-                <div class="coming-line"></div>
-
-                <p id="comingDescription">
-                    We are carefully crafting something special.
-                    A new experience from AURELIA is coming soon.
-                    Stay close as we prepare to share more with you.
-                </p>
-
-                <div class="coming-actions">
-
-                    <a href="index.html" class="coming-home">
-                        <i class="fa-solid fa-arrow-left"></i>
-                        Back to Homepage
-                    </a>
-
-                </div>
-
-                <div class="coming-bottom">
-
-                    <span>CRAFTED WITH INTENTION.</span>
-
-                    <span>EST. 2026</span>
-
-                </div>
-
+                <span class="ah-help-search-shortcut">SEARCH</span>
             </div>
 
-            <!-- EDITORIAL IMAGE -->
-            <div class="coming-image">
-
-                <img src="img/coming-soon/editorial.jpg"
-                    alt="AURELIA luxury accessories editorial">
-
-                <div class="coming-image-caption">
-                    <span>THE AURELIA EDIT</span>
-                    <p>Elegance in every detail.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- FOOTER TEXT -->
-        <div class="coming-footer">
-
-            <span>AURELIA ACCESSORIES</span>
-
-            <span>TIMELESS BY DESIGN.</span>
+            <span class="ah-help-search-hint">
+                TRY: ORDER TRACKING · RETURNS · JEWELLERY CARE
+            </span>
 
         </div>
 
-    </main>
+        <div class="ah-help-hero-bottom">
+            <span>HERE TO HELP</span>
+            <span>01 — CLIENT SERVICES</span>
+        </div>
+
+    </section>
 
 
-    <!-- PAGE CONFIGURATION -->
+    <!-- SUPPORT CATEGORIES -->
+    <section class="ah-help-categories">
+
+        <div class="ah-help-section-heading">
+
+            <div>
+                <span class="ah-help-eyebrow">EXPLORE SUPPORT</span>
+                <h2>How can we help?</h2>
+            </div>
+
+            <p>
+                Everything you need to know about
+                your AURELIA experience.
+            </p>
+
+        </div>
+
+
+        <div class="ah-help-category-grid">
+
+            <button class="ah-help-category-card" data-category="orders">
+                <span class="ah-help-category-icon">
+                    <i class="bi bi-box-seam"></i>
+                </span>
+
+                <span class="ah-help-category-content">
+                    <strong>Orders & Tracking</strong>
+                    <small>Order status, confirmation and delivery updates.</small>
+                </span>
+
+                <i class="bi bi-arrow-up-right ah-help-category-arrow"></i>
+            </button>
+
+
+            <button class="ah-help-category-card" data-category="shipping">
+                <span class="ah-help-category-icon">
+                    <i class="bi bi-truck"></i>
+                </span>
+
+                <span class="ah-help-category-content">
+                    <strong>Shipping & Delivery</strong>
+                    <small>Delivery timelines, charges and shipping details.</small>
+                </span>
+
+                <i class="bi bi-arrow-up-right ah-help-category-arrow"></i>
+            </button>
+
+
+            <button class="ah-help-category-card" data-category="returns">
+                <span class="ah-help-category-icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                </span>
+
+                <span class="ah-help-category-content">
+                    <strong>Returns & Exchanges</strong>
+                    <small>Our return, exchange and refund process.</small>
+                </span>
+
+                <i class="bi bi-arrow-up-right ah-help-category-arrow"></i>
+            </button>
+
+
+            <button class="ah-help-category-card" data-category="payments">
+                <span class="ah-help-category-icon">
+                    <i class="bi bi-credit-card"></i>
+                </span>
+
+                <span class="ah-help-category-content">
+                    <strong>Payments</strong>
+                    <small>Payment methods, transactions and refunds.</small>
+                </span>
+
+                <i class="bi bi-arrow-up-right ah-help-category-arrow"></i>
+            </button>
+
+
+            <button class="ah-help-category-card" data-category="products">
+                <span class="ah-help-category-icon">
+                    <i class="bi bi-gem"></i>
+                </span>
+
+                <span class="ah-help-category-content">
+                    <strong>Products & Care</strong>
+                    <small>Product details, materials and jewellery care.</small>
+                </span>
+
+                <i class="bi bi-arrow-up-right ah-help-category-arrow"></i>
+            </button>
+
+
+            <button class="ah-help-category-card" data-category="account">
+                <span class="ah-help-category-icon">
+                    <i class="bi bi-person"></i>
+                </span>
+
+                <span class="ah-help-category-content">
+                    <strong>My Account</strong>
+                    <small>Account access and personal information.</small>
+                </span>
+
+                <i class="bi bi-arrow-up-right ah-help-category-arrow"></i>
+            </button>
+
+
+            <button class="ah-help-category-card" data-category="gift">
+                <span class="ah-help-category-icon">
+                    <i class="bi bi-gift"></i>
+                </span>
+
+                <span class="ah-help-category-content">
+                    <strong>Gifting</strong>
+                    <small>Gift orders, packaging and special occasions.</small>
+                </span>
+
+                <i class="bi bi-arrow-up-right ah-help-category-arrow"></i>
+            </button>
+
+
+            <button class="ah-help-category-card" data-category="general">
+                <span class="ah-help-category-icon">
+                    <i class="bi bi-chat-square-text"></i>
+                </span>
+
+                <span class="ah-help-category-content">
+                    <strong>General Enquiries</strong>
+                    <small>Anything else? We're happy to help.</small>
+                </span>
+
+                <i class="bi bi-arrow-up-right ah-help-category-arrow"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="ah-help-faq-section" id="ahFaq">
+
+        <div class="ah-help-faq-heading">
+
+            <span class="ah-help-eyebrow">A LITTLE CLARITY</span>
+
+            <h2>Frequently asked <span>questions.</span></h2>
+
+            <p>
+                Quick answers to the things you might be wondering about.
+            </p>
+
+        </div>
+
+
+        <div class="ah-help-faq-layout">
+
+            <div class="ah-help-faq-sidebar">
+
+                <span class="ah-help-sidebar-label">BROWSE BY TOPIC</span>
+
+                <button class="ah-help-filter-btn ah-help-active" data-filter="all">
+                    All questions <span>08</span>
+                </button>
+
+                <button class="ah-help-filter-btn" data-filter="orders">
+                    Orders & Tracking
+                </button>
+
+                <button class="ah-help-filter-btn" data-filter="shipping">
+                    Shipping & Delivery
+                </button>
+
+                <button class="ah-help-filter-btn" data-filter="returns">
+                    Returns & Exchanges
+                </button>
+
+                <button class="ah-help-filter-btn" data-filter="payments">
+                    Payments
+                </button>
+
+                <button class="ah-help-filter-btn" data-filter="products">
+                    Products & Care
+                </button>
+
+                <button class="ah-help-filter-btn" data-filter="account">
+                    My Account
+                </button>
+
+                <button class="ah-help-filter-btn" data-filter="gift">
+                    Gifting
+                </button>
+
+            </div>
+
+
+            <div class="ah-help-faq-list" id="ahFaqList">
+
+
+                <article class="ah-help-faq-item" data-category="orders">
+
+                    <button class="ah-help-faq-question">
+                        <span>How can I track my order?</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <div class="ah-help-faq-answer">
+                        <p>
+                            Once your order is dispatched, you will receive
+                            a shipping confirmation with tracking details.
+                            Use the tracking information to follow your
+                            package until it reaches you.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="ah-help-faq-item" data-category="shipping">
+
+                    <button class="ah-help-faq-question">
+                        <span>What are the shipping charges and delivery timelines?</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <div class="ah-help-faq-answer">
+                        <p>
+                            We offer complimentary shipping on orders
+                            above ₹5,000. Applicable delivery charges
+                            and estimated delivery timelines are shown
+                            at checkout.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="ah-help-faq-item" data-category="returns">
+
+                    <button class="ah-help-faq-question">
+                        <span>Can I return or exchange an item?</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <div class="ah-help-faq-answer">
+                        <p>
+                            Return and exchange eligibility depends on
+                            the product and its condition. Please refer
+                            to our Returns & Exchanges policy or contact
+                            Client Care with your order details.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="ah-help-faq-item" data-category="payments">
+
+                    <button class="ah-help-faq-question">
+                        <span>Which payment methods do you accept?</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <div class="ah-help-faq-answer">
+                        <p>
+                            Available payment options are displayed
+                            securely during checkout. You can review
+                            the available methods before placing your order.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="ah-help-faq-item" data-category="products">
+
+                    <button class="ah-help-faq-question">
+                        <span>How should I care for my jewellery?</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <div class="ah-help-faq-answer">
+                        <p>
+                            Keep your jewellery away from perfumes,
+                            chemicals and excessive moisture. Store
+                            individual pieces separately in a dry place
+                            and clean them according to their material.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="ah-help-faq-item" data-category="account">
+
+                    <button class="ah-help-faq-question">
+                        <span>Do I need an account to place an order?</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <div class="ah-help-faq-answer">
+                        <p>
+                            You can shop using the checkout options
+                            available on our website. Creating an account,
+                            when available, makes it easier to manage
+                            your details and orders.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="ah-help-faq-item" data-category="gift">
+
+                    <button class="ah-help-faq-question">
+                        <span>Do you offer gift packaging?</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <div class="ah-help-faq-answer">
+                        <p>
+                            Gift packaging options can be explored
+                            during checkout or by contacting our
+                            Client Care team before placing your order.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="ah-help-faq-item" data-category="general">
+
+                    <button class="ah-help-faq-question">
+                        <span>How can I contact AURELIA?</span>
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <div class="ah-help-faq-answer">
+                        <p>
+                            You can reach our team through the contact
+                            details provided in the Client Care section
+                            below. Include your order number whenever
+                            your enquiry relates to a purchase.
+                        </p>
+                    </div>
+
+                </article>
+            </div>
+            <p class="ah-help-no-results" id="ahNoResults">
+                No matching questions found. Try another search.
+            </p>
+        </div>
+        <button class="ah-help-clear-filter" id="ahClearFilter">
+            View all questions <i class="bi bi-arrow-right"></i>
+        </button>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section class="ah-help-contact-section">
+        <div class="ah-help-contact-image">
+            <div class="ah-help-contact-image-overlay"></div>
+            <div class="ah-help-contact-image-text">
+                <span>THE AURELIA EXPERIENCE</span>
+                <p>Every detail<br>deserves attention.</p>
+            </div>
+        </div>
+        <div class="ah-help-contact-content">
+            <span class="ah-help-eyebrow">PERSONAL ATTENTION</span>
+            <h2>Still need a little <span>help?</span></h2>
+            <p class="ah-help-contact-description">
+                Some things are better answered personally.
+                Our Client Care team is here to make your
+                experience effortless.
+            </p>
+            <div class="ah-help-contact-options">
+                <a href="mailto:care@aurelia.com" class="ah-help-contact-option">
+                    <span class="ah-help-contact-option-icon">
+                        <i class="bi bi-envelope"></i>
+                    </span>
+                    <span>
+                        <small>WRITE TO US</small>
+                        <strong>care@aurelia.com</strong>
+                    </span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <a href="tel:+911234567890" class="ah-help-contact-option">
+                    <span class="ah-help-contact-option-icon">
+                        <i class="bi bi-telephone"></i>
+                    </span>
+                    <span>
+                        <small>GIVE US A CALL</small>
+                        <strong>+91 12345 67890</strong>
+                    </span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+            <a href="mailto:care@aurelia.com" class="ah-help-contact-button">
+                CONTACT CLIENT CARE
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <span class="ah-help-contact-note">
+                We aim to respond to enquiries within 1–2 business days.
+            </span>
+        </div>
+    </section>
+    <!-- BOTTOM BRAND MESSAGE -->
+    <section class="ah-help-bottom-message">
+        <span class="ah-help-eyebrow">AURELIA ACCESSORIES</span>
+        <h2>Made to be yours. <span>Here for you.</span></h2>
+        <a href="collection.html">
+            DISCOVER THE COLLECTION
+            <i class="bi bi-arrow-up-right"></i>
+        </a>
+    </section>
+</main>
+ <div id="site-footer"></div>
+    <!-- end of the footer  -->
     <script>
-
-        const pages = {
-
-            about: {
-                title: "Our Story<br>Unfolds Soon.",
-                description:
-                    "Every detail has a story. We are preparing to share the inspiration, craftsmanship and philosophy behind AURELIA."
-            },
-
-            journal: {
-                title: "Stories<br>Coming Soon.",
-                description:
-                    "A collection of inspiration, style notes and thoughtful stories. Discover the world of AURELIA through our upcoming journal."
-            },
-
-            help: {
-                title: "Here to Help.<br>Coming Soon.",
-                description:
-                    "Your experience matters to us. Our customer care and support experience is currently being prepared."
+        const cursor = document.querySelector(".aurelia-cursor");
+        const cursorRing = document.querySelector(".aurelia-cursor-ring");
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.18;
+            cursorY += (mouseY - cursorY) * 0.18;
+            if (cursor) {
+                cursor.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
             }
-
-        };
-
-        const params = new URLSearchParams(window.location.search);
-
-        const page = params.get("page") || "about";
-
-        const currentPage = pages[page] || pages.about;
-
-        document.getElementById("comingTitle").innerHTML =
-            currentPage.title;
-
-        document.getElementById("comingDescription").textContent =
-            currentPage.description;
-
-        document.title =
-            page.charAt(0).toUpperCase() +
-            page.slice(1) +
-            " — AURELIA Accessories";
-
-    </script>
-
+            if (cursorRing) {
+                cursorRing.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            requestAnimationFrame(animateCursor);
+        }
+        if (cursor && cursorRing) {
+            animateCursor();
+            document.querySelectorAll("a, button").forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.add("is-hovering");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-hovering");
+                });
+            });
+            document.querySelectorAll(
+                ".aurelia-gallery-item, .aurelia-collection-card, .aurelia-image"
+            ).forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.remove("is-hovering");
+                    cursorRing.classList.add("is-image");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-image");
+                });
+            });
+        }
+        const aureliaHero = document.querySelector("#aureliaHeroSlider");
+        if (aureliaHero && window.bootstrap) {
+            const heroCarousel = bootstrap.Carousel.getOrCreateInstance(
+                aureliaHero,
+                {
+                    interval: 5500,
+                    ride: "carousel",
+                    pause: "hover",
+                    touch: true,
+                    wrap: true
+                }
+            );
+            aureliaHero.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowLeft") {
+                    event.preventDefault();
+                    heroCarousel.prev();
+                }
+                if (event.key === "ArrowRight") {
+                    event.preventDefault();
+                    heroCarousel.next();
+                }
+            });
+        }
+        </script>
+<script src="script.js"></script>
 </body>
 </html>
