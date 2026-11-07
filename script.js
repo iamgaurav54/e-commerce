@@ -578,3 +578,325 @@ function showToast(message) {
 renderProducts();
 
 updateBagCount();
+// end of product 
+document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = [
+        ".ac-our-philosophy-image",
+        ".ac-our-philosophy-content",
+        ".ac-our-founder-image",
+        ".ac-our-founder-content",
+        ".ac-our-film-content",
+        ".ac-our-team-intro",
+        ".ac-our-team-member",
+        ".ac-our-behind-content",
+        ".ac-our-gallery-item",
+        ".ac-our-universe-content",
+        ".ac-our-universe-value"
+    ];
+    const elements = document.querySelectorAll(
+        revealElements.join(", ")
+    );
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) {
+        elements.forEach(element => {
+            element.style.opacity = "1";
+            element.style.transform = "none";
+        });
+    } else {
+        elements.forEach(element => {
+            element.classList.add("ac-our-reveal");
+        });
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(
+                            "ac-our-revealed"
+                        );
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -50px 0px"
+            }
+        );
+        elements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+    }
+    const teamMembers = document.querySelectorAll(
+        ".ac-our-team-member"
+    );
+    teamMembers.forEach((member, index) => {
+        member.style.setProperty(
+            "--ac-our-delay",
+            `${index * 120}ms`
+        );
+    });
+    const video = document.getElementById(
+        "ac-our-video"
+    );
+    const playButton = document.getElementById(
+        "ac-our-film-play"
+    );
+    const muteButton = document.getElementById(
+        "ac-our-film-mute"
+    );
+    const playIcon = playButton?.querySelector("i");
+    const muteIcon = muteButton?.querySelector("i");
+    if (video && playButton) {
+        playButton.addEventListener("click", async () => {
+            if (video.paused) {
+                try {
+                    await video.play();
+                    playButton.setAttribute(
+                        "aria-label",
+                        "Pause brand film"
+                    );
+                    if (playIcon) {
+                        playIcon.className = "fa-solid fa-pause";
+                    }
+                } catch (error) {
+                    console.error(
+                        "Unable to play the brand film:",
+                        error
+                    );
+                }
+
+            } else {
+
+                video.pause();
+
+            }
+
+        });
+        video.addEventListener("play", () => {
+            if (playIcon) {
+                playIcon.className = "fa-solid fa-pause";
+            }
+            playButton.setAttribute(
+                "aria-label",
+                "Pause brand film"
+            );
+        });
+        video.addEventListener("pause", () => {
+            if (playIcon) {
+                playIcon.className = "fa-solid fa-play";
+            }
+            playButton.setAttribute(
+                "aria-label",
+                "Play brand film"
+            );
+        });
+        video.addEventListener("ended", () => {
+            if (playIcon) {
+                playIcon.className = "fa-solid fa-play";
+            }
+            playButton.setAttribute(
+                "aria-label",
+                "Play brand film"
+            );
+        });
+    }
+    if (video && muteButton) {
+        muteButton.addEventListener("click", () => {
+            video.muted = !video.muted;
+            if (muteIcon) {
+                muteIcon.className = video.muted
+                    ? "fa-solid fa-volume-xmark"
+                    : "fa-solid fa-volume-high";
+            }
+            muteButton.setAttribute(
+                "aria-label",
+                video.muted ? "Unmute video" : "Mute video"
+            );
+        });
+    }
+    if (video) {
+        const videoObserver = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting && !video.paused) {
+                        video.pause();
+                    }
+                });
+            },
+            {
+                threshold: 0.1
+            }
+        );
+        videoObserver.observe(video);
+    }
+    const galleryImages = document.querySelectorAll(
+        ".ac-our-gallery-item img"
+    );
+    let currentImageIndex = 0;
+    if (galleryImages.length) {
+        const lightbox = document.createElement("div");
+        lightbox.className = "ac-our-lightbox";
+        lightbox.setAttribute("role", "dialog");
+        lightbox.setAttribute("aria-modal", "true");
+        lightbox.setAttribute("aria-label", "Image gallery");
+        lightbox.setAttribute("aria-hidden", "true");
+        const showGalleryImage = index => {
+            currentImageIndex =
+                (index + galleryImages.length) %
+                galleryImages.length;
+
+            const selectedImage =
+                galleryImages[currentImageIndex];
+
+            lightboxImage.src = selectedImage.src;
+
+            lightboxImage.alt = selectedImage.alt;
+
+            const galleryItem =
+                selectedImage.closest(
+                    ".ac-our-gallery-item"
+                );
+
+            const caption = galleryItem?.querySelector(
+                "span"
+            );
+
+            lightboxCaption.textContent =
+                caption?.textContent || selectedImage.alt;
+
+            lightboxCounter.textContent =
+                `${String(currentImageIndex + 1).padStart(2, "0")} / ${String(galleryImages.length).padStart(2, "0")}`;
+
+        };
+        // Open gallery
+        const openGallery = index => {
+            showGalleryImage(index);
+            lightbox.classList.add(
+                "ac-our-lightbox-active"
+            );
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+            document.body.style.overflow = "hidden";
+            closeButton.focus();
+
+        };
+        // Close gallery
+        const closeGallery = () => {
+            lightbox.classList.remove(
+                "ac-our-lightbox-active"
+            );
+            lightbox.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+            document.body.style.overflow = "";
+            galleryImages[currentImageIndex].closest(
+                ".ac-our-gallery-item"
+            )?.focus();
+
+        };
+        galleryImages.forEach((image, index) => {
+            image.closest(
+                ".ac-our-gallery-item"
+            ).style.cursor = "zoom-in";
+            image.closest(
+                ".ac-our-gallery-item"
+            ).setAttribute("tabindex", "0");
+            image.closest(
+                ".ac-our-gallery-item"
+            ).setAttribute("role", "button");
+            image.closest(
+                ".ac-our-gallery-item"
+            ).setAttribute(
+                "aria-label",
+                `Open image ${index + 1}: ${image.alt}`
+            );
+            image.closest(
+                ".ac-our-gallery-item"
+            ).addEventListener("click", () => {
+                openGallery(index);
+            });
+            image.closest(
+                ".ac-our-gallery-item"
+            ).addEventListener("keydown", event => {
+                if (
+                    event.key === "Enter" ||
+                    event.key === " "
+                ) {
+                    event.preventDefault();
+                    openGallery(index);
+                }
+            });
+        });
+        previousButton.addEventListener("click", () => {
+            showGalleryImage(currentImageIndex - 1);
+        });
+        nextButton.addEventListener("click", () => {
+            showGalleryImage(currentImageIndex + 1);
+
+        });
+        closeButton.addEventListener(
+            "click",
+            closeGallery
+        );
+        lightbox.addEventListener("click", event => {
+            if (event.target === lightbox) {
+                closeGallery();
+            }
+        });
+        document.addEventListener("keydown", event => {
+            if (
+                !lightbox.classList.contains(
+                    "ac-our-lightbox-active"
+                )
+            ) {
+                return;
+            }
+            if (event.key === "Escape") {
+                closeGallery();
+            }
+            if (event.key === "ArrowLeft") {
+                showGalleryImage(currentImageIndex - 1);
+            }
+            if (event.key === "ArrowRight") {
+                showGalleryImage(currentImageIndex + 1);
+            }
+        });
+    }
+    document.querySelectorAll(
+        '.ac-our-page a[href^="#"]'
+    ).forEach(link => {
+        link.addEventListener("click", event => {
+            const targetId = link.getAttribute("href");
+            const target = document.querySelector(targetId);
+            if (!target) return;
+            event.preventDefault();
+            target.scrollIntoView({
+                behavior: prefersReducedMotion
+                    ? "auto"
+                    : "smooth",
+                block: "start"
+            });
+        });
+    });
+    document.querySelectorAll(
+        ".ac-our-page img"
+    ).forEach(image => {
+        image.addEventListener("error", () => {
+            console.warn(
+                "AURELIA image could not be loaded:",
+                image.src
+            );
+        });
+    });
+    console.log(
+        "AURELIA About page initialized successfully."
+    );
+});
+// end of the about 
