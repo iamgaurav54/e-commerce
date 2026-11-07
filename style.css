@@ -4557,83 +4557,99 @@ select {
     }
 }
 /* end of collection  */
-starting of about.html
-.ac-our-page {
-    --ac-our-black: #11110f;
-    --ac-our-dark: #191815;
-    --ac-our-ivory: #f7f5ef;
-    --ac-our-cream: #eee9df;
-    --ac-our-white: #ffffff;
-    --ac-our-gold: #b4975a;
-    --ac-our-gold-light: #d2bd91;
-    --ac-our-text: #292720;
-    --ac-our-muted: #77736c;
-    --ac-our-border: rgba(180, 151, 90, 0.35);
-    --ac-our-heading: "Cormorant Garamond", serif;
-    --ac-our-body: "DM Sans", sans-serif;
-    --ac-our-width: 1440px;
-    --ac-our-gutter: clamp(24px, 6vw, 90px);
-    --ac-our-transition: 0.4s ease;
+/* starting of the about html  */
+.aa-about-page:root {
+    --aa-about-black: #11110f;
+    --aa-about-dark: #191815;
+    --aa-about-ivory: #f7f5ef;
+    --aa-about-cream: #eee9df;
+    --aa-about-white: #ffffff;
+    --aa-about-gold: #b4975a;
+    --aa-about-gold-light: #d2bd91;
+    --aa-about-text: #292720;
+    --aa-about-muted: #77736c;
+    --aa-about-border: rgba(180, 151, 90, 0.35);
+    --aa-about-heading: "Cormorant Garamond", serif;
+    --aa-about-body: "DM Sans", sans-serif;
+    --aa-about-width: 1440px;
+    --aa-about-gutter: clamp(24px, 6vw, 90px);
+    --aa-about-transition: 0.4s ease;
 }
-.ac-our-page {
+.aa-about-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.aa-about-page html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+.aa-about-page body {
+    background: var(--aa-about-ivory);
+    color: var(--aa-about-text);
+    font-family: var(--aa-about-body);
+    overflow-x: hidden;
+}
+
+.aa-about-page {
     width: 100%;
     overflow: hidden;
 }
 
-.ac-our-page img {
+.aa-about-page img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.ac-our-page a {
+.aa-about-page a {
     color: inherit;
     text-decoration: none;
 }
 
-.ac-our-page button {
+.aa-about-page button {
     font: inherit;
 }
 
-.ac-our-page h1,
-.ac-our-page h2,
-.ac-our-page h3,
-.ac-our-page p {
+.aa-about-page h1,
+.aa-about-page h2,
+.aa-about-page h3,
+.aa-about-page p {
     margin-top: 0;
 }
 
-.ac-our-page h1,
-.ac-our-page h2,
-.ac-our-page h3 {
-    font-family: var(--ac-our-heading);
+.aa-about-page h1,
+.aa-about-page h2,
+.aa-about-page h3 {
+    font-family: var(--aa-about-heading);
     font-weight: 400;
 }
 
-.ac-our-page em {
+.aa-about-page em {
     font-style: italic;
 }
-.ac-our-eyebrow {
+.aa-about-eyebrow {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: var(--ac-our-gold-light);
-    font-family: var(--ac-our-body);
+    color: var(--aa-about-gold-light);
+    font-family: var(--aa-about-body);
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 1.8px;
     text-transform: uppercase;
 }
 
-.ac-our-eyebrow > span:first-child {
-    color: var(--ac-our-gold);
+.aa-about-eyebrow > span:first-child {
+    color: var(--aa-about-gold);
 }
 
-.ac-our-eyebrow-dark {
+.aa-about-eyebrow-dark {
     color: #8d744c;
 }
 
-.ac-our-line {
+.aa-about-line {
     width: 38px;
     height: 1px;
     background: currentColor;
@@ -4641,31 +4657,31 @@ starting of about.html
     flex-shrink: 0;
 }
 
-.ac-our-text-link {
+.aa-about-text-link {
     display: inline-flex;
     align-items: center;
     gap: 15px;
 
     padding-bottom: 8px;
-    border-bottom: 1px solid var(--ac-our-gold);
+    border-bottom: 1px solid var(--aa-about-gold);
 
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1.2px;
     text-transform: uppercase;
 
-    transition: var(--ac-our-transition);
+    transition: var(--aa-about-transition);
 }
 
-.ac-our-text-link i {
-    transition: transform var(--ac-our-transition);
+.aa-about-text-link i {
+    transition: transform var(--aa-about-transition);
 }
 
-.ac-our-text-link:hover {
-    color: var(--ac-our-gold);
+.aa-about-text-link:hover {
+    color: var(--aa-about-gold);
 }
 
-.ac-our-text-link:hover i {
+.aa-about-text-link:hover i {
     transform: translateX(5px);
 }
 
@@ -4673,7 +4689,7 @@ starting of about.html
 /* 03. HERO SECTION
 ===================================================== */
 
-.ac-our-hero {
+.aa-about-hero {
     position: relative;
 
     display: flex;
@@ -4683,24 +4699,24 @@ starting of about.html
     height: min(760px, 90vh);
     min-height: 600px;
 
-    background: var(--ac-our-black);
-    color: var(--ac-our-white);
+    background: var(--aa-about-black);
+    color: var(--aa-about-white);
 
     overflow: hidden;
 }
 
-.ac-our-hero-image,
-.ac-our-hero-overlay {
+.aa-about-hero-image,
+.aa-about-hero-overlay {
     position: absolute;
     inset: 0;
 }
 
-.ac-our-hero-image img {
+.aa-about-hero-image img {
     object-position: center 45%;
-    animation: ac-our-hero-zoom 18s ease-in-out infinite alternate;
+    animation: aa-about-hero-zoom 18s ease-in-out infinite alternate;
 }
 
-.ac-our-hero-overlay {
+.aa-about-hero-overlay {
     background:
         linear-gradient(
             90deg,
@@ -4710,16 +4726,16 @@ starting of about.html
         );
 }
 
-.ac-our-hero-content {
+.aa-about-hero-content {
     position: relative;
     z-index: 2;
 
-    width: min(100%, var(--ac-our-width));
+    width: min(100%, var(--aa-about-width));
     margin: 0 auto;
-    padding: 40px var(--ac-our-gutter);
+    padding: 40px var(--aa-about-gutter);
 }
 
-.ac-our-hero h1 {
+.aa-about-hero h1 {
     max-width: 850px;
 
     margin: 35px 0 22px;
@@ -4729,11 +4745,11 @@ starting of about.html
     letter-spacing: -3px;
 }
 
-.ac-our-hero h1 em {
-    color: var(--ac-our-gold-light);
+.aa-about-hero h1 em {
+    color: var(--aa-about-gold-light);
 }
 
-.ac-our-hero-content > p {
+.aa-about-hero-content > p {
     max-width: 520px;
 
     margin-bottom: 32px;
@@ -4744,7 +4760,7 @@ starting of about.html
     letter-spacing: 0.2px;
 }
 
-.ac-our-scroll {
+.aa-about-scroll {
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -4755,7 +4771,7 @@ starting of about.html
     text-transform: uppercase;
 }
 
-.ac-our-scroll-icon {
+.aa-about-scroll-icon {
     display: grid;
     place-items: center;
 
@@ -4765,18 +4781,18 @@ starting of about.html
     border: 1px solid rgba(255, 255, 255, 0.55);
     border-radius: 50%;
 
-    transition: var(--ac-our-transition);
+    transition: var(--aa-about-transition);
 }
 
-.ac-our-scroll:hover .ac-our-scroll-icon {
-    background: var(--ac-our-gold);
-    border-color: var(--ac-our-gold);
+.aa-about-scroll:hover .aa-about-scroll-icon {
+    background: var(--aa-about-gold);
+    border-color: var(--aa-about-gold);
     transform: translateY(4px);
 }
 
-.ac-our-hero-caption {
+.aa-about-hero-caption {
     position: absolute;
-    right: var(--ac-our-gutter);
+    right: var(--aa-about-gutter);
     bottom: 30px;
 
     color: rgba(255, 255, 255, 0.75);
@@ -4788,7 +4804,7 @@ starting of about.html
 /* 04. BRAND PHILOSOPHY
 ===================================================== */
 
-.ac-our-philosophy {
+.aa-about-philosophy {
     position: relative;
 
     display: grid;
@@ -4798,27 +4814,27 @@ starting of about.html
     gap: clamp(35px, 6vw, 85px);
 
     min-height: 650px;
-    padding: 65px var(--ac-our-gutter);
+    padding: 65px var(--aa-about-gutter);
 
-    background: var(--ac-our-ivory);
+    background: var(--aa-about-ivory);
     overflow: hidden;
 }
 
-.ac-our-philosophy-image {
+.aa-about-philosophy-image {
     position: relative;
     height: 510px;
     overflow: hidden;
 }
 
-.ac-our-philosophy-image img {
+.aa-about-philosophy-image img {
     transition: transform 1s ease;
 }
 
-.ac-our-philosophy-image:hover img {
+.aa-about-philosophy-image:hover img {
     transform: scale(1.04);
 }
 
-.ac-our-image-number {
+.aa-about-image-number {
     position: absolute;
     bottom: 18px;
     left: 20px;
@@ -4828,13 +4844,13 @@ starting of about.html
     letter-spacing: 1.5px;
 }
 
-.ac-our-philosophy-content {
+.aa-about-philosophy-content {
     position: relative;
     z-index: 1;
     max-width: 590px;
 }
 
-.ac-our-philosophy-content h2 {
+.aa-about-philosophy-content h2 {
     margin: 25px 0 20px;
 
     font-size: clamp(42px, 4.5vw, 62px);
@@ -4842,19 +4858,19 @@ starting of about.html
     letter-spacing: -1.5px;
 }
 
-.ac-our-philosophy-content h2 em {
+.aa-about-philosophy-content h2 em {
     color: #9d8250;
 }
 
-.ac-our-philosophy-intro {
+.aa-about-philosophy-intro {
     max-width: 470px;
 
-    color: var(--ac-our-muted);
+    color: var(--aa-about-muted);
     font-size: 16px;
     line-height: 1.75;
 }
 
-.ac-our-philosophy-values {
+.aa-about-philosophy-values {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
@@ -4862,35 +4878,35 @@ starting of about.html
     margin: 35px 0 28px;
     padding-top: 22px;
 
-    border-top: 1px solid var(--ac-our-border);
+    border-top: 1px solid var(--aa-about-border);
 }
 
-.ac-our-value > span {
-    color: var(--ac-our-gold);
+.aa-about-value > span {
+    color: var(--aa-about-gold);
     font-size: 13px;
     letter-spacing: 1.5px;
 }
 
-.ac-our-value h3 {
+.aa-about-value h3 {
     margin: 10px 0 7px;
     font-size: 26px;
 }
 
-.ac-our-value p {
+.aa-about-value p {
     max-width: 230px;
 
-    color: var(--ac-our-muted);
+    color: var(--aa-about-muted);
     font-size: 14px;
     line-height: 1.65;
 }
 
-.ac-our-monogram {
+.aa-about-monogram {
     position: absolute;
     right: -15px;
     bottom: -100px;
 
     color: rgba(180, 151, 90, 0.045);
-    font-family: var(--ac-our-heading);
+    font-family: var(--aa-about-heading);
     font-size: 280px;
     line-height: 1;
 
@@ -4901,7 +4917,7 @@ starting of about.html
 /* 05. FOUNDER SECTION
 ===================================================== */
 
-.ac-our-founder {
+.aa-about-founder {
     position: relative;
 
     display: grid;
@@ -4911,13 +4927,13 @@ starting of about.html
     gap: clamp(35px, 6vw, 85px);
 
     min-height: 650px;
-    padding: 65px var(--ac-our-gutter);
+    padding: 65px var(--aa-about-gutter);
 
-    background: var(--ac-our-black);
-    color: var(--ac-our-ivory);
+    background: var(--aa-about-black);
+    color: var(--aa-about-ivory);
 }
 
-.ac-our-founder-image {
+.aa-about-founder-image {
     position: relative;
 
     width: 100%;
@@ -4927,17 +4943,17 @@ starting of about.html
     overflow: hidden;
 }
 
-.ac-our-founder-image img {
+.aa-about-founder-image img {
     object-position: center top;
     filter: saturate(0.8);
     transition: transform 1s ease;
 }
 
-.ac-our-founder-image:hover img {
+.aa-about-founder-image:hover img {
     transform: scale(1.04);
 }
 
-.ac-our-founder-image-caption {
+.aa-about-founder-image-caption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -4955,13 +4971,13 @@ starting of about.html
     letter-spacing: 1.5px;
 }
 
-.ac-our-founder-content {
+.aa-about-founder-content {
     position: relative;
     z-index: 1;
     max-width: 550px;
 }
 
-.ac-our-founder-content h2 {
+.aa-about-founder-content h2 {
     margin: 25px 0 20px;
 
     font-size: clamp(44px, 5vw, 68px);
@@ -4969,11 +4985,11 @@ starting of about.html
     letter-spacing: -1.5px;
 }
 
-.ac-our-founder-content h2 em {
-    color: var(--ac-our-gold-light);
+.aa-about-founder-content h2 em {
+    color: var(--aa-about-gold-light);
 }
 
-.ac-our-founder-content > p {
+.aa-about-founder-content > p {
     max-width: 470px;
 
     margin-bottom: 16px;
@@ -4983,15 +4999,15 @@ starting of about.html
     line-height: 1.75;
 }
 
-.ac-our-founder-signature {
+.aa-about-founder-signature {
     margin-top: 28px;
 
-    color: var(--ac-our-gold-light);
+    color: var(--aa-about-gold-light);
     font-family: "Italianno", cursive;
     font-size: 42px;
 }
 
-.ac-our-founder-role {
+.aa-about-founder-role {
     display: block;
     margin-top: 2px;
 
@@ -5000,7 +5016,7 @@ starting of about.html
     letter-spacing: 1.5px;
 }
 
-.ac-our-circle-link {
+.aa-about-circle-link {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -5013,27 +5029,27 @@ starting of about.html
     text-transform: uppercase;
 }
 
-.ac-our-circle-link span {
+.aa-about-circle-link span {
     display: grid;
     place-items: center;
 
     width: 45px;
     height: 45px;
 
-    border: 1px solid var(--ac-our-gold);
+    border: 1px solid var(--aa-about-gold);
     border-radius: 50%;
 
-    color: var(--ac-our-gold-light);
-    transition: var(--ac-our-transition);
+    color: var(--aa-about-gold-light);
+    transition: var(--aa-about-transition);
 }
 
-.ac-our-circle-link:hover span {
-    color: var(--ac-our-black);
-    background: var(--ac-our-gold-light);
+.aa-about-circle-link:hover span {
+    color: var(--aa-about-black);
+    background: var(--aa-about-gold-light);
     transform: rotate(-45deg);
 }
 
-.ac-our-founder-side-text {
+.aa-about-founder-side-text {
     position: absolute;
     top: 50%;
     right: 18px;
@@ -5041,7 +5057,7 @@ starting of about.html
     writing-mode: vertical-rl;
     transform: translateY(-50%);
 
-    color: var(--ac-our-gold);
+    color: var(--aa-about-gold);
     font-size: 12px;
     letter-spacing: 2px;
     opacity: 0.7;
@@ -5051,12 +5067,12 @@ starting of about.html
 /* 06. CINEMATIC FILM
 ===================================================== */
 
-.ac-our-film {
-    padding: 55px var(--ac-our-gutter);
-    background: var(--ac-our-ivory);
+.aa-about-film {
+    padding: 55px var(--aa-about-gutter);
+    background: var(--aa-about-ivory);
 }
 
-.ac-our-film-poster {
+.aa-about-film-poster {
     position: relative;
 
     width: 100%;
@@ -5068,7 +5084,7 @@ starting of about.html
     color: white;
 }
 
-.ac-our-film-video {
+.aa-about-film-video {
     position: absolute;
     inset: 0;
 
@@ -5078,7 +5094,7 @@ starting of about.html
     object-fit: cover;
 }
 
-.ac-our-film-overlay {
+.aa-about-film-overlay {
     position: absolute;
     inset: 0;
 
@@ -5091,7 +5107,7 @@ starting of about.html
     pointer-events: none;
 }
 
-.ac-our-film-content {
+.aa-about-film-content {
     position: absolute;
     inset: 0;
 
@@ -5103,18 +5119,18 @@ starting of about.html
     padding: clamp(30px, 6vw, 85px);
 }
 
-.ac-our-film-content h2 {
+.aa-about-film-content h2 {
     margin: 28px 0 18px;
 
     font-size: clamp(48px, 6vw, 82px);
     line-height: 0.98;
 }
 
-.ac-our-film-content h2 em {
-    color: var(--ac-our-gold-light);
+.aa-about-film-content h2 em {
+    color: var(--aa-about-gold-light);
 }
 
-.ac-our-film-content > p {
+.aa-about-film-content > p {
     max-width: 440px;
 
     color: rgba(255, 255, 255, 0.8);
@@ -5122,7 +5138,7 @@ starting of about.html
     line-height: 1.7;
 }
 
-.ac-our-film-play {
+.aa-about-film-play {
     display: grid;
     place-items: center;
 
@@ -5137,22 +5153,22 @@ starting of about.html
     color: white;
 
     cursor: pointer;
-    transition: var(--ac-our-transition);
+    transition: var(--aa-about-transition);
 }
 
-.ac-our-film-play:hover {
-    background: var(--ac-our-gold);
-    border-color: var(--ac-our-gold);
+.aa-about-film-play:hover {
+    background: var(--aa-about-gold);
+    border-color: var(--aa-about-gold);
     transform: scale(1.07);
 }
 
-.ac-our-film-play-label {
+.aa-about-film-play-label {
     margin-top: 10px;
     font-size: 12px;
     letter-spacing: 1.5px;
 }
 
-.ac-our-film-bottom {
+.aa-about-film-bottom {
     position: absolute;
     left: clamp(25px, 6vw, 85px);
     right: clamp(25px, 6vw, 85px);
@@ -5166,13 +5182,13 @@ starting of about.html
     letter-spacing: 1.5px;
 }
 
-.ac-our-film-bottom-line {
+.aa-about-film-bottom-line {
     flex: 1;
     height: 1px;
     background: rgba(255, 255, 255, 0.4);
 }
 
-.ac-our-film-mute {
+.aa-about-film-mute {
     display: grid;
     place-items: center;
 
@@ -5191,25 +5207,25 @@ starting of about.html
 /* 07. TEAM SECTION
 ===================================================== */
 
-.ac-our-team {
-    padding: 65px var(--ac-our-gutter);
-    background: var(--ac-our-cream);
+.aa-about-team {
+    padding: 65px var(--aa-about-gutter);
+    background: var(--aa-about-cream);
 }
 
-.ac-our-team-header {
+.aa-about-team-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 
-.ac-our-team-edition {
-    color: var(--ac-our-muted);
+.aa-about-team-edition {
+    color: var(--aa-about-muted);
     font-size: 12px;
     letter-spacing: 1.5px;
 }
 
-.ac-our-team-intro {
+.aa-about-team-intro {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -5218,7 +5234,7 @@ starting of about.html
     margin: 35px 0 38px;
 }
 
-.ac-our-team-intro h2 {
+.aa-about-team-intro h2 {
     margin: 0;
 
     font-size: clamp(46px, 6vw, 76px);
@@ -5226,31 +5242,31 @@ starting of about.html
     letter-spacing: -1.5px;
 }
 
-.ac-our-team-intro h2 em {
+.aa-about-team-intro h2 em {
     color: #a58a59;
 }
 
-.ac-our-team-intro > p {
+.aa-about-team-intro > p {
     max-width: 340px;
 
     margin-bottom: 5px;
 
-    color: var(--ac-our-muted);
+    color: var(--aa-about-muted);
     font-size: 16px;
     line-height: 1.7;
 }
 
-.ac-our-team-grid {
+.aa-about-team-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
 }
 
-.ac-our-team-member {
+.aa-about-team-member {
     min-width: 0;
 }
 
-.ac-our-team-image {
+.aa-about-team-image {
     position: relative;
 
     height: clamp(250px, 27vw, 340px);
@@ -5259,17 +5275,17 @@ starting of about.html
     background: #ddd5c8;
 }
 
-.ac-our-team-image img {
+.aa-about-team-image img {
     filter: saturate(0.8);
     transition: transform 0.8s ease, filter 0.8s ease;
 }
 
-.ac-our-team-member:hover .ac-our-team-image img {
+.aa-about-team-member:hover .aa-about-team-image img {
     transform: scale(1.05);
     filter: saturate(1);
 }
 
-.ac-our-team-index {
+.aa-about-team-index {
     position: absolute;
     top: 14px;
     left: 14px;
@@ -5281,16 +5297,16 @@ starting of about.html
     height: 32px;
 
     background: rgba(247, 245, 239, 0.92);
-    color: var(--ac-our-black);
+    color: var(--aa-about-black);
 
     font-size: 12px;
 }
 
-.ac-our-team-info {
+.aa-about-team-info {
     padding-top: 16px;
 }
 
-.ac-our-team-role {
+.aa-about-team-role {
     display: block;
 
     color: #9b8258;
@@ -5299,13 +5315,13 @@ starting of about.html
     text-transform: uppercase;
 }
 
-.ac-our-team-info h3 {
+.aa-about-team-info h3 {
     margin-top: 7px;
     font-size: clamp(20px, 2vw, 26px);
     line-height: 1.15;
 }
 
-.ac-our-team-bottom {
+.aa-about-team-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5314,17 +5330,17 @@ starting of about.html
     margin-top: 45px;
 }
 
-.ac-our-team-bottom span {
+.aa-about-team-bottom span {
     width: 50px;
     height: 1px;
-    background: var(--ac-our-border);
+    background: var(--aa-about-border);
 }
 
-.ac-our-team-bottom p {
+.aa-about-team-bottom p {
     margin: 0;
 
-    color: var(--ac-our-muted);
-    font-family: var(--ac-our-heading);
+    color: var(--aa-about-muted);
+    font-family: var(--aa-about-heading);
     font-size: 22px;
     font-style: italic;
 }
@@ -5333,25 +5349,25 @@ starting of about.html
 /* 08. BEHIND THE SCENES
 ===================================================== */
 
-.ac-our-behind {
-    padding: 65px var(--ac-our-gutter);
-    background: var(--ac-our-ivory);
+.aa-about-behind {
+    padding: 65px var(--aa-about-gutter);
+    background: var(--aa-about-ivory);
 }
 
-.ac-our-behind-header {
+.aa-about-behind-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 
-.ac-our-behind-edition {
-    color: var(--ac-our-muted);
+.aa-about-behind-edition {
+    color: var(--aa-about-muted);
     font-size: 12px;
     letter-spacing: 1.5px;
 }
 
-.ac-our-behind-layout {
+.aa-about-behind-layout {
     display: grid;
     grid-template-columns: 0.85fr 1.35fr;
     align-items: center;
@@ -5360,12 +5376,12 @@ starting of about.html
     margin-top: 38px;
 }
 
-.ac-our-behind-content {
+.aa-about-behind-content {
     position: sticky;
     top: 80px;
 }
 
-.ac-our-behind-content h2 {
+.aa-about-behind-content h2 {
     margin-bottom: 22px;
 
     font-size: clamp(50px, 6.5vw, 82px);
@@ -5373,72 +5389,72 @@ starting of about.html
     letter-spacing: -2px;
 }
 
-.ac-our-behind-content h2 em {
+.aa-about-behind-content h2 em {
     color: #a58a59;
 }
 
-.ac-our-behind-content > p {
+.aa-about-behind-content > p {
     max-width: 370px;
 
     margin-bottom: 25px;
 
-    color: var(--ac-our-muted);
+    color: var(--aa-about-muted);
     font-size: 16px;
     line-height: 1.7;
 }
 
-.ac-our-outline-button {
+.aa-about-outline-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 
     padding: 14px 20px;
-    border: 1px solid var(--ac-our-gold);
+    border: 1px solid var(--aa-about-gold);
 
     font-size: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    transition: var(--ac-our-transition);
+    transition: var(--aa-about-transition);
 }
 
-.ac-our-outline-button i {
-    transition: transform var(--ac-our-transition);
+.aa-about-outline-button i {
+    transition: transform var(--aa-about-transition);
 }
 
-.ac-our-outline-button:hover {
+.aa-about-outline-button:hover {
     color: white;
-    background: var(--ac-our-black);
-    border-color: var(--ac-our-black);
+    background: var(--aa-about-black);
+    border-color: var(--aa-about-black);
 }
 
-.ac-our-outline-button:hover i {
+.aa-about-outline-button:hover i {
     transform: translateX(5px);
 }
 
-.ac-our-behind-gallery {
+.aa-about-behind-gallery {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     grid-template-rows: 210px 190px 170px;
     gap: 10px;
 }
 
-.ac-our-gallery-item {
+.aa-about-gallery-item {
     position: relative;
     overflow: hidden;
-    background: var(--ac-our-cream);
+    background: var(--aa-about-cream);
 }
 
-.ac-our-gallery-item img {
+.aa-about-gallery-item img {
     transition: transform 0.9s ease;
 }
 
-.ac-our-gallery-item:hover img {
+.aa-about-gallery-item:hover img {
     transform: scale(1.06);
 }
 
-.ac-our-gallery-item::after {
+.aa-about-gallery-item::after {
     content: "";
     position: absolute;
     inset: 45% 0 0;
@@ -5451,7 +5467,7 @@ starting of about.html
     pointer-events: none;
 }
 
-.ac-our-gallery-item > span {
+.aa-about-gallery-item > span {
     position: absolute;
     z-index: 1;
     bottom: 14px;
@@ -5462,22 +5478,22 @@ starting of about.html
     letter-spacing: 1px;
 }
 
-.ac-our-gallery-large {
+.aa-about-gallery-large {
     grid-column: 1;
     grid-row: 1 / 3;
 }
 
-.ac-our-gallery-small:nth-child(2) {
+.aa-about-gallery-small:nth-child(2) {
     grid-column: 2;
     grid-row: 1;
 }
 
-.ac-our-gallery-small:nth-child(3) {
+.aa-about-gallery-small:nth-child(3) {
     grid-column: 2;
     grid-row: 2;
 }
 
-.ac-our-gallery-bottom {
+.aa-about-gallery-bottom {
     grid-column: 1 / 3;
     grid-row: 3;
 }
@@ -5486,7 +5502,7 @@ starting of about.html
 /* 09. THE AURELIA UNIVERSE
 ===================================================== */
 
-.ac-our-universe {
+.aa-about-universe {
     position: relative;
 
     display: flex;
@@ -5494,24 +5510,24 @@ starting of about.html
     justify-content: center;
 
     min-height: 700px;
-    padding: 65px var(--ac-our-gutter) 0;
+    padding: 65px var(--aa-about-gutter) 0;
 
-    background: var(--ac-our-black);
-    color: var(--ac-our-ivory);
+    background: var(--aa-about-black);
+    color: var(--aa-about-ivory);
 
     overflow: hidden;
 }
 
-.ac-our-universe-image {
+.aa-about-universe-image {
     position: absolute;
     inset: 0;
 }
 
-.ac-our-universe-image img {
+.aa-about-universe-image img {
     object-position: center 35%;
 }
 
-.ac-our-universe-overlay {
+.aa-about-universe-overlay {
     position: absolute;
     inset: 0;
 
@@ -5523,7 +5539,7 @@ starting of about.html
     );
 }
 
-.ac-our-universe-content {
+.aa-about-universe-content {
     position: relative;
     z-index: 2;
 
@@ -5531,7 +5547,7 @@ starting of about.html
     padding-bottom: 75px;
 }
 
-.ac-our-universe-content h2 {
+.aa-about-universe-content h2 {
     margin: 30px 0 22px;
 
     font-size: clamp(55px, 7vw, 92px);
@@ -5539,11 +5555,11 @@ starting of about.html
     letter-spacing: -2px;
 }
 
-.ac-our-universe-content h2 em {
-    color: var(--ac-our-gold-light);
+.aa-about-universe-content h2 em {
+    color: var(--aa-about-gold-light);
 }
 
-.ac-our-universe-content > p {
+.aa-about-universe-content > p {
     max-width: 450px;
 
     color: rgba(255, 255, 255, 0.8);
@@ -5551,15 +5567,15 @@ starting of about.html
     line-height: 1.7;
 }
 
-.ac-our-universe-quote {
+.aa-about-universe-quote {
     margin-top: 20px;
 }
 
-.ac-our-universe-quote em {
-    color: var(--ac-our-gold-light);
+.aa-about-universe-quote em {
+    color: var(--aa-about-gold-light);
 }
 
-.ac-our-universe-button {
+.aa-about-universe-button {
     display: inline-flex;
     align-items: center;
     gap: 18px;
@@ -5567,30 +5583,30 @@ starting of about.html
     margin-top: 25px;
     padding: 15px 22px;
 
-    border: 1px solid var(--ac-our-gold);
+    border: 1px solid var(--aa-about-gold);
     border-radius: 50px;
 
-    color: var(--ac-our-gold-light);
+    color: var(--aa-about-gold-light);
     font-size: 13px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 
-    transition: var(--ac-our-transition);
+    transition: var(--aa-about-transition);
 }
 
-.ac-our-universe-button i {
-    transition: transform var(--ac-our-transition);
+.aa-about-universe-button i {
+    transition: transform var(--aa-about-transition);
 }
 
-.ac-our-universe-button:hover {
-    color: var(--ac-our-black);
-    background: var(--ac-our-gold-light);
+.aa-about-universe-button:hover {
+    color: var(--aa-about-black);
+    background: var(--aa-about-gold-light);
 }
 
-.ac-our-universe-button:hover i {
+.aa-about-universe-button:hover i {
     transform: translateX(5px);
 }
-.ac-our-universe-values {
+.aa-about-universe-values {
     position: relative;
     z-index: 3;
 
@@ -5605,7 +5621,7 @@ starting of about.html
     border-top: 1px solid rgba(180, 151, 90, 0.5);
 }
 
-.ac-our-universe-value {
+.aa-about-universe-value {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5616,16 +5632,16 @@ starting of about.html
     border-right: 1px solid rgba(180, 151, 90, 0.4);
 
     color: #e5d5b5;
-    font-family: var(--ac-our-heading);
+    font-family: var(--aa-about-heading);
     font-size: 20px;
 }
 
-.ac-our-universe-value:last-child {
+.aa-about-universe-value:last-child {
     border-right: 0;
 }
 
-.ac-our-universe-value i {
-    color: var(--ac-our-gold-light);
+.aa-about-universe-value i {
+    color: var(--aa-about-gold-light);
     font-size: 16px;
 }
 
@@ -5633,7 +5649,7 @@ starting of about.html
 /* 10. ANIMATIONS
 ===================================================== */
 
-@keyframes ac-our-hero-zoom {
+@keyframes aa-about-hero-zoom {
     from {
         transform: scale(1);
     }
@@ -5650,62 +5666,62 @@ starting of about.html
 @media (max-width: 991px) {
 
     :root {
-        --ac-our-gutter: 38px;
+        --aa-about-gutter: 38px;
     }
 
-    .ac-our-hero {
+    .aa-about-hero {
         height: 680px;
         min-height: 580px;
     }
 
-    .ac-our-philosophy,
-    .ac-our-founder {
+    .aa-about-philosophy,
+    .aa-about-founder {
         gap: 35px;
         padding-top: 55px;
         padding-bottom: 55px;
     }
 
-    .ac-our-philosophy-image,
-    .ac-our-founder-image {
+    .aa-about-philosophy-image,
+    .aa-about-founder-image {
         height: 460px;
     }
 
-    .ac-our-philosophy-content h2 {
+    .aa-about-philosophy-content h2 {
         font-size: 48px;
     }
 
-    .ac-our-founder-content h2 {
+    .aa-about-founder-content h2 {
         font-size: 50px;
     }
 
-    .ac-our-team-grid {
+    .aa-about-team-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 35px 20px;
     }
 
-    .ac-our-team-image {
+    .aa-about-team-image {
         height: 350px;
     }
 
-    .ac-our-behind-layout {
+    .aa-about-behind-layout {
         grid-template-columns: 1fr;
         gap: 35px;
     }
 
-    .ac-our-behind-content {
+    .aa-about-behind-content {
         position: static;
     }
 
-    .ac-our-behind-gallery {
+    .aa-about-behind-gallery {
         grid-template-rows: 250px 210px 180px;
     }
 
-    .ac-our-universe-values {
+    .aa-about-universe-values {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 18px;
     }
 
-    .ac-our-universe-value:nth-child(2) {
+    .aa-about-universe-value:nth-child(2) {
         border-right: 0;
     }
 }
@@ -5717,20 +5733,20 @@ starting of about.html
 @media (max-width: 767px) {
 
     :root {
-        --ac-our-gutter: 24px;
+        --aa-about-gutter: 24px;
     }
 
-    .ac-our-hero {
+    .aa-about-hero {
         height: 680px;
         min-height: 580px;
         max-height: 90svh;
     }
 
-    .ac-our-hero-image img {
+    .aa-about-hero-image img {
         object-position: 60% center;
     }
 
-    .ac-our-hero-overlay {
+    .aa-about-hero-overlay {
         background: linear-gradient(
             90deg,
             rgba(0, 0, 0, 0.78),
@@ -5738,187 +5754,187 @@ starting of about.html
         );
     }
 
-    .ac-our-hero h1 {
+    .aa-about-hero h1 {
         font-size: clamp(58px, 13vw, 82px);
         letter-spacing: -2px;
     }
 
-    .ac-our-hero-content > p {
+    .aa-about-hero-content > p {
         max-width: 400px;
         font-size: 16px;
     }
 
-    .ac-our-hero-caption {
+    .aa-about-hero-caption {
         right: 24px;
         bottom: 22px;
     }
 
-    .ac-our-philosophy {
+    .aa-about-philosophy {
         grid-template-columns: 1fr;
         gap: 30px;
         padding-top: 55px;
         padding-bottom: 55px;
     }
 
-    .ac-our-philosophy-image {
+    .aa-about-philosophy-image {
         height: 420px;
     }
 
-    .ac-our-philosophy-content h2 {
+    .aa-about-philosophy-content h2 {
         font-size: clamp(42px, 10vw, 60px);
     }
 
-    .ac-our-philosophy-values {
+    .aa-about-philosophy-values {
         gap: 18px;
         margin: 28px 0 20px;
     }
 
-    .ac-our-value h3 {
+    .aa-about-value h3 {
         font-size: 23px;
     }
 
-    .ac-our-monogram {
+    .aa-about-monogram {
         font-size: 190px;
     }
 
-    .ac-our-founder {
+    .aa-about-founder {
         grid-template-columns: 1fr;
         gap: 30px;
         padding-top: 55px;
         padding-bottom: 55px;
     }
 
-    .ac-our-founder-image {
+    .aa-about-founder-image {
         height: 450px;
         max-width: none;
     }
 
-    .ac-our-founder-content h2 {
+    .aa-about-founder-content h2 {
         font-size: clamp(44px, 10vw, 65px);
     }
 
-    .ac-our-founder-side-text {
+    .aa-about-founder-side-text {
         display: none;
     }
 
-    .ac-our-film {
-        padding: 35px var(--ac-our-gutter);
+    .aa-about-film {
+        padding: 35px var(--aa-about-gutter);
     }
 
-    .ac-our-film-poster {
+    .aa-about-film-poster {
         height: 570px;
         min-height: 500px;
     }
 
-    .ac-our-film-content {
+    .aa-about-film-content {
         padding: 28px;
     }
 
-    .ac-our-film-content h2 {
+    .aa-about-film-content h2 {
         font-size: clamp(45px, 10vw, 68px);
     }
 
-    .ac-our-film-bottom {
+    .aa-about-film-bottom {
         left: 22px;
         right: 22px;
         bottom: 20px;
         gap: 10px;
     }
 
-    .ac-our-team {
+    .aa-about-team {
         padding-top: 55px;
         padding-bottom: 55px;
     }
 
-    .ac-our-team-intro {
+    .aa-about-team-intro {
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
         margin: 30px 0;
     }
 
-    .ac-our-team-intro h2 {
+    .aa-about-team-intro h2 {
         font-size: clamp(45px, 11vw, 70px);
     }
 
-    .ac-our-team-grid {
+    .aa-about-team-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 28px 13px;
     }
 
-    .ac-our-team-image {
+    .aa-about-team-image {
         height: clamp(210px, 58vw, 320px);
     }
 
-    .ac-our-team-info h3 {
+    .aa-about-team-info h3 {
         font-size: 22px;
     }
 
-    .ac-our-team-bottom {
+    .aa-about-team-bottom {
         margin-top: 35px;
         gap: 12px;
     }
 
-    .ac-our-team-bottom span {
+    .aa-about-team-bottom span {
         width: 25px;
     }
 
-    .ac-our-team-bottom p {
+    .aa-about-team-bottom p {
         font-size: 19px;
         text-align: center;
     }
 
-    .ac-our-behind {
+    .aa-about-behind {
         padding-top: 55px;
         padding-bottom: 55px;
     }
 
-    .ac-our-behind-layout {
+    .aa-about-behind-layout {
         margin-top: 30px;
         gap: 30px;
     }
 
-    .ac-our-behind-content h2 {
+    .aa-about-behind-content h2 {
         font-size: clamp(50px, 13vw, 82px);
     }
 
-    .ac-our-behind-gallery {
+    .aa-about-behind-gallery {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 260px 170px 170px;
         gap: 8px;
     }
 
-    .ac-our-gallery-large {
+    .aa-about-gallery-large {
         grid-column: 1 / 3;
         grid-row: 1;
     }
 
-    .ac-our-gallery-small:nth-child(2) {
+    .aa-about-gallery-small:nth-child(2) {
         grid-column: 1;
         grid-row: 2;
     }
 
-    .ac-our-gallery-small:nth-child(3) {
+    .aa-about-gallery-small:nth-child(3) {
         grid-column: 2;
         grid-row: 2;
     }
 
-    .ac-our-gallery-bottom {
+    .aa-about-gallery-bottom {
         grid-column: 1 / 3;
         grid-row: 3;
     }
 
-    .ac-our-universe {
+    .aa-about-universe {
         min-height: 720px;
         padding-top: 55px;
         padding-bottom: 0;
     }
 
-    .ac-our-universe-image img {
+    .aa-about-universe-image img {
         object-position: 62% center;
     }
 
-    .ac-our-universe-overlay {
+    .aa-about-universe-overlay {
         background: linear-gradient(
             90deg,
             rgba(12, 11, 9, 0.93),
@@ -5926,22 +5942,22 @@ starting of about.html
         );
     }
 
-    .ac-our-universe-content {
+    .aa-about-universe-content {
         padding-bottom: 80px;
     }
 
-    .ac-our-universe-content h2 {
+    .aa-about-universe-content h2 {
         font-size: clamp(52px, 13vw, 85px);
         letter-spacing: -1.5px;
     }
 
-    .ac-our-universe-values {
+    .aa-about-universe-values {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px 8px;
         padding: 20px 0;
     }
 
-    .ac-our-universe-value {
+    .aa-about-universe-value {
         justify-content: flex-start;
         border-right: 0;
         font-size: 17px;
@@ -5956,86 +5972,86 @@ starting of about.html
 @media (max-width: 420px) {
 
     :root {
-        --ac-our-gutter: 18px;
+        --aa-about-gutter: 18px;
     }
 
-    .ac-our-eyebrow {
+    .aa-about-eyebrow {
         font-size: 11px;
         letter-spacing: 1.2px;
         gap: 8px;
     }
 
-    .ac-our-line {
+    .aa-about-line {
         width: 25px;
     }
 
-    .ac-our-hero {
+    .aa-about-hero {
         height: 620px;
         min-height: 560px;
     }
 
-    .ac-our-hero h1 {
+    .aa-about-hero h1 {
         font-size: 58px;
     }
 
-    .ac-our-philosophy-image {
+    .aa-about-philosophy-image {
         height: 360px;
     }
 
-    .ac-our-philosophy-values {
+    .aa-about-philosophy-values {
         grid-template-columns: 1fr 1fr;
     }
 
-    .ac-our-founder-image {
+    .aa-about-founder-image {
         height: 390px;
     }
 
-    .ac-our-film-poster {
+    .aa-about-film-poster {
         height: 520px;
         min-height: 480px;
     }
 
-    .ac-our-film-content {
+    .aa-about-film-content {
         padding: 22px;
     }
 
-    .ac-our-team-grid {
+    .aa-about-team-grid {
         gap: 25px 10px;
     }
 
-    .ac-our-team-image {
+    .aa-about-team-image {
         height: 235px;
     }
 
-    .ac-our-team-info h3 {
+    .aa-about-team-info h3 {
         font-size: 20px;
     }
 
-    .ac-our-team-role {
+    .aa-about-team-role {
         font-size: 11px;
     }
 
-    .ac-our-behind-gallery {
+    .aa-about-behind-gallery {
         grid-template-rows: 220px 145px 145px;
     }
 
-    .ac-our-universe {
+    .aa-about-universe {
         min-height: 700px;
     }
 
-    .ac-our-universe-value {
+    .aa-about-universe-value {
         font-size: 15px;
     }
 }
 @media (prefers-reduced-motion: reduce) {
 
-    .ac-our-page *,
-    .ac-our-page *::before,
-    .ac-our-page *::after {
+    .aa-about-page *,
+    .aa-about-page *::before,
+    .aa-about-page *::after {
         scroll-behavior: auto !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
 }
-end of the about.html
+/* end of the about.html */
