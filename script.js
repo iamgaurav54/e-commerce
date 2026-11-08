@@ -7,7 +7,8 @@ const products = [
         price: 4900,
         badge: "BESTSELLER",
         image: "img/collection/solis-ring.jpg",
-        description: "A refined statement ring with a timeless silhouette and elegant finish."
+        description: "A refined statement ring with a timeless silhouette and elegant finish.",
+        link: "product-details.html?id=1"
     },
     {
         id: 2,
@@ -16,7 +17,8 @@ const products = [
         price: 6800,
         badge: "NEW ARRIVAL",
         image: "img/collection/collection-necklace.jpg",
-        description: "An elegant necklace designed to bring understated sophistication to every look."
+        description: "An elegant necklace designed to bring understated sophistication to every look.",
+        link: "product-details.html?id=2"
     },
     {
         id: 3,
@@ -25,7 +27,8 @@ const products = [
         price: 3600,
         badge: "",
         image: "img/collection/bracelet.jpg",
-        description: "A beautifully considered bracelet for effortless everyday styling."
+        description: "A beautifully considered bracelet for effortless everyday styling.",
+        link: "product-details.html?id=3"
     },
     {
         id: 4,
@@ -34,7 +37,8 @@ const products = [
         price: 8900,
         badge: "SIGNATURE",
         image: "img/collection/collection-handbag.jpg",
-        description: "A versatile everyday bag combining practical design with refined style."
+        description: "A versatile everyday bag combining practical design with refined style.",
+        link: "product-details.html?id=4"
     },
     {
         id: 5,
@@ -43,7 +47,8 @@ const products = [
         price: 7400,
         badge: "",
         image: "img/collection/shoulder-bag.jpg",
-        description: "A modern shoulder bag with a timeless, understated aesthetic."
+        description: "A modern shoulder bag with a timeless, understated aesthetic.",
+        link: "product-details.html?id=5"
     },
     {
         id: 6,
@@ -52,7 +57,8 @@ const products = [
         price: 12500,
         badge: "FEATURED",
         image: "img/collection/heritage-watch.jpg",
-        description: "A classic timepiece that balances simplicity and timeless character."
+        description: "A classic timepiece that balances simplicity and timeless character.",
+        link: "product-details.html?id=6"
     },
     {
         id: 7,
@@ -61,7 +67,8 @@ const products = [
         price: 9800,
         badge: "",
         image: "img/collection/steel-watch.jpg",
-        description: "A contemporary steel watch made for everyday sophistication."
+        description: "A contemporary steel watch made for everyday sophistication.",
+        link: "product-details.html?id=7"
     },
     {
         id: 8,
@@ -70,7 +77,8 @@ const products = [
         price: 2900,
         badge: "ESSENTIAL",
         image: "img/collection/collection-wallet.jpg",
-        description: "A considered finishing touch that completes a modern wardrobe."
+        description: "A considered finishing touch that completes a modern wardrobe.",
+        link: "product-details.html?id=8"
     }
 ];
 const productGrid = document.getElementById("productGrid");
