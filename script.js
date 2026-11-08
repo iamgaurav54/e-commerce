@@ -901,3 +901,441 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 });
 // end of the about 
+// starting of add to cart html js
+document.addEventListener("DOMContentLoaded", () => {
+    const CART_KEY = "aureliaCart";
+
+    const SHIPPING_FEE = 199;
+    const FREE_SHIPPING_LIMIT = 5000;
+
+    const COUPON_CODE = "AURELIA10";
+    const COUPON_DISCOUNT = 10;
+
+    let cart = [];
+    let couponApplied = false;
+    const productsContainer = document.getElementById("atc-products");
+    const emptyCart = document.getElementById("atc-empty");
+    const cartActions = document.getElementById("atc-cart-actions");
+
+    const subtotalElement = document.getElementById("atc-subtotal");
+    const discountElement = document.getElementById("atc-discount");
+    const shippingElement = document.getElementById("atc-shipping");
+    const totalElement = document.getElementById("atc-total");
+
+    const countElement = document.querySelector(".atc-count-number");
+
+    const couponForm = document.getElementById("atc-coupon-form");
+    const couponInput = document.getElementById("atc-coupon-input");
+    const couponMessage = document.getElementById("atc-coupon-message");
+
+    const updateButton = document.getElementById("atc-update");
+    const checkoutButton = document.getElementById("atc-checkout");
+    const formatPrice = (price) => {
+
+        return new Intl.NumberFormat("en-IN", {
+            style: "currency",
+            currency: "INR",
+            maximumFractionDigits: 0
+        }).format(price);
+
+    };
+    function loadCart() {
+
+        try {
+
+            const savedCart = localStorage.getItem(CART_KEY);
+
+            const parsedCart = savedCart
+                ? JSON.parse(savedCart)
+                : [];
+
+            if (!Array.isArray(parsedCart)) {
+                throw new Error("Invalid cart format");
+            }
+
+            cart = parsedCart
+                .filter(item => item && item.id != null)
+                .map(item => ({
+                    ...item,
+                    id: String(item.id),
+                    name: item.name || item.title || "AURELIA Product",
+                    price: Math.max(0, Number(item.price) || 0),
+                    quantity: Math.max(
+                        1,
+                        Math.floor(Number(item.quantity) || 1)
+                    ),
+                    image: item.image || item.img || "",
+                    category: item.category || "Accessories",
+                    description: item.description || item.variant || ""
+                }));
+
+        } catch (error) {
+
+            console.error("Unable to load shopping bag:", error);
+            cart = [];
+
+        }
+
+    }
+    function saveCart() {
+
+        localStorage.setItem(
+            CART_KEY,
+            JSON.stringify(cart)
+        );
+
+    }
+    function escapeHTML(value) {
+
+        return String(value).replace(/[&<>"']/g, character => {
+
+            const entities = {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;"
+            };
+
+            return entities[character];
+
+        });
+
+    }
+
+    function renderCart() {
+
+        productsContainer.innerHTML = "";
+
+        if (cart.length === 0) {
+
+            emptyCart.hidden = false;
+            cartActions.hidden = true;
+
+            checkoutButton.disabled = true;
+
+            updateSummary();
+
+            return;
+
+        }
+
+        emptyCart.hidden = true;
+        cartActions.hidden = false;
+
+        checkoutButton.disabled = false;
+
+        cart.forEach((product, index) => {
+
+            const productTotal = product.price * product.quantity;
+
+            const imageHTML = product.image
+                ? `<img src="${escapeHTML(product.image)}"
+                        alt="${escapeHTML(product.name)}"
+                        onerror="this.style.display='none'">`
+                : `<div class="atc-image-placeholder">
+                        <i class="fa-solid fa-gem"></i>
+                   </div>`;
+
+            const productHTML = `
+
+                <article class="atc-product" data-index="${index}">
+
+                    <div class="atc-product-info">
+
+                        <div class="atc-product-image">
+                            ${imageHTML}
+                        </div>
+
+                        <div class="atc-product-details">
+
+                            <span class="atc-product-category">
+                                ${escapeHTML(product.category)}
+                            </span>
+
+                            <h3 class="atc-product-name">
+                                ${escapeHTML(product.name)}
+                            </h3>
+
+                            <p class="atc-product-description">
+                                ${escapeHTML(product.description)}
+                            </p>
+
+                            <button
+                                type="button"
+                                class="atc-product-remove"
+                                data-action="remove"
+                                data-index="${index}"
+                                aria-label="Remove ${escapeHTML(product.name)}"
+                            >
+                                <i class="fa-regular fa-trash-can"></i>
+                                REMOVE
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="atc-quantity">
+
+                        <button
+                            type="button"
+                            data-action="decrease"
+                            data-index="${index}"
+                            aria-label="Decrease quantity"
+                        >−</button>
+
+                        <input
+                            type="number"
+                            min="1"
+                            max="99"
+                            value="${product.quantity}"
+                            data-action="quantity"
+                            data-index="${index}"
+                            aria-label="Product quantity"
+                        >
+
+                        <button
+                            type="button"
+                            data-action="increase"
+                            data-index="${index}"
+                            aria-label="Increase quantity"
+                        >+</button>
+
+                    </div>
+
+
+                    <div class="atc-product-price">
+
+                        ${formatPrice(productTotal)}
+
+                        <small>
+                            ${formatPrice(product.price)} / piece
+                        </small>
+
+                    </div>
+
+                </article>
+
+            `;
+
+            productsContainer.insertAdjacentHTML(
+                "beforeend",
+                productHTML
+            );
+
+        });
+
+        updateCount();
+        updateSummary();
+
+    }
+    function updateCount() {
+
+        const count = cart.reduce(
+            (total, item) => total + item.quantity,
+            0
+        );
+
+        countElement.textContent = count;
+
+    }
+    function calculateSubtotal() {
+
+        return cart.reduce(
+            (total, item) => total + (item.price * item.quantity),
+            0
+        );
+
+    }
+    function updateSummary() {
+
+        const subtotal = calculateSubtotal();
+
+        const discount = couponApplied
+            ? Math.round(subtotal * COUPON_DISCOUNT / 100)
+            : 0;
+
+        const afterDiscount = subtotal - discount;
+
+        const shipping = subtotal === 0 ||
+            subtotal >= FREE_SHIPPING_LIMIT
+            ? 0
+            : SHIPPING_FEE;
+
+        const total = afterDiscount + shipping;
+
+        subtotalElement.textContent = formatPrice(subtotal);
+
+        discountElement.textContent = discount > 0
+            ? "- " + formatPrice(discount)
+            : formatPrice(0);
+
+        shippingElement.textContent = shipping === 0
+            ? "FREE"
+            : formatPrice(shipping);
+
+        totalElement.textContent = formatPrice(total);
+
+        const shippingNote = document.getElementById(
+            "atc-shipping-note"
+        );
+
+        if (subtotal === 0) {
+
+            shippingNote.textContent =
+                "Your complimentary shipping will appear here.";
+
+        } else if (subtotal >= FREE_SHIPPING_LIMIT) {
+
+            shippingNote.textContent =
+                "You've unlocked complimentary shipping.";
+
+        } else {
+
+            shippingNote.textContent =
+                `Add ${formatPrice(FREE_SHIPPING_LIMIT - subtotal)} more for complimentary shipping.`;
+
+        }
+
+        updateCount();
+
+    }
+    productsContainer.addEventListener("click", (event) => {
+
+        const button = event.target.closest("[data-action]");
+
+        if (!button) return;
+
+        const index = Number(button.dataset.index);
+        const action = button.dataset.action;
+
+        if (!cart[index]) return;
+
+        if (action === "increase") {
+
+            cart[index].quantity = Math.min(
+                99,
+                cart[index].quantity + 1
+            );
+
+        }
+
+        if (action === "decrease") {
+
+            cart[index].quantity = Math.max(
+                1,
+                cart[index].quantity - 1
+            );
+
+        }
+
+        if (action === "remove") {
+
+            cart.splice(index, 1);
+
+        }
+
+        saveCart();
+        renderCart();
+
+    });
+    productsContainer.addEventListener("change", (event) => {
+
+        if (event.target.dataset.action !== "quantity") return;
+
+        const index = Number(event.target.dataset.index);
+
+        if (!cart[index]) return;
+
+        const quantity = Math.floor(
+            Number(event.target.value)
+        );
+
+        cart[index].quantity = Math.max(
+            1,
+            Math.min(99, quantity || 1)
+        );
+
+        saveCart();
+        renderCart();
+
+    });
+    couponForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const enteredCode = couponInput.value
+            .trim()
+            .toUpperCase();
+
+        couponMessage.classList.remove("atc-error");
+
+        if (cart.length === 0) {
+
+            couponMessage.textContent =
+                "Add a product before applying a coupon.";
+
+            couponMessage.classList.add("atc-error");
+            return;
+
+        }
+
+        if (enteredCode === COUPON_CODE) {
+
+            couponApplied = true;
+
+            couponMessage.textContent =
+                "Your 10% discount has been applied.";
+
+            couponInput.disabled = true;
+
+        } else {
+
+            couponApplied = false;
+
+            couponMessage.textContent =
+                "This promotion code is not valid.";
+
+            couponMessage.classList.add("atc-error");
+
+        }
+        updateSummary();
+
+    });
+    updateButton.addEventListener("click", () => {
+
+        saveCart();
+        renderCart();
+
+        updateButton.textContent = "BAG UPDATED";
+
+        setTimeout(() => {
+
+            updateButton.textContent = "UPDATE BAG";
+
+        }, 1800);
+
+    });
+    checkoutButton.addEventListener("click", () => {
+
+        if (cart.length === 0) return;
+        window.location.href = "checkout.html";
+
+    });
+    window.addEventListener("storage", (event) => {
+
+        if (event.key === CART_KEY) {
+
+            loadCart();
+            renderCart();
+
+        }
+
+    });
+    loadCart();
+    renderCart();
+
+});
+// end of the add to cart html js 
