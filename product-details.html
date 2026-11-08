@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wide Chunky Earrings | AURELIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="img/fevicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <script src="components.js" defer></script>
+    <!-- CUSTOM CURSOR -->
+    <div class="aurelia-cursor"></div>
+    <div class="aurelia-cursor-ring"></div>
+    <div id="site-header"></div>
+<main class="apd-page">
+    <section class="apd-product-section">
+        <div class="apd-gallery">
+            <div class="apd-main-image">
+                <img
+                    src="img/product-details/solis-ring.jpg"
+                    alt="AURELIA Wide Solis ring Gold Earrings"
+                    id="apdMainImage"
+                >
+                <span class="apd-image-label">AURELIA EDITION</span>
+            </div>
+            <div class="apd-thumbnails">
+                <button class="apd-thumbnail active"
+                    data-image="img/product-details/solis-ring.jpg">
+                    <img src="img/product-details/solis-ring.jpg" alt="Front view">
+                </button>
+                <button class="apd-thumbnail"
+                    data-image="img/product-details/solis-ring-2.jpg">
+                    <img src="img/product-details/solis-ring-top.jpg" alt="Side view">
+                </button>
+                <button class="apd-thumbnail"
+                    data-image="img/product-details/solis-ring-3.jpg">
+                    <img src="img/product-details/solis-ring-side.jpg" alt="Detail view">
+                </button>
+            </div>
+        </div>
+        <!-- right description -->
+        <div class="apd-information">
+            <div class="apd-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="shop.html">Jewellery</a>
+                <span>/</span>
+                <span>Rings</span>
+            </div>
+            <span class="apd-category">THE AURELIA COLLECTION</span>
+            <h1 class="apd-product-title">
+                Solis Ring<br> Golden Ring
+            </h1>
+            <div class="apd-price">
+                ₹8,200.00
+            </div>
+            <p class="apd-description">
+                A refined statement ring featuring a timeless silhouette, polished finish, and understated elegance.
+            </p>
+            <!-- PRODUCT SPECIFICATIONS -->
+            <div class="apd-specifications">
+                <div>
+                    <span>Weight:</span>
+                    <strong>8g each</strong>
+                </div>
+                <div>
+                    <span>Width:</span>
+                    <strong>8.7 mm</strong>
+                </div>
+            </div>
+            <!-- color selector -->
+            <div class="apd-colour-section">
+                <span class="apd-field-label">Colour</span>
+                <button class="apd-colour-option active"
+                    aria-label="Gold vermeil"
+                    title="Gold Vermeil">
+                    <span class="apd-colour-circle"></span>
+                    <span>Gold Vermeil</span>
+                </button>
+            </div>
+            <!-- quantity -->
+            <div class="apd-quantity-section">
+                <span class="apd-field-label">Quantity</span>
+                <div class="apd-quantity-control">
+                    <button type="button" id="apdDecrease">−</button>
+                    <span id="apdQuantity">1</span>
+                    <button type="button" id="apdIncrease">+</button>
+                </div>
+            </div>
+<!-- action btn  -->
+            <div class="apd-actions">
+                <button class="apd-add-cart" id="apdAddCart">
+                    ADD TO BAG
+                    <span>↗</span>
+                </button>
+
+                <button class="apd-wishlist" id="apdWishlist">
+                    ♡
+                </button>
+            </div>
+            <p class="apd-delivery-note">
+                Complimentary shipping on orders over ₹5,000.
+            </p>
+            <div class="apd-accordions">
+                <div class="apd-accordion">
+                    <button class="apd-accordion-trigger">
+                        <span>Warranty</span>
+                        <span class="apd-accordion-icon">+</span>
+                    </button>
+                    <div class="apd-accordion-content">
+                        <p>
+                            Every AURELIA piece is crafted with
+                            attention to detail and comes with
+                            our applicable product warranty.
+                        </p>
+                    </div>
+                </div>
+                <div class="apd-accordion">
+                    <button class="apd-accordion-trigger">
+                        <span>Shipping & Returns</span>
+                        <span class="apd-accordion-icon">+</span>
+                    </button>
+                    <div class="apd-accordion-content">
+                        <p>
+                            Enjoy complimentary shipping on orders
+                            above ₹5,000. Returns and exchanges are
+                            subject to our return policy.
+                        </p>
+                    </div>
+                </div>
+                <div class="apd-accordion">
+                    <button class="apd-accordion-trigger">
+                        <span>Product Details</span>
+                        <span class="apd-accordion-icon">+</span>
+                    </button>
+                    <div class="apd-accordion-content">
+                        <p>
+                            Material: Gold Vermeil<br>
+                            Finish: Polished Gold<br>
+                            Style: Chunky Hoop Earrings<br>
+                            Weight: 8g each
+                        </p>
+                    </div>
+                </div>
+                <div class="apd-accordion">
+                    <button class="apd-accordion-trigger">
+                        <span>Care & Maintenance</span>
+                        <span class="apd-accordion-icon">+</span>
+                    </button>
+                    <div class="apd-accordion-content">
+                        <p>
+                            Keep away from perfumes, chemicals and
+                            moisture. Store in a soft jewellery
+                            pouch when not in use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="apd-recommendations">
+        <div class="apd-section-heading">
+            <span>CURATED FOR YOU</span>
+            <h2>You May Also Like</h2>
+            <p>Pieces that complement your signature style.</p>
+        </div>
+        <div class="apd-recommendation-layout">
+            <a href="shop.html" class="apd-view-all">
+                VIEW ALL PRODUCTS ↗
+            </a>
+            <div class="apd-product-grid">
+                <!-- PRODUCT 1 -->
+                <a href="product-details.html" class="apd-product-card">
+                    <div class="apd-card-image">
+                        <img src="img/product-details/wave-earrings.jpg" alt="Golden Wave Earrings">
+                        <span class="apd-card-quick">VIEW PRODUCT ↗</span>
+                    </div>
+                    <div class="apd-card-details">
+                        <h3>Golden Wave Earrings</h3>
+                        <span>THE AURELIA EDIT</span>
+                        <p>₹6,900.00</p>
+                    </div>
+                </a>
+                <!-- PRODUCT 2 -->
+                <a href="product-details.html" class="apd-product-card">
+                    <div class="apd-card-image">
+                        <img src="img/product-details/pearl-necklace.jpg" alt="Elegant Pearl Necklace">
+                        <span class="apd-card-quick">VIEW PRODUCT ↗</span>
+                    </div>
+                    <div class="apd-card-details">
+                        <h3>Elegant Pearl Necklace</h3
+                        <span>TIMELESS COLLECTION</span>
+                        <p>₹7,800.00</p>
+                    </div>
+                </a>
+                <!-- PRODUCT 3 -->
+                <a href="product-details.html" class="apd-product-card">
+                    <div class="apd-card-image">
+                        <img src="img/product-details/round-earring.jpg" alt="Golden Round Earrings">
+                        <span class="apd-card-quick">VIEW PRODUCT ↗</span>
+                    </div>
+                    <div class="apd-card-details">
+                        <h3>Golden Round Earrings</h3>
+                        <span>EVERYDAY LUXURY</span>
+                        <p>₹5,600.00</p>
+                    </div>
+                </a>
+                <!-- PRODUCT 4 -->
+                <a href="product-details.html" class="apd-product-card">
+                    <div class="apd-card-image">
+                        <img src="img/product-details/wave-ring.jpg" alt="Golden Wave Ring">
+                        <span class="apd-card-quick">VIEW PRODUCT ↗</span>
+                    </div>
+                    <div class="apd-card-details">
+                        <h3>Golden Wave Ring</h3>
+                        <span>THE SIGNATURE EDIT</span>
+                        <p>₹4,900.00</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<div id="site-footer"></div>
+    <!-- end of the footer  -->
+    <script>
+        const cursor = document.querySelector(".aurelia-cursor");
+        const cursorRing = document.querySelector(".aurelia-cursor-ring");
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.18;
+            cursorY += (mouseY - cursorY) * 0.18;
+            if (cursor) {
+                cursor.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            if (cursorRing) {
+                cursorRing.style.transform =
+                    `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            }
+            requestAnimationFrame(animateCursor);
+        }
+        if (cursor && cursorRing) {
+            animateCursor();
+            document.querySelectorAll("a, button").forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.add("is-hovering");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-hovering");
+                });
+            });
+            document.querySelectorAll(
+                ".aurelia-gallery-item, .aurelia-collection-card, .aurelia-image"
+            ).forEach((element) => {
+                element.addEventListener("mouseenter", () => {
+                    cursorRing.classList.remove("is-hovering");
+                    cursorRing.classList.add("is-image");
+                });
+                element.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("is-image");
+                });
+            });
+        }
+        const aureliaHero = document.querySelector("#aureliaHeroSlider");
+        if (aureliaHero && window.bootstrap) {
+            const heroCarousel = bootstrap.Carousel.getOrCreateInstance(
+                aureliaHero,
+                {
+                    interval: 5500,
+                    ride: "carousel",
+                    pause: "hover",
+                    touch: true,
+                    wrap: true
+                }
+            );
+            aureliaHero.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowLeft") {
+                    event.preventDefault();
+                    heroCarousel.prev();
+                }
+                if (event.key === "ArrowRight") {
+                    event.preventDefault();
+                    heroCarousel.next();
+                }
+            });
+        }
+        </script>
+<script src="scripts.js"></script>
+</body>
+</html>
