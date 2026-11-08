@@ -1339,3 +1339,118 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 // end of the add to cart html js 
+// starting of the product-details html js 
+// prouct detail 
+document.addEventListener("DOMContentLoaded", () => {
+    const product = {
+        id: "aurelia-wide-chunky-earrings",
+        name: "Wide Chunky Earrings",
+        price: 8200,
+        image: "img/products/wide-chunky-earrings.jpg",
+        category: "Jewellery"
+    };
+    const mainImage = document.getElementById("apdMainImage");
+    const thumbnails = document.querySelectorAll(".apd-thumbnail");
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener("click", () => {
+            const newImage = thumbnail.dataset.image;
+            if (!newImage) return;
+            mainImage.src = newImage;
+            thumbnails.forEach(item => {
+                item.classList.remove("active");
+            });
+            thumbnail.classList.add("active");
+        });
+
+    });
+    let quantity = 1;
+    const quantityDisplay = document.getElementById("apdQuantity");
+    document.getElementById("apdIncrease").addEventListener("click", () => {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+    });
+    document.getElementById("apdDecrease").addEventListener("click", () => {
+        if (quantity > 1) {
+            quantity--;
+            quantityDisplay.textContent = quantity;
+        }
+    });
+    const accordionItems = document.querySelectorAll(".apd-accordion");
+    accordionItems.forEach(item => {
+        const trigger = item.querySelector(".apd-accordion-trigger");
+        trigger.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
+            accordionItems.forEach(accordion => {
+                accordion.classList.remove("active");
+            });
+
+            if (!isActive) {
+                item.classList.add("active");
+            }
+
+        });
+
+    });
+    const wishlistButton = document.getElementById("apdWishlist");
+    wishlistButton.addEventListener("click", () => {
+        let wishlist = JSON.parse(
+            localStorage.getItem("aureliaWishlist") || "[]"
+        );
+        const exists = wishlist.some(item => item.id === product.id);
+        if (exists) {
+            wishlist = wishlist.filter(item => item.id !== product.id);
+            wishlistButton.classList.remove("active");
+            wishlistButton.textContent = "♡";
+        } else {
+            wishlist.push(product);
+            wishlistButton.classList.add("active");
+            wishlistButton.textContent = "♥";
+        }
+        localStorage.setItem(
+            "aureliaWishlist",
+            JSON.stringify(wishlist)
+        );
+
+    });
+    const savedWishlist = JSON.parse(
+        localStorage.getItem("aureliaWishlist") || "[]"
+    );
+    if (savedWishlist.some(item => item.id === product.id)) {
+        wishlistButton.classList.add("active");
+        wishlistButton.textContent = "♥";
+    }
+    document.getElementById("apdAddCart").addEventListener("click", () => {
+        let cart = JSON.parse(
+            localStorage.getItem("aureliaCart") || "[]"
+        );
+        const existingProduct = cart.find(
+            item => item.id === product.id
+        );
+        if (existingProduct) {
+            existingProduct.quantity += quantity;
+        } else {
+            cart.push({
+                ...product,
+                quantity: quantity
+            });
+        }
+        localStorage.setItem(
+            "aureliaCart",
+            JSON.stringify(cart)
+        );
+        window.dispatchEvent(
+            new CustomEvent("aurelia:cart-updated", {
+                detail: { cart }
+            })
+        );
+        const button = document.getElementById("apdAddCart")
+        const originalText = button.innerHTML;
+        button.innerHTML = "ADDED TO BAG ✓";
+        setTimeout(() => {
+            button.innerHTML = originalText;
+        }, 1800);
+
+    });
+});
+
+// ending of the product-details html js
